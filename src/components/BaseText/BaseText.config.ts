@@ -7,7 +7,7 @@ import config from '@whirli/BaseText/BaseText.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseText.constants';
-import type { PropColor, PropSize, PropTag, PropFamily } from './BaseText.types';
+import type { PropColor, PropSize, PropTag, PropFont } from './BaseText.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
@@ -25,11 +25,11 @@ export const ConfigStyles: ComponentStyles = {
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropColor, string>,
   },
-  [PropKeys.FAMILY]: {
+  [PropKeys.FONT]: {
     generateBreakpoints: true,
     classes: {
-      default: 'family-arial',
-      ...config.styles[PropKeys.FAMILY]?.classes,
+      default: 'font-arial',
+      ...config.styles[PropKeys.FONT]?.classes,
     } as Record<PropColor, string>,
   },
 };
@@ -53,11 +53,11 @@ export const ConfigProps: ComponentProps = {
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.SIZE),
   },
-  [PropKeys.FAMILY]: {
+  [PropKeys.FONT]: {
     required: false,
-    type: [String, Object] as PropType<PropFamily>,
+    type: [String, Object] as PropType<PropFont>,
     default: 'default',
-    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.FAMILY),
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.FONT),
   },
 
   ...config.props,

@@ -1,0 +1,14 @@
+@import '../../styles/Breakpoints.scss';
+
+// default styles
+.spacer {
+    display: block;
+    width: 100%;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: (
+    size-default: (
+        height: 1rem,
+    ),
+);

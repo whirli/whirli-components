@@ -1,23 +1,23 @@
 <template>
-  <component :is="tag" :class="classes"><slot /></component>
+  <div :class="[classes, styles.spacer]" />
 </template>
 
-<script setup="props" lang="ts">
+<script setup="props">
 // Vue
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli/BaseText/BaseText.module.scss';
+import styles from '@whirli/BaseSpacer/BaseSpacer.module.scss';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BaseText.config';
+import { ConfigStyles, ConfigProps } from './BaseSpacer.config.ts';
 
 const ComponentStyles = ConfigStyles;
 
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '../../@use/class.ts';
 const { makeClasses } = useClasses();
 const classes = makeClasses(ComponentStyles, props, styles);
 </script>
