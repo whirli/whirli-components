@@ -13,6 +13,7 @@ export default function (): Classes {
   ): string[] => {
     const classes: string[] = [];
     Object.keys(props).forEach((propKey: string) => {
+      if (!config[propKey]?.classes) return;
       // Generate breakpoint styles if requested
       if (config[propKey].generateBreakpoints) {
         let defaultStyleKey;

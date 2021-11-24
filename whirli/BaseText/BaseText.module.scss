@@ -3,6 +3,10 @@
 // Standard styles
 
 // Breakpoint styles
-$localBreakpointStyles: ();
+$localBreakpointStyles: (
+    color-pink: (
+        color: pink,
+    ),
+);
 
 @include createBreakpointClasses(map-merge($packageBreakpointStyles, $localBreakpointStyles));

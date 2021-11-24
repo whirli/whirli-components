@@ -2,7 +2,13 @@ import { ComponentStyles, ComponentProps, ComponentConfig } from '@whirli-compon
 
 import * as PropHelpers from '@whirli-components/src/helpers/props';
 
-const styles: ComponentStyles = {};
+const styles: ComponentStyles = {
+  color: {
+    classes: {
+      pink: 'color-pink',
+    },
+  },
+};
 
 const props: ComponentProps = {};
 

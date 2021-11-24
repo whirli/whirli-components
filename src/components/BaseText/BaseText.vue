@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">Hello from BaseText component</div>
+  <component :is="tag" :class="classes"><slot /></component>
 </template>
 
 <script setup="props">

@@ -3,4 +3,14 @@
 // default styles
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$packageBreakpointStyles: (
+    color-black: (
+        color: black,
+    ),
+    size-base: (
+        font-size: 16px,
+    ),
+    family-arial: (
+        font-family: arial,
+    )
+);

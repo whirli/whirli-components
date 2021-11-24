@@ -4,13 +4,11 @@ import { ComponentStyles } from '../@types/components';
 
 interface PropValidation {
   /* eslint-disable-next-line */
-  type: any;
   validator: (value: string) => boolean;
 }
 
 export const stylePropValidation = (component: ComponentStyles, propName: string): PropValidation => {
   return {
-    type: [String, Number],
     validator: (value: string | number) => {
       const passesValidation = Object.keys(component[propName]?.classes).includes(String(value));
       if (!passesValidation) invalidStyleWarning(propName, value);
@@ -24,7 +22,6 @@ export const breakpointStylePropValidation = (
   propName: string
 ): PropValidation => {
   return {
-    type: [Object, String, Number],
     /* eslint-disable-next-line */
     validator: (value: any | string | number): boolean => {
       let passesValidation = true;
