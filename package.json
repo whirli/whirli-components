@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "component:build": "node ./generator/scaffold.js build",
+    "component:destroy": "node ./generator/scaffold.js destroy"
   },
   "dependencies": {
     "core-js": "^3.6.5",

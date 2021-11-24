@@ -1,0 +1,15 @@
+@import '@whirli-components/src/components/FirstComponent/FirstComponent.scss';
+
+// Standard styles
+
+// Breakpoint styles
+$localBreakpointStyles: (
+    /*underline: (
+        text-decoration: underline
+    ),
+    strikethrough: (
+        text-decoration: line-through
+    )*/
+);
+
+@include createBreakpointClasses(map-merge($packageBreakpointStyles, $localBreakpointStyles));

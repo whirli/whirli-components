@@ -1,0 +1,52 @@
+$breakpoints: (
+    tablet: (
+        prefix: t,
+        min-width: 48rem
+    ),
+    desktop: (
+        prefix: d,
+        min-width: 80rem
+    )
+);
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@mixin createBreakpointClasses($styles) {
+    
+    @each $className, $classStyles in $styles {
+        .#{$className} {
+            @each $classProperty, $classStyle in $classStyles {
+                #{$classProperty}: $classStyle;
+            }
+        }
+    }
+    
+    @each $name, $value in $breakpoints {
+        $prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
+        $breakpoint: map-deep-get($breakpoints, #{$name}, 'min-width');
+  
+        @media screen and (min-width: $breakpoint) {
+            
+            
+            @each $className, $classStyles in $styles {
+                .#{$prefix}\:#{$className} {
+                    @each $classProperty, $classStyle in $classStyles {
+                        #{$classProperty}: $classStyle;
+                    }
+                }
+            }
+        }
+    }
+    
+  }
+
+:export {
+    @each $name, $value in $breakpoints {
+        #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix')
+    }
+}
