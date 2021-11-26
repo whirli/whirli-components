@@ -59,6 +59,5 @@ export const ConfigProps: ComponentProps = {
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.FONT),
   },
-
   ...config.props,
 };

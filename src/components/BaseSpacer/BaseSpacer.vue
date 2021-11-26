@@ -1,5 +1,5 @@
 <template>
-  <div :class="[classes, styles.spacer]" />
+  <div :class="classes" />
 </template>
 
 <script setup="props">
@@ -19,5 +19,5 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class.ts';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.spacer, ...makeClasses(ComponentStyles, props, styles)];
 </script>
