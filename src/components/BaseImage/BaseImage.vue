@@ -3,10 +3,10 @@
     <picture>
       <img
         :class="styles.image"
-        :src="image.url"
-        :alt="image.title"
-        :height="image.height"
-        :width="image.width"
+        :src="props.image.url"
+        :alt="props.image.title"
+        :height="props.image.height"
+        :width="props.image.width"
         ref="defaultImage"
         loading="lazy"
       />

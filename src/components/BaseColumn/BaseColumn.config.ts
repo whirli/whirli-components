@@ -34,7 +34,7 @@ export const ConfigStyles: ComponentStyles = {
 export const ConfigProps: ComponentProps = {
   [PropKeys.SPANS]: {
     required: false,
-    type: [String, Object] as PropType<PropSpans>,
+    type: [String, Object] as PropType<PropSpans | Record<string, PropSpans>>,
     default: '12',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.SPANS),
   },

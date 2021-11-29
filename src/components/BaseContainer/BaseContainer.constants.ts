@@ -1,7 +1,7 @@
 export const PropKeys = {
-  SIZE: 'size',
+  // COLOR: 'color',
 };
 
 export const PropValues = {
-  [PropKeys.SIZE]: ['default'] as string[],
+  // [PropKeys.COLOR]: ['default'],
 };

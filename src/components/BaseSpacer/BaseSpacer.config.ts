@@ -15,6 +15,7 @@ export const ConfigStyles: ComponentStyles = {
     generateBreakpoints: true,
     classes: {
       default: 'size-default',
+      large: 'size-large',
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },

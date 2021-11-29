@@ -2,7 +2,7 @@
   <div :class="classes" />
 </template>
 
-<script setup="props">
+<script setup="props" lang="ts">
 // Vue
 import { defineProps } from 'vue';
 
@@ -10,14 +10,14 @@ import { defineProps } from 'vue';
 import styles from '@whirli/BaseSpacer/BaseSpacer.module.scss';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BaseSpacer.config.ts';
+import { ConfigStyles, ConfigProps } from './BaseSpacer.config';
 
 const ComponentStyles = ConfigStyles;
 
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class.ts';
+import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.spacer, ...makeClasses(ComponentStyles, props, styles)];
 </script>

@@ -15,21 +15,29 @@
         title: 'Test',
       }"
     />
-    <BaseGrid>
-      <BaseColumn>Hello world</BaseColumn>
-    </BaseGrid>
+    <BaseContainer>
+      <BaseGrid>
+        <BaseColumn>Hello world</BaseColumn>
+      </BaseGrid>
+    </BaseContainer>
     <BaseGrid>
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world</BaseColumn>
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world 2</BaseColumn>
     </BaseGrid>
+    <BaseSection :size="['default', 'large']">
+      <BaseText>Hello from section</BaseText>
+    </BaseSection>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import FirstComponent from './FirstComponent/FirstComponent.vue';
 import BaseText from './BaseText/BaseText.vue';
 import BaseSpacer from './BaseSpacer/BaseSpacer.vue';
 import BaseImage from './BaseImage/BaseImage.vue';
 import BaseGrid from './BaseGrid/BaseGrid.vue';
 import BaseColumn from './BaseColumn/BaseColumn.vue';
+import BaseContainer from './BaseContainer/BaseContainer.vue';
+import BaseSection from './BaseSection/BaseSection.vue';
+import TestComponent from './TestComponent.vue';
 </script>

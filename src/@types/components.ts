@@ -9,7 +9,7 @@ export interface ComponentProps {
   [key: string]: {
     required?: boolean;
     type?: any;
-    default?: string;
+    default?: any;
     validator?: (value: string) => boolean;
   };
 }

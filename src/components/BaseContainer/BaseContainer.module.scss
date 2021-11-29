@@ -1,0 +1,12 @@
+@import '../../styles/Breakpoints.scss';
+
+// default styles
+.container {
+    width: 100%;
+    max-width: 64rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: ();
