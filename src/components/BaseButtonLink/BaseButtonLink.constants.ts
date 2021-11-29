@@ -1,7 +1,5 @@
 export const PropKeys = {
-  // COLOR: 'color',
+  URL: 'url',
 };
 
-export const PropValues = {
-  // [PropKeys.COLOR]: ['default'],
-};
+export const PropValues = {};

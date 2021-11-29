@@ -2,13 +2,17 @@ import Breakpoints from '../styles/Breakpoints.scss';
 import { ComponentStyles } from '../@types/components';
 
 interface Classes {
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   makeClasses: (config: ComponentStyles, props: Readonly<any>, styles: Record<string, string>) => string[];
+  /* eslint-enable  @typescript-eslint/no-explicit-any */
 }
 
 export default function (): Classes {
   const makeClasses = (
     config: ComponentStyles,
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     props: Readonly<any>,
+    /* enable-disable  @typescript-eslint/no-explicit-any */
     styles: Record<string, string>
   ): string[] => {
     const classes: string[] = [];

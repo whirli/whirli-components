@@ -1,9 +1,10 @@
 @import '../../styles/Breakpoints.scss';
 
 // default styles
-.button {}
+
 // breakpoint styles
 $packageBreakpointStyles: (
-    size-default: (),
-    color-default: ()
+    /*color-black: (
+        color: black,
+    ),*/
 );

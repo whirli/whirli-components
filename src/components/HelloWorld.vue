@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
-    <BaseButtonLink url="/home">Home</BaseButtonLink>
-    <BaseButtonLink url="https://bbc.co.uk">Away</BaseButtonLink>
+    <BaseButton url="https://www.bbc.co.uk">Link</BaseButton>
+    <BaseButton url="/about">Internal</BaseButton>
+    <BaseButton @click="alertMe('pressed')">Button</BaseButton>
+    <BaseButton :state="buttonState" type="submit">Submit</BaseButton>
+
     <FirstComponent
       background="background1"
       :decoration="{ default: 'underline', tablet: 'strikethrough' }"
@@ -33,6 +36,8 @@
 </template>
 
 <script setup lang="ts">
+import { Ref, onMounted, ref } from 'vue';
+
 import FirstComponent from './FirstComponent/FirstComponent.vue';
 import BaseText from './BaseText/BaseText.vue';
 import BaseSpacer from './BaseSpacer/BaseSpacer.vue';
@@ -41,5 +46,23 @@ import BaseGrid from './BaseGrid/BaseGrid.vue';
 import BaseColumn from './BaseColumn/BaseColumn.vue';
 import BaseContainer from './BaseContainer/BaseContainer.vue';
 import BaseSection from './BaseSection/BaseSection.vue';
-import BaseButtonLink from './BaseButtonLink/BaseButtonLink.vue';
+import BaseButton from './BaseButton/BaseButton.vue';
+
+function alertMe(string: string): void {
+  alert(string);
+}
+
+const buttonState: Ref<string> = ref('loading');
+
+onMounted((): void => {
+  setTimeout(() => {
+    buttonState.value = 'processing';
+  }, 1000);
+  setTimeout(() => {
+    buttonState.value = 'complete';
+  }, 2000);
+  setTimeout(() => {
+    buttonState.value = 'default';
+  }, 3000);
+});
 </script>

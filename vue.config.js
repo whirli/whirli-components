@@ -5,8 +5,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "@whirli": path.resolve(__dirname, "whirli"),
-        "@whirli-components": path.resolve(__dirname, ""),
+        '@whirli': path.resolve(__dirname, 'whirli'),
+        '@whirli-components': path.resolve(__dirname, ''),
       },
     },
   },

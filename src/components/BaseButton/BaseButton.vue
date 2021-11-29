@@ -1,10 +1,24 @@
 <template>
-  <div :class="classes">Hello from BaseButton component</div>
+  <component
+    :is="button"
+    :type="props.type"
+    :url="props.url"
+    :class="classes"
+    :state="props.state"
+    v-bind="$attrs"
+  >
+    <slot />
+  </component>
 </template>
 
 <script setup="props" lang="ts">
 // Vue
-import { defineProps } from 'vue';
+import { defineProps, computed } from 'vue';
+import type { ComputedRef, Component } from 'vue';
+
+// components
+import BaseButtonDefault from '../BaseButtonDefault/BaseButtonDefault.vue';
+import BaseButtonLink from '../BaseButtonLink/BaseButtonLink.vue';
 
 // Styles
 import styles from '@whirli/BaseButton/BaseButton.module.scss';
@@ -19,5 +33,9 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.button, ...makeClasses(ComponentStyles, props, styles)];
+
+const button: ComputedRef<Component> = computed((): Component => {
+  return props.url !== undefined ? BaseButtonLink : BaseButtonDefault;
+});
 </script>

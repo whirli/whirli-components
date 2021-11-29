@@ -1,5 +1,5 @@
 <template>
-  <RouterLink v-if="isInternal" :to="props.url"><slot /></RouterLink>
+  <component :is="routerComponent" v-if="isInternal" :to="props.url"><slot /></component>
   <a :href="props.url" v-else target="_blank" rel="nofollow noopener"><slot /></a>
 </template>
 
@@ -8,24 +8,16 @@
 import { defineProps, computed } from 'vue';
 import type { ComputedRef } from 'vue';
 
-// Styles
-import styles from '@whirli/BaseButtonLink/BaseButtonLink.module.scss';
-
 // Data
-import { ConfigStyles, ConfigProps } from './BaseButtonLink.config';
-
-const ComponentStyles = ConfigStyles;
+import { ConfigProps } from './BaseButtonLink.config';
 
 const props = defineProps(ConfigProps);
 
-// Classes
-import useClasses from '../../@use/class';
-const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
-
 // Component
-
 const isInternal: ComputedRef<boolean> = computed((): boolean => {
   return props.url.startsWith('/');
 });
+
+// @ts-ignore
+const routerComponent = typeof $nuxt !== 'undefined' ? 'NuxtLink' : 'RouterLink';
 </script>
