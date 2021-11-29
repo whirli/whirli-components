@@ -15,6 +15,7 @@ import type {
   PropTransform,
   PropLetterSpacing,
   PropLineHeight,
+  PropAlign,
 } from './BaseText.types';
 
 export const ConfigStyles: ComponentStyles = {
@@ -86,6 +87,15 @@ export const ConfigStyles: ComponentStyles = {
       ...config.styles[PropKeys.LINE_HEIGHT]?.classes,
     } as Record<PropLineHeight, string>,
   },
+  [PropKeys.ALIGN]: {
+    generateBreakpoints: true,
+    classes: {
+      default: 'align-default',
+      center: 'align-center',
+      right: 'align-right',
+      ...config.styles[PropKeys.ALIGN]?.classes,
+    } as Record<PropAlign, string>,
+  },
 };
 
 export const ConfigProps: ComponentProps = {
@@ -130,6 +140,12 @@ export const ConfigProps: ComponentProps = {
     type: String as PropType<PropLineHeight>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.LINE_HEIGHT),
+  },
+  [PropKeys.ALIGN]: {
+    required: false,
+    type: String as PropType<PropAlign>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
   },
   ...config.props,
 };

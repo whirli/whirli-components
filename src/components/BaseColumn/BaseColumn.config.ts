@@ -6,8 +6,8 @@ import { ComponentStyles, ComponentProps } from '../../@types/components';
 import config from '@whirli/BaseColumn/BaseColumn.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseColumn.constants';
-import type { PropSpans } from './BaseColumn.types';
+import { PropKeys } from './BaseColumn.constants';
+import type { PropSpans, PropAlign, PropJustify } from './BaseColumn.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
@@ -29,6 +29,24 @@ export const ConfigStyles: ComponentStyles = {
       ...config.styles[PropKeys.SPANS]?.classes,
     } as Record<PropSpans, string>,
   },
+  [PropKeys.ALIGN]: {
+    generateBreakpoints: true,
+    classes: {
+      default: 'align-default',
+      end: 'align-end',
+      between: 'align-between',
+      ...config.styles[PropKeys.ALIGN]?.classes,
+    } as Record<PropAlign, string>,
+  },
+  [PropKeys.JUSTIFY]: {
+    generateBreakpoints: true,
+    classes: {
+      default: 'justify-default',
+      end: 'justify-end',
+      between: 'justify-between',
+      ...config.styles[PropKeys.JUSTIFY]?.classes,
+    } as Record<PropJustify, string>,
+  },
 };
 
 export const ConfigProps: ComponentProps = {
@@ -37,6 +55,18 @@ export const ConfigProps: ComponentProps = {
     type: [String, Object] as PropType<PropSpans | Record<string, PropSpans>>,
     default: '12',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.SPANS),
+  },
+  [PropKeys.ALIGN]: {
+    required: false,
+    type: [String, Object] as PropType<PropSpans | Record<string, PropAlign>>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
+  },
+  [PropKeys.JUSTIFY]: {
+    required: false,
+    type: [String, Object] as PropType<PropSpans | Record<string, PropJustify>>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.JUSTIFY),
   },
   ...config.props,
 };

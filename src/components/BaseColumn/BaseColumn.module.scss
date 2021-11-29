@@ -21,4 +21,24 @@ $packageBreakpointStyles: (
     span-10: ( grid-column: span 10 / span 10 ),
     span-11: ( grid-column: span 11 / span 11 ),
     span-12: ( grid-column: span 12 / span 12 ),
+
+    align-default: (
+      align-items: flex-start,
+    ),
+    align-end: (
+      align-items: flex-end,
+    ),
+    align-between: (
+      align-items: space-between,
+    ),
+
+    justify-default: (
+      justify-content: flex-start,
+    ),
+    justify-end: (
+      justify-content: flex-end,
+    ),
+    justify-between: (
+      justify-content: space-between,
+    ),
 );

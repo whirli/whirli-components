@@ -6,6 +6,7 @@ export const PropKeys = {
   TRANSFORM: 'transform',
   LETTER_SPACING: 'letter-spacing',
   LINE_HEIGHT: 'line-height',
+  ALIGN: 'align',
 };
 
 export const PropValues = {
@@ -31,4 +32,5 @@ export const PropValues = {
   [PropKeys.TRANSFORM]: ['default', 'uppercase'],
   [PropKeys.LETTER_SPACING]: ['default', 'md', 'lg', 'xl'],
   [PropKeys.LINE_HEIGHT]: ['3xs', '2xs', 'xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
+  [PropKeys.ALIGN]: ['default', 'center', 'right'],
 };

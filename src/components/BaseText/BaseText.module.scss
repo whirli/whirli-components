@@ -101,6 +101,15 @@ $packageBreakpointStyles: (
     letter-spacing-xl: (
         font-size: toRems(1.5),
     ),
+    align-default: (
+        text-align: left,
+    ),
+    align-center: (
+        text-align: center,
+    ),
+    align-right: (
+        text-align: right,
+    ),
     family-arial: (
         font-family: arial,
     )
