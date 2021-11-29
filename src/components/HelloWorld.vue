@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <BaseButtonLink url="/home">Home</BaseButtonLink>
+    <BaseButtonLink url="https://bbc.co.uk">Away</BaseButtonLink>
     <FirstComponent
       background="background1"
       :decoration="{ default: 'underline', tablet: 'strikethrough' }"
@@ -24,7 +26,7 @@
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world</BaseColumn>
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world 2</BaseColumn>
     </BaseGrid>
-    <BaseSection :size="['default', 'large']">
+    <BaseSection size="large">
       <BaseText>Hello from section</BaseText>
     </BaseSection>
   </div>
@@ -39,5 +41,5 @@ import BaseGrid from './BaseGrid/BaseGrid.vue';
 import BaseColumn from './BaseColumn/BaseColumn.vue';
 import BaseContainer from './BaseContainer/BaseContainer.vue';
 import BaseSection from './BaseSection/BaseSection.vue';
-import TestComponent from './TestComponent.vue';
+import BaseButtonLink from './BaseButtonLink/BaseButtonLink.vue';
 </script>

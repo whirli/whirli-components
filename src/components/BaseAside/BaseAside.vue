@@ -1,5 +1,7 @@
 <template>
-  <div :class="classes"><slot /></div>
+  <aside id="aside" :class="classes">
+    <slot />
+  </aside>
 </template>
 
 <script setup="props" lang="ts">
@@ -7,10 +9,10 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli/BaseColumn/BaseColumn.module.scss';
+import styles from '@whirli/BaseAside/BaseAside.module.scss';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BaseColumn.config';
+import { ConfigStyles, ConfigProps } from './BaseAside.config';
 
 const ComponentStyles = ConfigStyles;
 
@@ -19,5 +21,5 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = [styles.column, ...makeClasses(ComponentStyles, props, styles)];
+const classes = makeClasses(ComponentStyles, props, styles);
 </script>

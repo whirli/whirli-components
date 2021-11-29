@@ -34,8 +34,8 @@ const classes = makeClasses(ComponentStyles, props, styles);
 
 const size: ComputedRef<ComputedSize> = computed(() => {
   return {
-    top: Array.isArray(props.size) && props.size.length > 0 ? props.size[0] : props.size,
-    bottom: Array.isArray(props.size) && props.size.length > 1 ? props.size[1] || props.size[0] : props.size,
+    top: props.size.top ? props.size.top : props.size.bottom ? undefined : props.size,
+    bottom: props.size.bottom ? props.size.bottom : props.size.top ? undefined : props.size,
   };
 });
 </script>

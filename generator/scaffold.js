@@ -1,5 +1,11 @@
 /* eslint-disable-next-line */
 const fs = require('fs');
+/* eslint-disable-next-line */
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 const ACTION = process.argv[2]; // First 2 arguments are default ones that Node.js provides
 const NEW_COMPONENT_NAME = process.argv[3]; // First 2 arguments are default ones that Node.js provide
@@ -7,6 +13,11 @@ const NEW_COMPONENT_NAME = process.argv[3]; // First 2 arguments are default one
 const ACTION_TYPES = {
   BUILD: 'build',
   DESTROY: 'destroy',
+};
+
+const PROMPT_ANSWERS = {
+  PROCEED: 'yes',
+  STOP: 'no',
 };
 
 const SKELETON_COMPONENT_NAME = 'SkeletonComponent';
@@ -87,10 +98,19 @@ if (ACTION === ACTION_TYPES.BUILD) {
     const [src, target] = fileGroup;
     makeFileFromSkeleton(src, target, SKELETON_COMPONENT_NAME, NEW_COMPONENT_NAME);
   });
+  rl.close();
 } else if (ACTION === ACTION_TYPES.DESTROY) {
-  DIRECTORIES.forEach((directory) => {
-    if (fs.existsSync(directory)) {
-      fs.rmdirSync(directory, { recursive: true });
+  rl.question(
+    `Are you sure you want to destroy ${NEW_COMPONENT_NAME}? [${PROMPT_ANSWERS.STOP}]/${PROMPT_ANSWERS.PROCEED}: `,
+    function (answer) {
+      if (answer === PROMPT_ANSWERS.PROCEED) {
+        DIRECTORIES.forEach((directory) => {
+          if (fs.existsSync(directory)) {
+            fs.rmdirSync(directory, { recursive: true });
+          }
+        });
+      }
+      rl.close();
     }
-  });
+  );
 }

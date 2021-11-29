@@ -4,10 +4,7 @@ const propBackground = PropValues[PropKeys.BACKGROUND];
 
 export type PropBackground = typeof propBackground[number];
 
-export type PropSize =
-  | string
-  | Record<string, string>
-  | [string | Record<string, string>, string | Record<string, string>];
+export type PropSize = string | Record<string, string> | Record<string, Record<string, string>>;
 
 export interface ComputedSize {
   top: PropSize;
