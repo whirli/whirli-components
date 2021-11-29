@@ -7,21 +7,40 @@ import config from '@whirli/BaseText/BaseText.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseText.constants';
-import type { PropColor, PropSize, PropTag, PropFont } from './BaseText.types';
+import type {
+  PropColor,
+  PropSize,
+  PropTag,
+  PropFont,
+  PropTransform,
+  PropLetterSpacing,
+  PropLineHeight,
+} from './BaseText.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.COLOR]: {
     generateBreakpoints: true,
     classes: {
-      default: 'color-black',
+      default: 'color-default',
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
-      default: 'size-base',
+      '3xs': 'size-3xs',
+      '2xs': 'size-2xs',
+      xs: 'size-xs',
+      sm: 'size-sm',
+      default: 'size-default',
+      md: 'size-md',
+      lg: 'size-lg',
+      xl: 'size-xl',
+      '2xl': 'size-2xl',
+      '3xl': 'size-3xl',
+      '4xl': 'size-4xl',
+      '5xl': 'size-5xl',
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropColor, string>,
   },
@@ -31,6 +50,41 @@ export const ConfigStyles: ComponentStyles = {
       default: 'font-arial',
       ...config.styles[PropKeys.FONT]?.classes,
     } as Record<PropColor, string>,
+  },
+  [PropKeys.TRANSFORM]: {
+    classes: {
+      default: 'transform-default',
+      uppercase: 'transform-uppercase',
+      ...config.styles[PropKeys.TRANSFORM]?.classes,
+    } as Record<PropColor, string>,
+  },
+  [PropKeys.LETTER_SPACING]: {
+    generateBreakpoints: true,
+    classes: {
+      default: 'letter-spacing-default',
+      md: 'letter-spacing-md',
+      lg: 'letter-spacing-lg',
+      xl: 'letter-spacing-xl',
+      ...config.styles[PropKeys.LETTER_SPACING]?.classes,
+    } as Record<PropLetterSpacing, string>,
+  },
+  [PropKeys.LINE_HEIGHT]: {
+    generateBreakpoints: true,
+    classes: {
+      '3xs': 'line-height-3xs',
+      '2xs': 'line-height-2xs',
+      xs: 'line-height-xs',
+      sm: 'line-height-sm',
+      default: 'line-height-default',
+      md: 'line-height-md',
+      lg: 'line-height-lg',
+      xl: 'line-height-xl',
+      '2xl': 'line-height-2xl',
+      '3xl': 'line-height-3xl',
+      '4xl': 'line-height-4xl',
+      '5xl': 'line-height-5xl',
+      ...config.styles[PropKeys.LINE_HEIGHT]?.classes,
+    } as Record<PropLineHeight, string>,
   },
 };
 
@@ -58,6 +112,24 @@ export const ConfigProps: ComponentProps = {
     type: [String, Object] as PropType<PropFont>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.FONT),
+  },
+  [PropKeys.TRANSFORM]: {
+    required: false,
+    type: String as PropType<PropTransform>,
+    default: 'default',
+    ...PropHelpers.stylePropValidation(ConfigStyles, PropKeys.TRANSFORM),
+  },
+  [PropKeys.LETTER_SPACING]: {
+    required: false,
+    type: String as PropType<PropLetterSpacing>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.LETTER_SPACING),
+  },
+  [PropKeys.LINE_HEIGHT]: {
+    required: false,
+    type: String as PropType<PropLineHeight>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.LINE_HEIGHT),
   },
   ...config.props,
 };

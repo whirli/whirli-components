@@ -1,8 +1,8 @@
 <template>
-  <div :class="styles.image__wrapper" :style="`padding-top: ${height}`">
+  <div :class="wrapperClasses" :style="`padding-top: ${height}`">
     <picture>
       <img
-        :class="styles.image"
+        :class="imageClasses"
         :src="props.image.url"
         :alt="props.image.title"
         :height="props.image.height"
@@ -38,7 +38,8 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const wrapperClasses = [styles.image__wrapper, ...makeClasses(ComponentStyles, props, styles)];
+const imageClasses = [styles.image];
 
 // Component specific
 

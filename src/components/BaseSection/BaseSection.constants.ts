@@ -6,6 +6,6 @@ export const PropKeys = {
 };
 
 export const PropValues = {
-  [PropKeys.BACKGROUND]: ['default'] as string[],
+  [PropKeys.BACKGROUND]: ['default'],
   [PropKeys.SIZE]: SpacerPropValues.SIZE,
 };

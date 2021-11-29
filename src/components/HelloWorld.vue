@@ -5,11 +5,6 @@
     <BaseButton @click="alertMe('pressed')">Button</BaseButton>
     <BaseButton :state="buttonState" type="submit">Submit</BaseButton>
 
-    <FirstComponent
-      background="background1"
-      :decoration="{ default: 'underline', tablet: 'strikethrough' }"
-      :color="{ default: 'color2', tablet: 'color1' }"
-    />
     <BaseSpacer />
 
     <BaseImage
@@ -29,8 +24,8 @@
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world</BaseColumn>
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world 2</BaseColumn>
     </BaseGrid>
-    <BaseSection size="large">
-      <BaseText>Hello from section</BaseText>
+    <BaseSection :size="{ top: { default: 'lg', tablet: '5xl' }, bottom: 'default' }">
+      <BaseText color="default">Hello from section</BaseText>
     </BaseSection>
   </div>
 </template>

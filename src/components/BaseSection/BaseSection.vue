@@ -30,7 +30,7 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.section, ...makeClasses(ComponentStyles, props, styles)];
 
 const size: ComputedRef<ComputedSize> = computed(() => {
   return {

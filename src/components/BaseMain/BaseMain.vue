@@ -21,5 +21,5 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.main, ...makeClasses(ComponentStyles, props, styles)];
 </script>

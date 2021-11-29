@@ -17,7 +17,7 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.BACKGROUND]: {
     generateBreakpoints: true,
     classes: {
-      default: 'background-blue',
+      default: 'background-default',
       ...config.styles[PropKeys.BACKGROUND]?.classes,
     } as Record<PropBackground, string>,
   },

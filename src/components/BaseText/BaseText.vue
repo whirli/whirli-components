@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="classes"><slot /></component>
+  <component :is="props.tag" :class="classes"><slot /></component>
 </template>
 
 <script setup="props" lang="ts">
@@ -19,5 +19,5 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.text, ...makeClasses(ComponentStyles, props, styles)];
 </script>

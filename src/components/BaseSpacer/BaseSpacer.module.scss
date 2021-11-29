@@ -1,3 +1,4 @@
+@import '../../styles/Spacers.scss';
 @import '../../styles/Breakpoints.scss';
 
 // default styles
@@ -8,10 +9,43 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    size-default: (
-        height: 1rem,
+    size-4xs: (
+        height: $spacer4Xs,
     ),
-    size-large: (
-        height: 3rem,
+    size-3xs: (
+        height: $spacer3Xs,
+    ),
+    size-2xs: (
+        height: $spacer2Xs,
+    ),
+    size-xs: (
+        height: $spacerXs,
+    ),
+    size-sm: (
+        height: $spacerSm,
+    ),
+    size-default: (
+        height: $spacerDefault,
+    ),
+    size-md: (
+        height: $spacerMd,
+    ),
+    size-lg: (
+        height: $spacerLg,
+    ),
+    size-xl: (
+        height: $spacerXl,
+    ),
+    size-2xl: (
+        height: $spacer2Xl,
+    ),
+    size-3xl: (
+        height: $spacer3Xl,
+    ),
+    size-4xl: (
+        height: $spacer4Xl,
+    ),
+    size-5xl: (
+        height: $spacer5Xl,
     ),
 );

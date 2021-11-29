@@ -1,3 +1,5 @@
+@import './Helpers.scss';
+
 $breakpoints: (
     tablet: (
         prefix: t,
@@ -8,13 +10,6 @@ $breakpoints: (
         min-width: 80rem
     )
 );
-
-@function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
-}
 
 @mixin createBreakpointClasses($styles) {
     
