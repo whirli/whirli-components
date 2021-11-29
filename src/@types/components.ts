@@ -5,6 +5,7 @@ export interface ComponentStyles {
   };
 }
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export interface ComponentProps {
   [key: string]: {
     required?: boolean;
@@ -13,6 +14,7 @@ export interface ComponentProps {
     validator?: (value: string) => boolean;
   };
 }
+/* eslint-enable  @typescript-eslint/no-explicit-any */
 
 export interface ComponentConfig {
   styles: ComponentStyles;
