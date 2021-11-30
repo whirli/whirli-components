@@ -52,3 +52,20 @@ import WhirliConfig from '../whirli/config';
 
 app.use(WhirliComponents, WhirliConfig);
 ```
+
+#### Copy the local config files
+The the following command from your terminal
+
+`cp -R node_modules/@whirli-components/whirli ./`
+
+#### Create the local config
+@todo, this shouls happen automatically when pulling the components
+
+In the whirli folder, create a `config.ts` file and import the relative configs
+
+```
+import FirstComponent from './FirstComponent/FirstComponent.config'
+export default {
+    FirstComponent
+}
+```
