@@ -70,3 +70,12 @@ export default {
     FirstComponent
 }
 ```
+
+#### Add SCSS to your shim file
+
+```shims.vue.d.ts
+declare module '*.scss' {
+  const content: {[className: string]: string};
+  export default content;
+}
+```
