@@ -25,7 +25,7 @@
       <BaseColumn :spans="{ default: 12, tablet: 6 }">Hello world 2</BaseColumn>
     </BaseGrid>
     <BaseSection :size="{ top: { default: 'lg', tablet: '5xl' }, bottom: 'default' }">
-      <BaseText color="default">Hello from section</BaseText>
+      <BaseText color="default" font="mono">Hello from section</BaseText>
     </BaseSection>
   </div>
 </template>

@@ -48,7 +48,9 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.FONT]: {
     generateBreakpoints: true,
     classes: {
-      default: 'font-arial',
+      default: 'font-sans',
+      bold: 'font-bold ',
+      mono: 'font-mono',
       ...config.styles[PropKeys.FONT]?.classes,
     } as Record<PropColor, string>,
   },

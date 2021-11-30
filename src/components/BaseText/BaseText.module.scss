@@ -1,6 +1,21 @@
 @import '../../styles/Breakpoints.scss';
 @import '../../styles/Helpers.scss';
 
+@font-face {
+    font-family: "Maax";
+    src: url('~@whirli-components/src/assets/fonts/Maax.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "MaaxBold";
+    src: url('~@whirli-components/src/assets/fonts/MaaxBold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "MaaxMono";
+    src: url('~@whirli-components/src/assets/fonts/MaaxMonoRegular.woff2') format("woff2");
+}
+
 // default styles
 .text {}
 
@@ -11,6 +26,20 @@
 .transform-uppercase {
     text-transform: uppercase;
 }
+
+.font-sans {
+    font-family: 'Maax', Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.font-bold {
+    font-family: 'MaaxBold', Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.font-mono {
+    font-family: 'MaaxMono', "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
 
 // breakpoint styles
 $packageBreakpointStyles: (
@@ -109,8 +138,5 @@ $packageBreakpointStyles: (
     ),
     align-right: (
         text-align: right,
-    ),
-    family-arial: (
-        font-family: arial,
     )
 );
