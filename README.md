@@ -64,7 +64,7 @@ The the following command from your terminal
 
 In the whirli folder, create a `config.ts` file and import the relative configs
 
-```
+```config.ts
 import FirstComponent from './FirstComponent/FirstComponent.config'
 export default {
     FirstComponent
