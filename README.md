@@ -26,7 +26,8 @@ yarn lint
 ```
 
 ## Install
-While still under heavy development, the package is not in npm, it will need to be copied.
+Install the package dependencies in package.json:
+`"@whirli/components": "https://github.com/whirli/whirli-constants.git#master"`
 
 ### Vue
 
@@ -57,19 +58,8 @@ app.use(WhirliComponents, WhirliConfig);
 #### Copy the local config files
 The the following command from your terminal
 
-`cp -R node_modules/@whirli-components/whirli ./`
+`cp -R node_modules/@whirli/components/whirli ./`
 
-#### Create the local config
-@todo, this shouls happen automatically when pulling the components
-
-In the whirli folder, create a `config.ts` file and import the relative configs
-
-```config.ts
-import FirstComponent from './FirstComponent/FirstComponent.config'
-export default {
-    FirstComponent
-}
-```
 
 #### Add SCSS to your shim file
 
@@ -79,3 +69,42 @@ declare module '*.scss' {
   export default content;
 }
 ```
+
+#### Add package alias
+
+##### nuxt.config.ts
+```ts
+'@whirli': resolve(__dirname, './whirli'),
+'@whirli-components': resolve(__dirname, './node_modules/@whirli/components'),
+```
+
+##### tsconfig.json
+```ts
+"paths": {
+    "@whirli": [
+      "./whirli"
+    ],
+    "@whirli-components/*": [
+      "node_modules/@whirli/components/*"
+    ],
+  }
+```
+
+##### jest.config.js
+```js
+module.exports = {
+    moduleFileExtensions: ['js', 'ts', 'scss', 'vue'],
+    /**/
+    transform: {
+      '^.+\\.vue$': 'vue-jest',
+      '^.+\\.tsx?$': 'ts-jest',
+    },
+    /**/
+    transformIgnorePatterns: ['<rootDir>/node_modules/(?!@whirli.*)'],
+    moduleNameMapper: {
+      '^@whirli-components(.*)$': '<rootDir>/node_modules/@whirli/components/$1',
+      '^@whirli(.*)$': '<rootDir>/whirli/$1',
+    },
+};
+```
+
