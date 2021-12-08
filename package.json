@@ -11,7 +11,7 @@
     "component:destroy": "node ./generator/scaffold.js destroy"
   },
   "dependencies": {
-    "@nuxt/kit": "^0.8.1-edge",
+    "@nuxt/kit-edge": "^3.0.0-27313139.1c88580",
     "core-js": "^3.6.5",
     "pathe": "^0.2.0",
     "vue": "^3.0.0",

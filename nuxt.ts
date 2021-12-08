@@ -1,5 +1,5 @@
 import { join } from 'pathe';
-import { defineNuxtModule } from '@nuxt/kit';
+import { defineNuxtModule } from '@nuxt/kit-edge';
 
 export default defineNuxtModule({
   hooks: {
