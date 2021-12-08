@@ -75,7 +75,7 @@ declare module '*.scss' {
 ##### nuxt.config.ts
 ```ts
 '@whirli': resolve(__dirname, './whirli'),
-'@whirli-constants': resolve(__dirname, './node_modules/@whirli/constants'),
+'@whirli-components': resolve(__dirname, './node_modules/@whirli/components'),
 ```
 
 ##### tsconfig.json
