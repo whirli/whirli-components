@@ -55,6 +55,21 @@ import WhirliConfig from '../whirli/config';
 app.use(WhirliComponents, WhirliConfig);
 ```
 
+### Nuxt
+
+#### Register plugin
+
+Add plugin to nuxt.config.ts buildModules
+
+```ts
+buildModules: [
+  /**/
+  '@whirli/components/nuxt'
+]
+```
+
+### Vue / Nuxt
+
 #### Copy the local config files
 The the following command from your terminal
 
@@ -74,7 +89,7 @@ declare module '*.scss' {
 
 ##### nuxt.config.ts
 ```ts
-'@whirli': resolve(__dirname, './whirli'),
+'@whirli-local': resolve(__dirname, './whirli'),
 '@whirli-components': resolve(__dirname, './node_modules/@whirli/components'),
 ```
 
@@ -103,7 +118,7 @@ module.exports = {
     transformIgnorePatterns: ['<rootDir>/node_modules/(?!@whirli.*)'],
     moduleNameMapper: {
       '^@whirli-components(.*)$': '<rootDir>/node_modules/@whirli/components/$1',
-      '^@whirli(.*)$': '<rootDir>/whirli/$1',
+      '^@whirli-local(.*)$': '<rootDir>/whirli/$1',
     },
 };
 ```
