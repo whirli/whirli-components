@@ -15,5 +15,9 @@ import { ConfigStyles, ConfigProps } from './BaseGrid.config';
 const ComponentStyles = ConfigStyles;
 
 const props = defineProps(ConfigProps);
-const classes = [styles.grid];
+
+// Classes
+import useClasses from '../../@use/class';
+const { makeClasses } = useClasses();
+const classes = [styles.grid, ...makeClasses(ComponentStyles, props, styles)];
 </script>

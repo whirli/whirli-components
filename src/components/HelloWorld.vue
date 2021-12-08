@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <BaseText size="5xl" line-height="default" letter-spacing="md">Heading 1</BaseText>
+    <BaseSpacer />
     <BaseButton url="https://www.bbc.co.uk">Link</BaseButton>
     <BaseButton url="/about">Internal</BaseButton>
     <BaseButton @click="alertMe('pressed')">Button</BaseButton>

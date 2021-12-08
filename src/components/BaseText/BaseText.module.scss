@@ -43,8 +43,8 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    color-default: (
-        color: black,
+    color-inherit: (
+        color: inherit,
     ),
     size-3xs: (
         font-size: toRems(10),

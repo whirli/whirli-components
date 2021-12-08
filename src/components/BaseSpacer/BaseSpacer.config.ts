@@ -14,6 +14,7 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
+      '0': 'size-0',
       '4xs': 'size-4xs',
       '3xs': 'size-3xs',
       '2xs': 'size-2xs',

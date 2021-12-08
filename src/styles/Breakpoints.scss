@@ -1,15 +1,5 @@
+@import '@whirli/config.scss';
 @import './Helpers.scss';
-
-$breakpoints: (
-    tablet: (
-        prefix: t,
-        min-width: 48rem
-    ),
-    desktop: (
-        prefix: d,
-        min-width: 80rem
-    )
-);
 
 @mixin createBreakpointClasses($styles) {
     

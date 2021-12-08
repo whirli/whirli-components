@@ -1,5 +1,5 @@
 import { PropKeys, PropValues } from './BaseGrid.constants';
 
-// const propColor = PropValues[PropKeys.COLOR];
+const propGap = PropValues[PropKeys.GAP];
 
-// export type PropColor = typeof propColor[number];
+export type PropGap = typeof propGap[number];

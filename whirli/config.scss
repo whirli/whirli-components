@@ -1,0 +1,18 @@
+@import '@whirli-components/src/styles/Helpers.scss';
+
+$breakpoints: (
+    tablet: (
+        prefix: t,
+        min-width: 48rem,
+    ),
+    desktop: (
+        prefix: d,
+        min-width: 80rem,
+    )
+);
+
+:export {
+    @each $name, $value in $breakpoints {
+        BREAKPOINT_#{to-upper-case(#{$name})}: map-deep-get($breakpoints, #{$name}, 'min-width')
+    }
+}

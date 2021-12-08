@@ -9,11 +9,8 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    size-4xs: (
-        height: $spacer4Xs,
-    ),
-    size-3xs: (
-        height: $spacer3Xs,
+    size-0: (
+        height: 0
     ),
     size-2xs: (
         height: $spacer2Xs,
@@ -47,5 +44,11 @@ $packageBreakpointStyles: (
     ),
     size-5xl: (
         height: $spacer5Xl,
+    ),
+    size-6xl: (
+        height: $spacer6Xl,
+    ),
+    size-7xl: (
+        height: $spacer7Xl,
     ),
 );

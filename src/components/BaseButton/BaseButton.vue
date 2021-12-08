@@ -8,6 +8,12 @@
     v-bind="$attrs"
   >
     <slot />
+    <template #processing>
+      <slot name="processing" />
+    </template>
+    <template #loading>
+      <slot name="loading" />
+    </template>
   </component>
 </template>
 

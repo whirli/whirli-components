@@ -1,10 +1,19 @@
 @import '../../styles/Breakpoints.scss';
+@import '../../styles/Spacers.scss';
 
 // default styles
 .grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
+    width: 100%;
+}
+
+.gap-default {
+    gap: $spacerDefault;
+}
+
+.gap-0 {
+    gap: 0;
 }
 
 // breakpoint styles

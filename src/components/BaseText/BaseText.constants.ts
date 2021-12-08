@@ -10,8 +10,11 @@ export const PropKeys = {
 };
 
 export const PropValues = {
-  [PropKeys.COLOR]: ['default'],
+  [PropKeys.COLOR]: ['inherit'],
   [PropKeys.TAG]: [
+    'a',
+    'nuxt-link',
+    'router-link',
     'span',
     'p',
     'h1',
@@ -28,7 +31,7 @@ export const PropValues = {
     'figcaption',
   ],
   [PropKeys.SIZE]: ['3xs', '2xs', 'xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
-  [PropKeys.FONT]: ['default'],
+  [PropKeys.FONT]: ['default', 'bold', 'mono'],
   [PropKeys.TRANSFORM]: ['default', 'uppercase'],
   [PropKeys.LETTER_SPACING]: ['default', 'md', 'lg', 'xl'],
   [PropKeys.LINE_HEIGHT]: ['3xs', '2xs', 'xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],

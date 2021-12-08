@@ -23,7 +23,7 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.COLOR]: {
     generateBreakpoints: true,
     classes: {
-      default: 'color-default',
+      default: 'color-inherit',
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
@@ -43,23 +43,23 @@ export const ConfigStyles: ComponentStyles = {
       '4xl': 'size-4xl',
       '5xl': 'size-5xl',
       ...config.styles[PropKeys.SIZE]?.classes,
-    } as Record<PropColor, string>,
+    } as Record<PropSize, string>,
   },
   [PropKeys.FONT]: {
     generateBreakpoints: true,
     classes: {
       default: 'font-sans',
-      bold: 'font-bold ',
+      bold: 'font-bold',
       mono: 'font-mono',
       ...config.styles[PropKeys.FONT]?.classes,
-    } as Record<PropColor, string>,
+    } as Record<PropFont, string>,
   },
   [PropKeys.TRANSFORM]: {
     classes: {
       default: 'transform-default',
       uppercase: 'transform-uppercase',
       ...config.styles[PropKeys.TRANSFORM]?.classes,
-    } as Record<PropColor, string>,
+    } as Record<PropTransform, string>,
   },
   [PropKeys.LETTER_SPACING]: {
     generateBreakpoints: true,
@@ -133,19 +133,19 @@ export const ConfigProps: ComponentProps = {
   },
   [PropKeys.LETTER_SPACING]: {
     required: false,
-    type: String as PropType<PropLetterSpacing>,
+    type: [String, Object] as PropType<PropLetterSpacing>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.LETTER_SPACING),
   },
   [PropKeys.LINE_HEIGHT]: {
     required: false,
-    type: String as PropType<PropLineHeight>,
+    type: [String, Object] as PropType<PropLineHeight>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.LINE_HEIGHT),
   },
   [PropKeys.ALIGN]: {
     required: false,
-    type: String as PropType<PropAlign>,
+    type: [String, Object] as PropType<PropAlign>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
   },

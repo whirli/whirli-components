@@ -1,7 +1,7 @@
 export const PropKeys = {
-  // COLOR: 'color',
+  GAP: 'gap',
 };
 
 export const PropValues = {
-  // [PropKeys.COLOR]: ['default'],
+  [PropKeys.GAP]: ['default', '0'],
 };
