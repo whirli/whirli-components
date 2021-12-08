@@ -2,7 +2,7 @@ import { PropType } from 'vue';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
-import config from '@whirli/BaseButtonLink/BaseButtonLink.config';
+import config from '@whirli-local/BaseButtonLink/BaseButtonLink.config';
 
 // Package config
 import { PropKeys } from './BaseButtonLink.constants';

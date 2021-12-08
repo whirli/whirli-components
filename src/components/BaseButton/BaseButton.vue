@@ -27,7 +27,7 @@ import BaseButtonDefault from '../BaseButtonDefault/BaseButtonDefault.vue';
 import BaseButtonLink from '../BaseButtonLink/BaseButtonLink.vue';
 
 // Styles
-import styles from '@whirli/BaseButton/BaseButton.module.scss';
+import styles from '@whirli-local/BaseButton/BaseButton.module.scss';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseButton.config';

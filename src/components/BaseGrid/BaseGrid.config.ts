@@ -3,7 +3,7 @@ import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
-import config from '@whirli/BaseGrid/BaseGrid.config';
+import config from '@whirli-local/BaseGrid/BaseGrid.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseGrid.constants';

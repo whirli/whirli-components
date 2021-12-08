@@ -3,7 +3,7 @@ import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
-import config from '@whirli/BaseSection/BaseSection.config';
+import config from '@whirli-local/BaseSection/BaseSection.config';
 
 // Package config
 import { PropKeys } from './BaseSection.constants';

@@ -19,7 +19,7 @@
       "@/*": [
         "src/*"
       ],
-      "@whirli/*": [
+      "@whirli-local/*": [
         "whirli/*"
       ],
       "@whirli-components/*": [

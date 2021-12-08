@@ -9,7 +9,7 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli/BaseMain/BaseMain.module.scss';
+import styles from '@whirli-local/BaseMain/BaseMain.module.scss';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseMain.config';

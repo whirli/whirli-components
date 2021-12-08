@@ -1,4 +1,4 @@
-import config from '@whirli/FirstComponent/FirstComponent.config';
+import config from '@whirli-local/FirstComponent/FirstComponent.config';
 import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
