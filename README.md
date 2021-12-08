@@ -89,14 +89,14 @@ declare module '*.scss' {
 
 ##### nuxt.config.ts
 ```ts
-'@whirli': resolve(__dirname, './whirli'),
+'@whirli-local': resolve(__dirname, './whirli'),
 '@whirli-components': resolve(__dirname, './node_modules/@whirli/components'),
 ```
 
 ##### tsconfig.json
 ```ts
 "paths": {
-    "@whirli": [
+    "@whirli-local": [
       "./whirli"
     ],
     "@whirli-components/*": [
@@ -118,7 +118,7 @@ module.exports = {
     transformIgnorePatterns: ['<rootDir>/node_modules/(?!@whirli.*)'],
     moduleNameMapper: {
       '^@whirli-components(.*)$': '<rootDir>/node_modules/@whirli/components/$1',
-      '^@whirli(.*)$': '<rootDir>/whirli/$1',
+      '^@whirli-local(.*)$': '<rootDir>/whirli/$1',
     },
 };
 ```
