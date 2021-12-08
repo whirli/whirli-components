@@ -81,7 +81,7 @@ declare module '*.scss' {
 ##### tsconfig.json
 ```ts
 "paths": {
-    "@whirli": [
+    "@whirli-local": [
       "./whirli"
     ],
     "@whirli-components/*": [
