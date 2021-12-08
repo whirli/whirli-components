@@ -55,6 +55,21 @@ import WhirliConfig from '../whirli/config';
 app.use(WhirliComponents, WhirliConfig);
 ```
 
+### Nuxt
+
+#### Register plugin
+
+Add plugin to nuxt.config.ts buildModules
+
+```ts
+buildModules: [
+  /**/
+  '@whirli/components/nuxt'
+]
+```
+
+### Vue / Nuxt
+
 #### Copy the local config files
 The the following command from your terminal
 
