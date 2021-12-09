@@ -1,4 +1,4 @@
-import Breakpoints from '../styles/Breakpoints.scss';
+import Breakpoints from '../styles/Breakpoints.module.scss';
 import { invalidBreakpointWarning, invalidStyleWarning } from './warnings';
 import { ComponentStyles } from '../@types/components';
 
