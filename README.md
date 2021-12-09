@@ -37,7 +37,7 @@ Create a plugin, import and install desired plugins.
 @todo, this should be automatic, potentially `import * as WhirliComponents from '@whirli-components'` or similar.
 
 ```/plugins/whirli-components.ts
-import FirstComponent from "@whirli-components/src/components/FirstComponent/FirstComponent.vue";
+import FirstComponent from "@whirli-components/components/FirstComponent/FirstComponent.vue";
 
 export default {
     install: (app: any, options: any) => {

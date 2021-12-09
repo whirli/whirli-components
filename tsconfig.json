@@ -23,7 +23,7 @@
         "whirli/*"
       ],
       "@whirli-components/*": [
-        "*"
+        "src/*"
       ]
     },
     "lib": [

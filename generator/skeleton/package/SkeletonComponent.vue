@@ -7,7 +7,7 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/SkeletonComponent/SkeletonComponent.module.scss';
+import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss';
 
 // Data
 import { ConfigStyles, ConfigProps } from './SkeletonComponent.config';

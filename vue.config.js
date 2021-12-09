@@ -6,7 +6,7 @@ module.exports = {
     resolve: {
       alias: {
         '@whirli-local': path.resolve(__dirname, 'whirli'),
-        '@whirli-components': path.resolve(__dirname, ''),
+        '@whirli-components': path.resolve(__dirname, 'src'),
       },
     },
   },

@@ -7,7 +7,7 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/BaseSpacer/BaseSpacer.module.scss';
+import styles from '@whirli-local/components/BaseSpacer/BaseSpacer.module.scss';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseSpacer.config';

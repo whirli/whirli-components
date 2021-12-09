@@ -3,7 +3,7 @@ import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
-import config from '@whirli-local/BaseSpacer/BaseSpacer.config';
+import config from '@whirli-local/components/BaseSpacer/BaseSpacer.config';
 
 // Package config
 import { PropKeys } from './BaseSpacer.constants';

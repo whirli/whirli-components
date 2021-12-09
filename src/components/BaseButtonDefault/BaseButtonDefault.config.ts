@@ -2,7 +2,7 @@ import { ComponentStyles, ComponentProps } from '../../@types/components';
 import { ConfigProps as BaseButtonConfigProps } from '../BaseButton/BaseButton.config';
 
 // Local config
-import config from '@whirli-local/BaseButtonDefault/BaseButtonDefault.config';
+import config from '@whirli-local/components/BaseButtonDefault/BaseButtonDefault.config';
 
 // Package config
 import { PropKeys as BaseButtonPropKeys } from '../BaseButton/BaseButton.constants';

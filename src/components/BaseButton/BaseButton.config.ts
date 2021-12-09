@@ -3,7 +3,7 @@ import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
-import config from '@whirli-local/BaseButton/BaseButton.config';
+import config from '@whirli-local/components/BaseButton/BaseButton.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseButton.constants';

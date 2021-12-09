@@ -9,7 +9,7 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/BaseContainer/BaseContainer.module.scss';
+import styles from '@whirli-local/components/BaseContainer/BaseContainer.module.scss';
 
 const classes = [styles.container];
 </script>

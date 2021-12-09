@@ -7,7 +7,7 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/BaseColumn/BaseColumn.module.scss';
+import styles from '@whirli-local/components/BaseColumn/BaseColumn.module.scss';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseColumn.config';
