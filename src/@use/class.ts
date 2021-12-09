@@ -41,7 +41,7 @@ export default function (): Classes {
         }
         // Generate the breakpoint styles
         Object.entries(props[propKey]).forEach(([propBreakpointKey, propBreakpointStyle]) => {
-          const breakpointPrefix: string = Breakpoints[`${propBreakpointKey}Prefix`];
+          const breakpointPrefix: string = styles[`${propBreakpointKey}Prefix`];
           const styleKey: string = config[propKey].classes[propBreakpointStyle as string];
           const breakpointStyleKey = `${breakpointPrefix}:${styleKey}`;
 
