@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseMain.vue - Single classes renders the component 1`] = `
+<div
+  class=""
+  style="padding-top: 100%;"
+>
+  <picture>
+    <img
+      alt="Hello world"
+      class=""
+      height="400"
+      loading="lazy"
+      src="my-image.jpg"
+      width="400"
+    />
+  </picture>
+</div>
+`;

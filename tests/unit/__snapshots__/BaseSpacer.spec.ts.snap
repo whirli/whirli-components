@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseSpacer.vue - Breakpoint classes renders the component 1`] = `
+<div
+  class=""
+/>
+`;
+
+exports[`BaseSpacer.vue - Single classes renders the component 1`] = `
+<div
+  class=""
+/>
+`;

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseButton.vue - Default - State: complete renders the component 1`] = `
+<button
+  class=""
+  type="button"
+>
+  
+  
+  complete
+  
+  
+</button>
+`;
+
+exports[`BaseButton.vue - Default - State: default renders the component 1`] = `
+<button
+  class=""
+  type="button"
+>
+  
+  
+  default
+  
+  
+</button>
+`;
+
+exports[`BaseButton.vue - Default - State: loading renders the component 1`] = `
+<button
+  class=""
+  type="button"
+>
+  
+  
+  loading
+  
+  
+</button>
+`;
+
+exports[`BaseButton.vue - Default - State: processing renders the component 1`] = `
+<button
+  class=""
+  type="button"
+>
+  
+  
+  processing
+  
+  
+</button>
+`;
+
+exports[`BaseButton.vue - Link: External renders the component 1`] = `
+<a
+  class=""
+  href="https://www.whirli.com"
+  rel="nofollow noopener"
+  state="default"
+  target="_blank"
+  type="button"
+>
+  
+  
+  default
+  
+  
+</a>
+`;
+
+exports[`BaseButton.vue - Link: Internal renders the component 1`] = `
+<routerlink
+  class=""
+  state="default"
+  to="/internal"
+  type="button"
+>
+  
+  
+  default
+  
+  
+</routerlink>
+`;
