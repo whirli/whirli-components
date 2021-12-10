@@ -1,7 +1,9 @@
 <template>
   <section :class="classes">
     <BaseSpacer :size="size.top" />
-    <slot />
+    <div>
+      <slot />
+    </div>
     <BaseSpacer :size="size.bottom" />
   </section>
 </template>

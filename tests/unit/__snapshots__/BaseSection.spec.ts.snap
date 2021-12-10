@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseSection.vue - Single classes: Equal top and bottom renders the component 1`] = `
+<section
+  class=""
+>
+  <base-spacer-stub
+    size="md"
+  />
+  <div>
+    
+    Hello world
+    
+  </div>
+  <base-spacer-stub
+    size="md"
+  />
+</section>
+`;
+
+exports[`BaseSection.vue - Single classes: Seperate top and bottom renders the component 1`] = `
+<section
+  class=""
+>
+  <base-spacer-stub
+    size="md"
+  />
+  <div>
+    
+    Hello world
+    
+  </div>
+  <base-spacer-stub
+    size="lg"
+  />
+</section>
+`;

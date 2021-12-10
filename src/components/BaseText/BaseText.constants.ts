@@ -4,8 +4,8 @@ export const PropKeys = {
   SIZE: 'size',
   FONT: 'font',
   TRANSFORM: 'transform',
-  LETTER_SPACING: 'letter-spacing',
-  LINE_HEIGHT: 'line-height',
+  LETTER_SPACING: 'letterSpacing',
+  LINE_HEIGHT: 'lineHeight',
   ALIGN: 'align',
 };
 

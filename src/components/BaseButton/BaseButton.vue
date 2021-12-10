@@ -14,6 +14,9 @@
     <template #loading>
       <slot name="loading" />
     </template>
+    <template #complete>
+      <slot name="complete" />
+    </template>
   </component>
 </template>
 

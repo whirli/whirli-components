@@ -1,3 +1,4 @@
+// @ts-ignore
 import { PropType } from 'vue';
 import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';

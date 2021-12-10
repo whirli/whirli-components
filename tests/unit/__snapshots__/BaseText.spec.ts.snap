@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseText.vue - Breakpoint classes renders the component 1`] = `
+<p
+  class=""
+>
+  
+  Hello World
+  
+</p>
+`;
+
+exports[`BaseText.vue - Single classes renders the component 1`] = `
+<h1
+  class=""
+>
+  
+  Hello World
+  
+</h1>
+`;
