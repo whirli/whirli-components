@@ -1,0 +1,56 @@
+@import '../../styles/Breakpoints.module.scss';
+@import '../../styles/Spacers.scss';
+
+// default styles
+.overlay {
+    padding: $spacer2Xl 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.state-closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in-out opacity 0.5s 0.2s, ease-in-out visibility 1s;
+}
+
+.state-open {
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in-out opacity 0.5s, ease-in-out visibility 0s;
+}
+
+.overlay__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.state-closed .overlay__content {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in-out opacity 0.5s, ease-in-out visibility 0.5s;
+}
+
+.state-open .overlay__content {
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in-out opacity 0.5s, ease-in-out visibility 0s;
+}
+
+.color-default {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+// breakpoint styles
+$packageBreakpointStyles: (
+    /*color-black: (
+        color: black,
+    ),*/
+);

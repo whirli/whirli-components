@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseOverlay.vue - Single classes renders the component 1`] = `
+<div
+  class=""
+>
+  <div
+    class=""
+  >
+    
+    Hello World
+    
+  </div>
+</div>
+`;

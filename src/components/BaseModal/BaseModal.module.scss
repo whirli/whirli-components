@@ -1,0 +1,42 @@
+@import '../../styles/Breakpoints.module.scss';
+@import '../../styles/Spacers.scss';
+
+// default styles
+.modal {
+    box-sizing: border-box;
+    padding: $spacerXl;
+    max-width: 90%;
+    overflow: scroll;
+    max-height: 100%;
+    position: relative;
+}
+
+.modal__close-icon {
+    position: absolute;
+    top: $spacerXl;
+    right: $spacerXl;
+}
+
+.modal__content {
+    width: toRems(800);
+    max-width: 100%;
+}
+
+.color-default {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.size-default {
+    width: toRems(1200);
+}
+
+.size-small {
+    width: toRems(800);
+}
+
+// breakpoint styles
+$packageBreakpointStyles: (
+    /*color-black: (
+        color: black,
+    ),*/
+);

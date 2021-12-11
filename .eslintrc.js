@@ -17,6 +17,7 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    'no-empty': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-unused-vars': 'off',
