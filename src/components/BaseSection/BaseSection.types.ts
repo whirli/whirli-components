@@ -1,6 +1,6 @@
 import { PropKeys, PropValues } from './BaseSection.constants';
 
-const propBackground = PropValues[PropKeys.BACKGROUND];
+const propBackground: string[] = PropValues[PropKeys.BACKGROUND];
 
 export type PropBackground = typeof propBackground[number];
 

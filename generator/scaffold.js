@@ -27,7 +27,7 @@ const SKELETON_PACKAGE_FOLDER = `${SKELETON_FOLDER}/package`;
 const SKELETON_LOCAL_FOLDER = `${SKELETON_FOLDER}/local`;
 
 const COMPONENT_PACKAGE_FOLDER = './src/components';
-const COMPONENT_LOCAL_FOLDER = './whirli';
+const COMPONENT_LOCAL_FOLDER = './whirli/components';
 
 const CONFIG_EXTENSION = 'config.ts';
 const TYPES_EXTENSION = 'types.ts';
