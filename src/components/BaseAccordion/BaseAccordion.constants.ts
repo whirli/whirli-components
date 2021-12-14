@@ -3,6 +3,6 @@ export const PropKeys = {
   NAME: 'name',
 };
 
-export const PropValues = {
+export const PropValues: Record<string, string[]> = {
   [PropKeys.STATE]: ['open', 'closed'],
 };
