@@ -3,12 +3,20 @@
 $breakpoints: (
     tablet: (
         prefix: t,
-        min-width: 48rem,
+        min-width: 672px,
     ),
-    desktop: (
-        prefix: d,
-        min-width: 80rem,
-    )
+    smallDesk: (
+        prefix: sd,
+        min-width: 1056px
+    ),
+    largeDesk: (
+        prefix: ld,
+        min-width: 1312px
+    ),
+    hugeDesk: (
+        name: hd,
+        min-width: 1584px
+    ),
 );
 
 :export {

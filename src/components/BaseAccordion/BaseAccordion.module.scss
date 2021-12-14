@@ -1,0 +1,46 @@
+@import '../../styles/Breakpoints.module.scss';
+
+// default styles
+.accordion {}
+
+.accordion__trigger {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.accordion__content {
+  overflow: hidden;
+  transition: max-height ease-in-out 0.5s;
+}
+
+.state-open.toggle-default .accordion__content {
+    max-height: auto;
+    max-height: var(--accordion-height);
+}
+
+.state-open.toggle-alt .accordion__content {
+    max-height: auto;
+    max-height: var(--accordion-height);
+}
+
+// breakpoint styles
+$packageBreakpointStyles: (
+    'state-open.toggle-default .accordion__content': (
+        max-height: var(--accordion-height),
+    ),
+
+    'state-open.toggle-alt .accordion__content': (
+        max-height: 0,
+    ),
+
+    'state-closed.toggle-default .accordion__content': (
+        max-height: 0,
+    ),
+
+    'state-closed.toggle-alt .accordion__content': (
+        max-height: var(--accordion-height),
+    ),
+);
