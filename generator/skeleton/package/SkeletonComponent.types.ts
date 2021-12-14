@@ -1,5 +1,5 @@
 import { PropKeys, PropValues } from './SkeletonComponent.constants';
 
-// const propColor = PropValues[PropKeys.COLOR];
+// const propColor: string[]  = PropValues[PropKeys.COLOR];
 
 // export type PropColor = typeof propColor[number];

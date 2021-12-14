@@ -1,6 +1,12 @@
 <template>
   <div :class="wrapperClasses">
-    <button :class="triggerClasses" @click="setAccordionToggleState()" :aria-controls="bodyId" :id="headerId">
+    <button
+      :class="triggerClasses"
+      @click="setAccordionToggleState()"
+      :aria-controls="bodyId"
+      :aria-expanded="isAccordionOpen"
+      :id="headerId"
+    >
       <slot name="title" />
     </button>
     <div
@@ -9,17 +15,23 @@
       :class="contentClasses"
       :style="`--accordion-height: ${accordionMaxHeight}`"
       :aria-labelledby="headerId"
-      :aria-expanded="isAccordionOpen"
+      :aria-hidden="!isAccordionOpen"
     >
-      <div ref="accordionContent" :aria-hidden="!isAccordionOpen"><slot name="content" /></div>
+      <div ref="accordionContent"><slot name="content" /></div>
     </div>
   </div>
 </template>
 
 <script setup="props" lang="ts">
 // Vue
-import { defineProps, computed, ref, onMounted, onUpdated, nextTick } from 'vue';
+import { defineProps, computed, ref, onMounted, onUnmounted } from 'vue';
 import type { ComputedRef, Ref } from 'vue';
+
+// Types
+import {
+  ComponentStyles as ComponentStylesInterface,
+  ComponentProps as ComponentPropsInterface,
+} from '../../@types/components';
 
 // Styles
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss';
@@ -27,9 +39,9 @@ import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.
 // Data
 import { ConfigStyles, ConfigProps } from './BaseAccordion.config';
 
-const ComponentStyles = ConfigStyles;
+const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
-const props = defineProps(ConfigProps);
+const props: ComponentPropsInterface = defineProps(ConfigProps);
 
 const TOGGLE_STATES: Record<string, string> = {
   DEFAULT: 'toggle-default',
@@ -40,9 +52,9 @@ const accordionContentWrapper: Ref<HTMLElement> = ref({} as HTMLElement);
 const accordionContent: Ref<HTMLElement> = ref({} as HTMLElement);
 const accordionMaxHeight: Ref<string> = ref('');
 const accordionToggleState: Ref<string> = ref(TOGGLE_STATES.DEFAULT);
-const isAccordionOpen: ComputedRef<boolean> = computed(() => true);
+const isAccordionOpen: Ref<boolean> = ref(false);
 const headerId = `${props.name}-header-id`;
-const bodyId = `${props.name}-body-id`;
+const bodyId = `${props.name}-content-id`;
 
 // Classes
 import useClasses from '../../@use/class';
@@ -52,8 +64,8 @@ const wrapperClasses: ComputedRef<string[]> = computed(() => [
   styles[accordionToggleState.value],
   ...makeClasses(ComponentStyles, props, styles),
 ]);
-const triggerClasses = [styles['accordion__trigger']];
-const contentClasses = [styles['accordion__content']];
+const triggerClasses: string[] = [styles['accordion__trigger']];
+const contentClasses: string[] = [styles['accordion__content']];
 
 function updateAccordionHeight(): void {
   accordionMaxHeight.value = `${accordionContent.value.offsetHeight}px`;
@@ -62,13 +74,28 @@ function updateAccordionHeight(): void {
 function setAccordionToggleState(): void {
   accordionToggleState.value =
     accordionToggleState.value === TOGGLE_STATES.DEFAULT ? TOGGLE_STATES.ALT : TOGGLE_STATES.DEFAULT;
+  setAccordionOpenState();
+}
+
+function setAccordionOpenState(): void {
+  // @todo - Revisit this function
+  setTimeout(() => {
+    isAccordionOpen.value = accordionContentWrapper.value.clientHeight > 0;
+  }, 1000);
+}
+
+function windowResized(): void {
+  accordionToggleState.value = TOGGLE_STATES.DEFAULT;
+  setAccordionOpenState();
 }
 
 onMounted(() => {
   updateAccordionHeight();
-  window.addEventListener('resize', async () => {
-    accordionToggleState.value = TOGGLE_STATES.DEFAULT;
-    updateAccordionHeight();
-  });
+  setAccordionOpenState();
+  window.addEventListener('resize', windowResized);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', windowResized);
 });
 </script>

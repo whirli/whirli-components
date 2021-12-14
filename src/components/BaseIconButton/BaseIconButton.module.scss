@@ -1,0 +1,17 @@
+@import '../../styles/Breakpoints.module.scss';
+
+// default styles
+.icon-button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.icon-button:disabled {
+    cursor: not-allowed;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: ();

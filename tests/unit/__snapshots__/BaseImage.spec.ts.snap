@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseMain.vue - Single classes renders the component 1`] = `
+exports[`BaseImage.vue - Single classes renders the component 1`] = `
 <div
   class=""
   style="padding-top: 100%;"

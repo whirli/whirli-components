@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseText.vue - Single classes renders the component 1`] = `
+exports[`BaseGrid.vue - Single classes renders the component 1`] = `
 <div
   class=""
 >

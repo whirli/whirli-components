@@ -1,26 +1,30 @@
 @import '@whirli-components/styles/Helpers.scss';
 
+$breakpointPrefix: BREAKPOINT_;
+
 $breakpoints: (
     tablet: (
         prefix: t,
         min-width: 672px,
     ),
-    smallDesk: (
+    small_desk: (
         prefix: sd,
         min-width: 1056px
     ),
-    largeDesk: (
+    large_desk: (
         prefix: ld,
         min-width: 1312px
     ),
-    hugeDesk: (
+    huge_desk: (
         name: hd,
         min-width: 1584px
     ),
 );
 
 :export {
+    prefix: $breakpointPrefix;
+    BREAKPOINT_default: 0px;
     @each $name, $value in $breakpoints {
-        BREAKPOINT_#{to-upper-case(#{$name})}: map-deep-get($breakpoints, #{$name}, 'min-width')
+        BREAKPOINT_#{$name}: map-deep-get($breakpoints, #{$name}, 'min-width')
     }
 }

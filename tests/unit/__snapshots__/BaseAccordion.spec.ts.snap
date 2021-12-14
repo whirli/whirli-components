@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseAccordion.vue - Breakpoint classes renders the component 1`] = `
+<div
+  class=""
+>
+  <button
+    aria-controls="accordion-content-id"
+    aria-expanded="false"
+    class=""
+    id="accordion-header-id"
+  >
+    
+    Title
+    
+  </button>
+  <div
+    aria-hidden="true"
+    aria-labelledby="accordion-header-id"
+    class=""
+    id="accordion-content-id"
+    style="--accordion-height: 0px;"
+  >
+    <div>
+      
+      Hello World
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BaseAccordion.vue - Single classes renders the component 1`] = `
+<div
+  class=""
+>
+  <button
+    aria-controls="accordion-content-id"
+    aria-expanded="false"
+    class=""
+    id="accordion-header-id"
+  >
+    
+    Title
+    
+  </button>
+  <div
+    aria-hidden="true"
+    aria-labelledby="accordion-header-id"
+    class=""
+    id="accordion-content-id"
+    style="--accordion-height: 0px;"
+  >
+    <div>
+      
+      Hello World
+      
+    </div>
+  </div>
+</div>
+`;

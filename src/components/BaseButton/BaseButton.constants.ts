@@ -1,11 +1,11 @@
-export const LoadingStates = {
+export const LoadingStates: Record<string, string> = {
   DEFAULT: 'default',
   LOADING: 'loading',
   PROCESSING: 'processing',
   COMPLETE: 'complete',
 };
 
-export const PropKeys = {
+export const PropKeys: Record<string, string> = {
   TYPE: 'type',
   URL: 'url',
   COLOR: 'color',
@@ -13,7 +13,7 @@ export const PropKeys = {
   STATE: 'state',
 };
 
-export const PropValues = {
+export const PropValues: Record<string, string[]> = {
   [PropKeys.TYPE]: ['button', 'submit'],
   [PropKeys.COLOR]: ['default'],
   [PropKeys.SIZE]: ['default'],

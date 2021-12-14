@@ -1,5 +1,5 @@
 import { PropKeys, PropValues } from './BaseSpacer.constants';
 
-const propSize = PropValues[PropKeys.SIZE];
+const propSize: string[] = PropValues[PropKeys.SIZE];
 
 export type PropSize = typeof propSize[number];
