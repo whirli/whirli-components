@@ -4,6 +4,10 @@
       >Hello world</BaseText
     >
     <BaseSection>Hello</BaseSection>
+    <BaseAccordion :state="{ default: 'closed', tablet: 'open' }" name="test">
+      <template v-slot:title>TESTING</template>
+      <template v-slot:content>HELLO</template>
+    </BaseAccordion>
     <BaseModal :state="modalState" @modal:close="setModalState('closed')">Hello world</BaseModal>
 
     <button @click="setModalState('closed')">Close</button>
@@ -17,6 +21,7 @@ import type { Ref } from 'vue';
 
 import BaseText from '@/components/BaseText/BaseText.vue';
 import BaseSection from '@/components/BaseSection/BaseSection.vue';
+import BaseAccordion from '@/components/BaseAccordion/BaseAccordion.vue';
 import BaseModal from '@/components/BaseModal/BaseModal.vue';
 
 const modalState: Ref<string> = ref('closed');
