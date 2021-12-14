@@ -1,0 +1,17 @@
+@import '../../styles/Breakpoints.module.scss';
+
+// default styles
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.style-disc {
+    list-style: disc;
+}
+
+.style-none {
+    list-style: none;
+}
+// breakpoint styles
+$packageBreakpointStyles: ();

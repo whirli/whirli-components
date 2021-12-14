@@ -12,6 +12,10 @@
 
     <button @click="setModalState('closed')">Close</button>
     <button @click="setModalState('open')">Open</button>
+
+    <BaseList>
+      <BaseListItem>Hello world</BaseListItem>
+    </BaseList>
   </div>
 </template>
 
@@ -23,6 +27,8 @@ import BaseText from '@/components/BaseText/BaseText.vue';
 import BaseSection from '@/components/BaseSection/BaseSection.vue';
 import BaseAccordion from '@/components/BaseAccordion/BaseAccordion.vue';
 import BaseModal from '@/components/BaseModal/BaseModal.vue';
+import BaseList from '@/components/BaseList/BaseList.vue';
+import BaseListItem from '@/components/BaseListItem/BaseListItem.vue';
 
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseList.vue - Single classes renders the component 1`] = `
+<ul
+  class=""
+>
+  
+  Hello world
+  
+</ul>
+`;
