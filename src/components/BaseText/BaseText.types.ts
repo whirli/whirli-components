@@ -1,13 +1,13 @@
 import { PropKeys, PropValues } from './BaseText.constants';
 
-const propColor = PropValues[PropKeys.COLOR];
-const propSize = PropValues[PropKeys.SIZE];
-const propTag = PropValues[PropKeys.TAG];
-const propFont = PropValues[PropKeys.FONT];
-const propTransform = PropValues[PropKeys.TRANSFORM];
-const propLineHeight = PropValues[PropKeys.LINE_HEIGHT];
-const propLetterSpacing = PropValues[PropKeys.LETTER_SPACING];
-const propAlign = PropValues[PropKeys.ALIGN];
+const propColor: string[] = PropValues[PropKeys.COLOR];
+const propSize: string[] = PropValues[PropKeys.SIZE];
+const propTag: string[] = PropValues[PropKeys.TAG];
+const propFont: string[] = PropValues[PropKeys.FONT];
+const propTransform: string[] = PropValues[PropKeys.TRANSFORM];
+const propLineHeight: string[] = PropValues[PropKeys.LINE_HEIGHT];
+const propLetterSpacing: string[] = PropValues[PropKeys.LETTER_SPACING];
+const propAlign: string[] = PropValues[PropKeys.ALIGN];
 
 export type PropColor = typeof propColor[number];
 export type PropSize = typeof propSize[number];

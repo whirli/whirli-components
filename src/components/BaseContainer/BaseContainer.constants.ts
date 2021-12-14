@@ -1,7 +1,3 @@
-export const PropKeys = {
-  // COLOR: 'color',
-};
+export const PropKeys: Record<string, string> = {};
 
-export const PropValues = {
-  // [PropKeys.COLOR]: ['default'],
-};
+export const PropValues: Record<string, string[]> = {};

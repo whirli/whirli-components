@@ -1,3 +1,3 @@
-export const PropKeys = {};
+export const PropKeys: Record<string, string> = {};
 
-export const PropValues = {};
+export const PropValues: Record<string, string[]> = {};

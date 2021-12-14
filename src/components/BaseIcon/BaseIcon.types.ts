@@ -1,8 +1,8 @@
 import { PropKeys, PropValues } from './BaseIcon.constants';
 
-const propIcon = PropValues[PropKeys.ICON];
-const propSize = PropValues[PropKeys.SIZE];
-const propColor = PropValues[PropKeys.COLOR];
+const propIcon: string[] = PropValues[PropKeys.ICON];
+const propSize: string[] = PropValues[PropKeys.SIZE];
+const propColor: string[] = PropValues[PropKeys.COLOR];
 
 export type PropIcon = typeof propIcon[number];
 export type PropSize = typeof propSize[number];
