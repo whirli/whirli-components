@@ -20,7 +20,7 @@
     </BaseList>
     <BaseTag>Hello world</BaseTag>
 
-    <BasePagination :first-page="1" :current-page="2" :last-page="30" />
+    <BasePagination :first-page="1" :last-page="30" />
   </div>
 </template>
 

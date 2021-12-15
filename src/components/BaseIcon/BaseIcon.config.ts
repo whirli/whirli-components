@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '../../@types/components';
 import config from '@whirli-local/components/BaseIcon/BaseIcon.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseIcon.constants';
-import type { PropIcon, PropBackdrop, PropSize, PropTheme } from './BaseIcon.types';
+import { PropKeys } from './BaseIcon.constants';
+import type { PropIcon, PropBackdrop, PropSize, PropTheme, PropRotate } from './BaseIcon.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
@@ -40,6 +40,19 @@ export const ConfigStyles: ComponentStyles = {
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },
+  [PropKeys.ROTATE]: {
+    classes: {
+      default: 'rotate-default',
+      '45': 'rotate-45',
+      '90': 'rotate-90',
+      '135': 'rotate-135',
+      '180': 'rotate-180',
+      '225': 'rotate-225',
+      '270': 'rotate-270',
+      '315': 'rotate-315',
+      ...config.styles[PropKeys.ROTATE]?.classes,
+    } as Record<PropRotate, string>,
+  },
 };
 
 export const ConfigProps: ComponentProps = {
@@ -62,7 +75,13 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.THEME]: {
     required: false,
     type: String as PropType<PropTheme>,
-    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.THEME),
+    ...PropHelpers.stylePropValidation(ConfigStyles, PropKeys.THEME),
+    default: 'default',
+  },
+  [PropKeys.ROTATE]: {
+    required: false,
+    type: String as PropType<PropRotate>,
+    ...PropHelpers.stylePropValidation(ConfigStyles, PropKeys.ROTATE),
     default: 'default',
   },
   ...config.props,

@@ -8,13 +8,17 @@
           :href="previousPageUrl"
           @click="goToPreviousPage()"
           backdrop="circle"
+          rotate="90"
+          ref="previousButton"
         />
         <BaseList direction="row">
-          <BaseListItem v-for="pageNumber in getPageNumbers" :key="`page-number-${pageNumber}`">
+          <BaseListItem v-for="(option, index) in getPageNumbers" :key="`page-number-${index}`">
+            <BaseText v-if="option.isPlaceholder">{{ props.placeholder }}</BaseText>
             <BasePageNumber
+              v-else-if="option"
               :disabled="props.busy"
-              :page-number="pageNumber"
-              @page-number:click="goToPage(pageNumber)"
+              :page-number="option.number"
+              @page-number:click="goToPage(option.number ?? 1)"
             />
           </BaseListItem>
         </BaseList>
@@ -24,6 +28,8 @@
           :href="nextPageUrl"
           @click="goToNextPage()"
           backdrop="circle"
+          rotate="270"
+          ref="nextButton"
         />
       </BaseRow>
     </BaseGrid>
@@ -50,6 +56,7 @@ import {
   ComponentStyles as ComponentStylesInterface,
   ComponentProps as ComponentPropsInterface,
 } from '../../@types/components';
+import type { PaginationOption } from '../../@types/pagination';
 
 // Components
 import BaseGrid from '../BaseGrid/BaseGrid.vue';
@@ -63,58 +70,69 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 const props: ComponentPropsInterface = defineProps(ConfigProps);
 
+const firstPage = 1;
+const currentPage: ComputedRef<number> = computed(() => (Route.query.page ? +Route.query.page : 1));
+
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, props, styles)];
 
+function isCurrentPage(number: number): boolean {
+  return number === currentPage.value;
+}
+
 function goToPage(page: number) {
-  if (page < props.firstPage || page > props.lastPage) return;
+  if (page < firstPage || page > props.lastPage) return;
   Emit('pagination:go-to', page);
 }
 
 function goToNextPage() {
-  if (props.currentPage === props.lastPage) return;
+  if (currentPage.value === props.lastPage) return;
   Emit('pagination:next');
 }
 
 function goToPreviousPage() {
-  if (props.currentPage === props.firstPage) return;
+  if (currentPage.value === firstPage) return;
   Emit('pagination:previous');
 }
 
-function isCurrentPage(number: number): boolean {
-  return number === props.currentPage;
-}
-
 const previousPageUrl: ComputedRef<string | boolean> = computed(() => {
-  const previousPageNumber: number = (props.currentPage as number) - 1;
+  const previousPageNumber: number = currentPage.value - 1;
   return previousPageNumber < 1 ? false : `${Route.path}?page=${previousPageNumber}`;
 });
 
 const nextPageUrl: ComputedRef<string | boolean> = computed(() => {
-  const nextPageNumber: number = (props.currentPage as number) + 1;
+  const nextPageNumber: number = currentPage.value + 1;
   return nextPageNumber > props.lastPage ? false : `${Route.path}?page=${nextPageNumber}`;
 });
 
-const getPageNumbers: ComputedRef<number[]> = computed(() => {
-  const lowerBound = Math.max(2, (props.currentPage as number) - (props.delta as number));
-  const upperBound = Math.min(
-    (props.lastPage as number) - 1,
-    (props.currentPage as number) + (props.delta as number)
-  );
+const getPageNumbers: ComputedRef<PaginationOption[]> = computed(() => {
+  const placeholderOption: PaginationOption = { isPlaceholder: true };
+
+  const lowerBound = Math.max(2, currentPage.value - (props.delta as number));
+  const upperBound = Math.min((props.lastPage as number) - 1, currentPage.value + (props.delta as number));
 
   const range = [];
   for (let pageNumber = lowerBound; pageNumber <= upperBound; pageNumber += 1) {
-    range.push(pageNumber);
+    range.push({ number: pageNumber, isPlaceholder: false, isCurrentPage: isCurrentPage(pageNumber) });
   }
 
-  range.unshift(1);
+  if (currentPage.value - (props.delta as number) > 2) range.unshift(placeholderOption);
+
+  if (currentPage.value + (props.delta as number) < (props.lastPage as number) - 1)
+    range.push(placeholderOption);
+
+  range.unshift({ number: 1, isPlaceholder: false, isCurrentPage: isCurrentPage(1) });
 
   if (props.lastPage !== 1) {
-    range.push(props.lastPage);
+    range.push({
+      number: props.lastPage as number,
+      isPlaceholder: false,
+      isCurrentPage: isCurrentPage(props.lastPage as number),
+    });
   }
 
-  return range as number[];
+  return range;
 });
 </script>

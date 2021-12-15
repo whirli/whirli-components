@@ -20,15 +20,7 @@ export const ConfigProps: ComponentProps = {
     type: [Boolean, null] as PropType<boolean | null>,
     default: null,
   },
-  [PropKeys.FIRST_PAGE]: {
-    required: true,
-    type: Number as PropType<number>,
-  },
   [PropKeys.LAST_PAGE]: {
-    required: true,
-    type: Number as PropType<number>,
-  },
-  [PropKeys.CURRENT_PAGE]: {
     required: true,
     type: Number as PropType<number>,
   },
