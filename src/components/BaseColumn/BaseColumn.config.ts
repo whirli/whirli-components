@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseColumn/BaseColumn.config';
 
 // Package config
 import { PropKeys } from './BaseColumn.constants';
-import type { PropSpans, PropAlign, PropJustify } from './BaseColumn.types';
+import type { PropSpans, PropAlign, PropJustify, PropDirection } from './BaseColumn.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
@@ -34,6 +34,7 @@ export const ConfigStyles: ComponentStyles = {
     generateBreakpoints: true,
     classes: {
       default: 'align-default',
+      center: 'align-center',
       end: 'align-end',
       between: 'align-between',
       ...config.styles[PropKeys.ALIGN]?.classes,
@@ -43,10 +44,19 @@ export const ConfigStyles: ComponentStyles = {
     generateBreakpoints: true,
     classes: {
       default: 'justify-default',
+      center: 'justify-center',
       end: 'justify-end',
       between: 'justify-between',
       ...config.styles[PropKeys.JUSTIFY]?.classes,
     } as Record<PropJustify, string>,
+  },
+  [PropKeys.DIRECTION]: {
+    generateBreakpoints: true,
+    classes: {
+      default: 'direction-default',
+      row: 'direction-row',
+      ...config.styles[PropKeys.DIRECTION]?.classes,
+    } as Record<PropDirection, string>,
   },
 };
 
@@ -59,15 +69,21 @@ export const ConfigProps: ComponentProps = {
   },
   [PropKeys.ALIGN]: {
     required: false,
-    type: [String, Object] as PropType<PropSpans | Record<string, PropAlign>>,
+    type: [String, Object] as PropType<PropAlign | Record<string, PropAlign>>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
   },
   [PropKeys.JUSTIFY]: {
     required: false,
-    type: [String, Object] as PropType<PropSpans | Record<string, PropJustify>>,
+    type: [String, Object] as PropType<PropJustify | Record<string, PropJustify>>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.JUSTIFY),
+  },
+  [PropKeys.DIRECTION]: {
+    required: false,
+    type: [String, Object] as PropType<PropDirection | Record<string, PropDirection>>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.DIRECTION),
   },
   ...config.props,
 };

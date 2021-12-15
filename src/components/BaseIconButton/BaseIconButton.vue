@@ -1,7 +1,7 @@
 <template>
-  <button :class="classes">
+  <component :is="props.tag" :class="classes">
     <BaseIcon v-bind="$attrs" />
-  </button>
+  </component>
 </template>
 
 <script setup="props" lang="ts">

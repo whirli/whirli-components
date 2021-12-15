@@ -1,0 +1,25 @@
+@import '../../styles/Breakpoints.module.scss';
+@import '../../styles/Spacers.scss';
+
+// default styles
+.page-number {
+    display: flex;
+    height: $spacerMd;
+    width: $spacerMd;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 $spacer3Xs;
+}
+
+.page-number:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.is-active { background-color: grey;}
+.is-not-active {}
+// breakpoint styles
+$packageBreakpointStyles: (
+
+);

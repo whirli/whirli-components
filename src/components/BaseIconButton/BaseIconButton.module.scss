@@ -7,11 +7,13 @@
     box-shadow: none;
     color: inherit;
     cursor: pointer;
+    display: inline-block;
 }
 
 .icon-button:disabled {
     cursor: not-allowed;
 }
+
 
 // breakpoint styles
 $packageBreakpointStyles: ();

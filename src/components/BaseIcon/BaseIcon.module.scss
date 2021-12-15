@@ -1,10 +1,31 @@
 @import '../../styles/Breakpoints.module.scss';
+@import '../../styles/Spacers.scss';
 @import '../../styles/Helpers.scss';
 
 // default styles
-.icon {}
+.icon {
+    display: block;
+}
 
 .color-inherit {
+    color: inherit;
+}
+
+.backdrop-none {
+    background-color: none !important;
+}
+
+.backdrop-circle {
+    border-radius: 50%;
+    padding: $spacerXs;
+}
+
+.backdrop-square {
+    padding: $spacerXs;
+}
+
+.theme-default {
+    background: grey;
     color: inherit;
 }
 

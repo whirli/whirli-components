@@ -19,6 +19,8 @@
       <BaseListItem>Hello world</BaseListItem>
     </BaseList>
     <BaseTag>Hello world</BaseTag>
+
+    <BasePagination :first-page="1" :current-page="2" :last-page="30" />
   </div>
 </template>
 
@@ -34,6 +36,7 @@ import BaseList from '@/components/BaseList/BaseList.vue';
 import BaseListItem from '@/components/BaseListItem/BaseListItem.vue';
 import BaseDivider from '@/components/BaseDivider/BaseDivider.vue';
 import BaseTag from '@/components/BaseTag/BaseTag.vue';
+import BasePagination from '@/components/BasePagination/BasePagination.vue';
 
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {
