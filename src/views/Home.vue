@@ -12,6 +12,8 @@
 
     <button @click="setModalState('closed')">Close</button>
     <button @click="setModalState('open')">Open</button>
+
+    <BaseTag>Hello world</BaseTag>
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import BaseText from '@/components/BaseText/BaseText.vue';
 import BaseSection from '@/components/BaseSection/BaseSection.vue';
 import BaseAccordion from '@/components/BaseAccordion/BaseAccordion.vue';
 import BaseModal from '@/components/BaseModal/BaseModal.vue';
+import BaseTag from '@/components/BaseTag/BaseTag.vue';
 
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {
