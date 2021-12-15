@@ -1,0 +1,9 @@
+@import '../../styles/Breakpoints.module.scss';
+
+// default styles
+.list-item {
+    display: flex;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: ();
