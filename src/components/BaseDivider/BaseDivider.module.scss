@@ -1,0 +1,18 @@
+@import '../../styles/Breakpoints.module.scss';
+@import '../../styles/Spacers.scss';
+
+// default styles
+.divider {
+  border: none;
+}
+
+.size-default {
+    height: $spacerHairline;
+}
+
+.color-default {
+    background-color: black;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: ();

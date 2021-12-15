@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">Hello from SkeletonComponent component</div>
+  <component :is="props.tag" :class="classes"><slot /></component>
 </template>
 
 <script setup="props" lang="ts">
@@ -7,10 +7,10 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss';
+import styles from '@whirli-local/components/BaseTag/BaseTag.module.scss';
 
 // Data
-import { ConfigStyles, ConfigProps } from './SkeletonComponent.config';
+import { ConfigStyles, ConfigProps } from './BaseTag.config';
 
 // Types
 import {
@@ -25,5 +25,5 @@ const props: ComponentPropsInterface = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.tag, ...makeClasses(ComponentStyles, props, styles)];
 </script>

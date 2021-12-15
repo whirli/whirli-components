@@ -10,12 +10,15 @@
     </BaseAccordion>
     <BaseModal :state="modalState" @modal:close="setModalState('closed')">Hello world</BaseModal>
 
+    <BaseDivider />
+
     <button @click="setModalState('closed')">Close</button>
     <button @click="setModalState('open')">Open</button>
 
     <BaseList>
       <BaseListItem>Hello world</BaseListItem>
     </BaseList>
+    <BaseTag>Hello world</BaseTag>
   </div>
 </template>
 
@@ -29,6 +32,8 @@ import BaseAccordion from '@/components/BaseAccordion/BaseAccordion.vue';
 import BaseModal from '@/components/BaseModal/BaseModal.vue';
 import BaseList from '@/components/BaseList/BaseList.vue';
 import BaseListItem from '@/components/BaseListItem/BaseListItem.vue';
+import BaseDivider from '@/components/BaseDivider/BaseDivider.vue';
+import BaseTag from '@/components/BaseTag/BaseTag.vue';
 
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {
