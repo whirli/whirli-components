@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseTag.vue - Single classes renders the component 1`] = `
+<span
+  class=""
+>
+  
+  Hello World
+  
+</span>
+`;

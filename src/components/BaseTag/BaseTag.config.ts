@@ -43,7 +43,7 @@ export const ConfigProps: ComponentProps = {
     required: false,
     type: String as PropType<PropTheme>,
     default: 'default',
-    ...PropHelpers.stylePropValidation(ConfigStyles, PropKeys.COLOR),
+    ...PropHelpers.stylePropValidation(ConfigStyles, PropKeys.THEME),
   },
   ...config.props,
 };
