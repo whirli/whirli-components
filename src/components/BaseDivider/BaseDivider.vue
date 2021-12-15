@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">Hello from SkeletonComponent component</div>
+  <hr :class="classes" />
 </template>
 
 <script setup="props" lang="ts">
@@ -7,16 +7,16 @@
 import { defineProps } from 'vue';
 
 // Styles
-import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss';
-
-// Data
-import { ConfigStyles, ConfigProps } from './SkeletonComponent.config';
+import styles from '@whirli-local/components/BaseDivider/BaseDivider.module.scss';
 
 // Types
 import {
   ComponentStyles as ComponentStylesInterface,
   ComponentProps as ComponentPropsInterface,
 } from '../../@types/components';
+
+// Data
+import { ConfigStyles, ConfigProps } from './BaseDivider.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -25,5 +25,5 @@ const props: ComponentPropsInterface = defineProps(ConfigProps);
 // Classes
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles.divider, ...makeClasses(ComponentStyles, props, styles)];
 </script>
