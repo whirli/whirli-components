@@ -37,7 +37,7 @@ export const ConfigProps: ComponentProps = {
     required: false,
     type: String as PropType<PropTag>,
     validator: (value: PropTag): boolean => PropValues[PropKeys.TAG].includes(value),
-    default: 'span',
+    default: 'div',
   },
   [PropKeys.THEME]: {
     required: false,

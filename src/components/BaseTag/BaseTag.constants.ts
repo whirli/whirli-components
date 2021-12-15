@@ -4,6 +4,6 @@ export const PropKeys: Record<string, string> = {
 };
 
 export const PropValues: Record<string, string[]> = {
-  [PropKeys.TAG]: ['default', 'span', 'button'],
+  [PropKeys.TAG]: ['div', 'span', 'button'],
   [PropKeys.THEME]: ['default'],
 };
