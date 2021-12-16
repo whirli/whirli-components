@@ -11,6 +11,7 @@
           rotate="90"
           ref="previousButton"
           :is-disabled="isFirstPage"
+          aria-label="Previous page"
         />
         <BaseList direction="row" class="from-tablet">
           <BaseListItem v-for="(option, index) in getPageNumbers" :key="`page-number-${index}`">
@@ -35,6 +36,7 @@
           rotate="270"
           ref="nextButton"
           :is-disabled="isLastPage"
+          aria-label="Next page"
         />
       </BaseRow>
       <BaseRow class="until-tablet">
