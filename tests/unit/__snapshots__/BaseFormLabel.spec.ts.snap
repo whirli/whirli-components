@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormLabel.vue renders the component 1`] = `
+<label
+  class=""
+  for="hello-world"
+>
+  
+  Hello World
+  
+</label>
+`;

@@ -14,6 +14,11 @@ export const ConfigStyles: ComponentStyles = {
 };
 
 export const ConfigProps: ComponentProps = {
+  [PropKeys.IS_DISABLED]: {
+    required: false,
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
   [PropKeys.TAG]: {
     required: false,
     type: String as PropType<PropTag>,

@@ -2,7 +2,7 @@
   <component
     :is="tag"
     :href="pageUrl"
-    :class="[defaultClasses, activeClasses]"
+    :class="[defaultClasses, activeClasses, disabledClasses]"
     @click.prevent="$emit('page-number:click', props.pageNumber)"
   >
     {{ props.pageNumber }}
@@ -23,16 +23,15 @@ import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.modul
 
 // Data
 import { ConfigStyles, ConfigProps } from './BasePageNumber.config';
+import { PropKeys } from '../BasePageNumber/BasePageNumber.constants';
 
 // Types
-import {
-  ComponentStyles as ComponentStylesInterface,
-  ComponentProps as ComponentPropsInterface,
-} from '../../@types/components';
+import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
+import { Props } from '../../@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
-const props: ComponentPropsInterface = defineProps(ConfigProps);
+const props: Props = defineProps(ConfigProps);
 
 const pageUrl: ComputedRef<string> = computed(() => `${Route.path}?page=${props.pageNumber}`);
 const isActivePage: ComputedRef<boolean> = computed(
@@ -47,7 +46,8 @@ const tag: ComputedRef<string> = computed(() => (isActivePage.value ? 'div' : 'a
 import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
 const defaultClasses = [styles['page-number'], ...makeClasses(ComponentStyles, props, styles)];
-const activeClasses: ComputedRef<string> = computed(() =>
-  isActivePage.value ? styles['is-active'] : styles['is-not-active']
+const activeClasses: ComputedRef<string> = computed(() => (isActivePage.value ? styles['is-active'] : ''));
+const disabledClasses: ComputedRef<string> = computed(() =>
+  props[PropKeys.IS_DISABLED] ? styles['is-disabled'] : ''
 );
 </script>

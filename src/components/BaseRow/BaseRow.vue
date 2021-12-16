@@ -16,14 +16,12 @@ import { ConfigStyles, ConfigProps } from './BaseRow.config';
 import BaseColumn from '../BaseColumn/BaseColumn.vue';
 
 // Types
-import {
-  ComponentStyles as ComponentStylesInterface,
-  ComponentProps as ComponentPropsInterface,
-} from '../../@types/components';
+import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
+import { Props } from '../../@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
-const props: ComponentPropsInterface = defineProps(ConfigProps);
+const props: Props = defineProps(ConfigProps);
 
 // Classes
 import useClasses from '../../@use/class';

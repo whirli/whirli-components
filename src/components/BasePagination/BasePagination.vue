@@ -6,31 +6,46 @@
           tag="a"
           icon="ArrowCenter"
           :href="previousPageUrl"
-          @click="goToPreviousPage()"
+          @click.prevent="goToPreviousPage()"
           backdrop="circle"
           rotate="90"
           ref="previousButton"
+          :is-disabled="isFirstPage"
         />
-        <BaseList direction="row">
+        <BaseList direction="row" class="from-tablet">
           <BaseListItem v-for="(option, index) in getPageNumbers" :key="`page-number-${index}`">
             <BaseText v-if="option.isPlaceholder">{{ props.placeholder }}</BaseText>
             <BasePageNumber
               v-else-if="option"
-              :disabled="props.busy"
+              :is-disabled="props.busy"
               :page-number="option.number"
               @page-number:click="goToPage(option.number ?? 1)"
             />
           </BaseListItem>
         </BaseList>
+        <BaseText class="until-tablet">Page {{ currentPage }} of {{ props.lastPage }}</BaseText>
         <BaseIconButton
           tag="a"
           icon="ArrowCenter"
           :href="nextPageUrl"
-          @click="goToNextPage()"
+          @click.prevent="goToNextPage()"
           backdrop="circle"
           rotate="270"
           ref="nextButton"
+          :is-disabled="isLastPage"
         />
+      </BaseRow>
+      <BaseRow class="until-tablet">
+        <BaseFormSelect name="pagination" label="Jump to" @change="goToPage($event.target.value)">
+          <option
+            v-for="(number, index) in props.lastPage"
+            :key="index"
+            :value="number"
+            :selected="number === currentPage"
+          >
+            {{ number }}
+          </option>
+        </BaseFormSelect>
       </BaseRow>
     </BaseGrid>
   </nav>
@@ -52,10 +67,8 @@ import styles from '@whirli-local/components/BasePagination/BasePagination.modul
 import { ConfigStyles, ConfigProps } from './BasePagination.config';
 
 // Types
-import {
-  ComponentStyles as ComponentStylesInterface,
-  ComponentProps as ComponentPropsInterface,
-} from '../../@types/components';
+import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
+import { Props } from '../../@types/props';
 import type { PaginationOption } from '../../@types/pagination';
 
 // Components
@@ -65,13 +78,18 @@ import BasePageNumber from '../BasePageNumber/BasePageNumber.vue';
 import BaseIconButton from '../BaseIconButton/BaseIconButton.vue';
 import BaseList from '../BaseList/BaseList.vue';
 import BaseListItem from '../BaseListItem/BaseListItem.vue';
+import BaseText from '../BaseText/BaseText.vue';
+import BaseFormSelect from '../BaseFormSelect/BaseFormSelect.vue';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
-const props: ComponentPropsInterface = defineProps(ConfigProps);
+const props: Props = defineProps(ConfigProps);
 
 const firstPage = 1;
 const currentPage: ComputedRef<number> = computed(() => (Route.query.page ? +Route.query.page : 1));
+
+const isFirstPage: ComputedRef<boolean> = computed(() => currentPage.value === firstPage);
+const isLastPage: ComputedRef<boolean> = computed(() => currentPage.value === props.lastPage);
 
 // Classes
 import useClasses from '../../@use/class';
