@@ -23,7 +23,9 @@
             />
           </BaseListItem>
         </BaseList>
-        <BaseText class="until-tablet">Page {{ currentPage }} of {{ props.lastPage }}</BaseText>
+        <BaseText ref="pageCount" class="until-tablet">
+          Page {{ currentPage }} of {{ props.lastPage }}
+        </BaseText>
         <BaseIconButton
           tag="a"
           icon="ArrowCenter"
