@@ -1,14 +1,12 @@
 // @ts-ignore
 import { PropType } from 'vue';
-import * as PropHelpers from '../../helpers/props';
 import { ComponentStyles, ComponentProps } from '../../@types/components';
 
 // Local config
 import config from '@whirli-local/components/BasePagination/BasePagination.config';
 
 // Package config
-import { PropKeys, PropValues } from './BasePagination.constants';
-// import type { PropColor } from './BasePagination.types';
+import { PropKeys } from './BasePagination.constants';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

@@ -5,6 +5,4 @@ export const PropKeys: Record<string, string> = {
   PLACEHOLDER: 'placeholder',
 };
 
-export const PropValues: Record<string, string[]> = {
-  // [PropKeys.COLOR]: ['default'],
-};
+export const PropValues: Record<string, string[]> = {};
