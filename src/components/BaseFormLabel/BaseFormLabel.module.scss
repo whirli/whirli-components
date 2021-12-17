@@ -1,0 +1,12 @@
+@import '../../styles/Breakpoints.module.scss';
+
+// default styles
+.label {}
+
+.required:after {
+    content: ' *';
+    display: inline;
+}
+
+// breakpoint styles
+$packageBreakpointStyles: ();

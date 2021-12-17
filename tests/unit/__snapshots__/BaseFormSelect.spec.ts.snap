@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormSelect.vue renders the component 1`] = `
+<div
+  class=""
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <label
+        class=""
+        for="select-name"
+      >
+        
+        Hello World
+        
+      </label>
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      
+      <select
+        class=""
+        id="select-name"
+        name="select-name"
+      >
+        
+        Hello Content
+        
+      </select>
+      
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;

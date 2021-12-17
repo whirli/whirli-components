@@ -16,6 +16,7 @@ describe('BaseIcon.vue - Single classes', () => {
       props: {
         size: 'sm',
         icon: 'Cross',
+        backdrop: 'circle',
       },
     });
   });
@@ -28,11 +29,9 @@ describe('BaseIcon.vue - Single classes', () => {
     expect(wrapper.findComponent(IconCross).exists()).toBeTruthy();
   });
 
-  it('is the correct size', () => {
+  it('has the correct styles', () => {
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.SIZE, 'size-sm')).toBe(true);
-  });
-
-  it('is the correct color', () => {
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.COLOR, 'color-inherit')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.THEME, 'theme-default')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.BACKDROP, 'backdrop-circle')).toBe(true);
   });
 });

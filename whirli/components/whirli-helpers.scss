@@ -1,0 +1,59 @@
+@import '@whirli-components/styles/Breakpoints.module.scss';
+
+@mixin from($from) {
+    $breakpoint: map-deep-get($breakpoints, #{$from}, 'min-width');
+    @media screen and (min-width: $breakpoint) { @content; }
+}
+
+@mixin until($until) {
+    $breakpoint: map-deep-get($breakpoints, #{$until}, 'min-width');
+    @media screen and (max-width: calc($breakpoint - 1px)) { @content; }
+}
+
+@include until(tablet) {
+    .from-tablet {
+        display: none !important;
+    }
+}
+
+@include until(small_desk) {
+    .from-small-desk {
+        display: none !important;
+    }
+}
+
+@include until(large_desk) {
+    .from-large-desk {
+        display: none !important;
+    }
+}
+
+@include until(huge_desk) {
+    .from-huge-desk {
+        display: none !important;
+    }
+}
+
+@include from(tablet) {
+    .until-tablet {
+        display: none !important;
+    }
+}
+
+@include from(small_desk) {
+    .until-small-desk {
+        display: none !important;
+    }
+}
+
+@include from(large_desk) {
+    .until-large-desk {
+        display: none !important;
+    }
+}
+
+@include from(huge_desk) {
+    .until-huge-desk {
+        display: none !important;
+    }
+}

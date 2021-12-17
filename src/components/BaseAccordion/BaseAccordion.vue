@@ -28,10 +28,8 @@ import { defineProps, computed, ref, onMounted, onUnmounted } from 'vue';
 import type { ComputedRef, Ref } from 'vue';
 
 // Types
-import {
-  ComponentStyles as ComponentStylesInterface,
-  ComponentProps as ComponentPropsInterface,
-} from '../../@types/components';
+import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
+import { Props } from '../../@types/props';
 
 // Styles
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss';
@@ -41,7 +39,7 @@ import { ConfigStyles, ConfigProps } from './BaseAccordion.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
-const props: ComponentPropsInterface = defineProps(ConfigProps);
+const props: Props = defineProps(ConfigProps);
 
 const TOGGLE_STATES: Record<string, string> = {
   DEFAULT: 'toggle-default',

@@ -2,11 +2,19 @@
 
 // default styles
 .column {
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    grid-column: span 12 / span 12;
-  }
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  grid-column: span 12 / span 12;
+}
+
+.direction-default {
+  flex-direction: column;
+}
+
+.direction-row {
+  flex-direction: row;
+}
 
 // breakpoint styles
 $packageBreakpointStyles: (
@@ -29,12 +37,18 @@ $packageBreakpointStyles: (
     align-end: (
       align-items: flex-end,
     ),
+    align-center: (
+      align-items: center,
+    ),
     align-between: (
       align-items: space-between,
     ),
 
     justify-default: (
       justify-content: flex-start,
+    ),
+    justify-center: (
+      justify-content: center,
     ),
     justify-end: (
       justify-content: flex-end,

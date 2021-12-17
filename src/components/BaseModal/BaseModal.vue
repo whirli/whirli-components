@@ -39,8 +39,4 @@ import useClasses from '../../@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.modal, ...makeClasses(ComponentStyles, props, styles)];
 const contentClasses = [styles['modal__content']];
-
-const closeModal = (): void => {
-  console.log('Close');
-};
 </script>

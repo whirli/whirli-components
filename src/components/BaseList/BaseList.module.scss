@@ -4,6 +4,15 @@
 .list {
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.direction-row {
+    flex-direction: row;
 }
 
 .style-disc {

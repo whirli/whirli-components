@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormLabel.vue - With Slot renders the component 1`] = `
+<span
+  class=""
+>
+  
+  
+  Hello World
+  
+  
+</span>
+`;
+
+exports[`BaseFormLabel.vue - Without Slot renders the component 1`] = `<!--v-if-->`;

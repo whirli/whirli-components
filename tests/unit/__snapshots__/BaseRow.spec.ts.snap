@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseRow.vue renders the component 1`] = `
+<div
+  class=""
+>
+  
+  
+  Hello World
+  
+  
+</div>
+`;
