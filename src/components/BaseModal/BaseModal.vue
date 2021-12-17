@@ -13,7 +13,7 @@
   </BaseOverlay>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, defineEmits } from 'vue';
 

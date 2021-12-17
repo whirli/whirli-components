@@ -20,7 +20,7 @@
   </component>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, computed } from 'vue';
 import type { ComputedRef, Component } from 'vue';

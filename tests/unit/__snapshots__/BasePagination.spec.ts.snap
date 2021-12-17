@@ -15,6 +15,7 @@ exports[`BasePagination.vue renders the component 1`] = `
       
       
       <a
+        aria-label="Previous page"
         backdrop="circle"
         class=""
         href="/browse?page=2"
@@ -22,6 +23,7 @@ exports[`BasePagination.vue renders the component 1`] = `
         rotate="90"
       >
         <svg
+          aria-label="Previous page"
           class=""
           href="/browse?page=2"
           viewBox="0 0 24 24"
@@ -177,6 +179,7 @@ exports[`BasePagination.vue renders the component 1`] = `
         
       </span>
       <a
+        aria-label="Next page"
         backdrop="circle"
         class=""
         href="/browse?page=4"
@@ -184,6 +187,7 @@ exports[`BasePagination.vue renders the component 1`] = `
         rotate="270"
       >
         <svg
+          aria-label="Next page"
           class=""
           href="/browse?page=4"
           viewBox="0 0 24 24"

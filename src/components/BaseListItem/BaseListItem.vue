@@ -4,7 +4,7 @@
   </component>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps } from 'vue';
 

@@ -2,7 +2,7 @@
   <label :for="props.name" :class="[classes, requiredClass]"><slot /></label>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps } from 'vue';
 

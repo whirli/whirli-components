@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, computed } from 'vue';
 import { ComputedRef } from 'vue';

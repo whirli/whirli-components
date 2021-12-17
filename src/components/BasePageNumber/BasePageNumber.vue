@@ -9,7 +9,7 @@
   </component>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, defineEmits, computed } from 'vue';
 import type { ComputedRef } from 'vue';

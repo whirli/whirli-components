@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, ref, computed, onMounted } from 'vue';
 

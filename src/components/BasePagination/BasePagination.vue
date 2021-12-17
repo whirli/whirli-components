@@ -55,7 +55,7 @@
   </nav>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { computed, defineProps, defineEmits } from 'vue';
 import type { ComputedRef } from 'vue';

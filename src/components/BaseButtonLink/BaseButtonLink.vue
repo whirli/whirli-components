@@ -3,7 +3,7 @@
   <a :href="props.url" v-else target="_blank" rel="nofollow noopener"><slot /></a>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, computed } from 'vue';
 import type { ComputedRef } from 'vue';

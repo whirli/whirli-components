@@ -2,7 +2,7 @@
   <BaseColumn direction="row" v-bind="$attrs" :class="classes"><slot /></BaseColumn>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps } from 'vue';
 

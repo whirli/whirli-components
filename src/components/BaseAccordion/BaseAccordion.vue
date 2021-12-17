@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 // Vue
 import { defineProps, computed, ref, onMounted, onUnmounted } from 'vue';
 import type { ComputedRef, Ref } from 'vue';
