@@ -1,6 +1,6 @@
-import Breakpoints from '../styles/Breakpoints.module.scss';
+import Breakpoints from '@whirli-components/styles/Breakpoints.module.scss';
 import { invalidBreakpointWarning, invalidStyleWarning } from './warnings';
-import { ComponentStyles } from '../@types/components';
+import { ComponentStyles } from '@whirli-components/@types/components';
 
 interface PropValidation {
   /* eslint-disable-next-line */

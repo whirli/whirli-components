@@ -15,12 +15,12 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, defineEmits } from 'vue';
+import { defineEmits } from 'vue';
 
 // Components
-import BaseOverlay from '../BaseOverlay/BaseOverlay.vue';
-import BaseSpacer from '../BaseSpacer/BaseSpacer.vue';
-import BaseIconButton from '../BaseIconButton/BaseIconButton.vue';
+import BaseOverlay from '@whirli-components/components/BaseOverlay/BaseOverlay.vue';
+import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue';
+import BaseIconButton from '@whirli-components/components/BaseIconButton/BaseIconButton.vue';
 
 // Styles
 import styles from '@whirli-local/components/BaseModal/BaseModal.module.scss';
@@ -35,7 +35,7 @@ const props = defineProps(ConfigProps);
 const emits = defineEmits(['modal:close', 'modal:open']);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.modal, ...makeClasses(ComponentStyles, props, styles)];
 const contentClasses = [styles['modal__content']];

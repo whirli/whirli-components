@@ -1,4 +1,4 @@
-import { PropValues as SpacerPropValues } from '../BaseSpacer/BaseSpacer.constants';
+import { PropValues as SpacerPropValues } from '@whirli-components/components/BaseSpacer/BaseSpacer.constants';
 
 export const PropKeys: Record<string, string> = {
   BACKGROUND: 'background',

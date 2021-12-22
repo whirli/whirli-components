@@ -22,12 +22,12 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import type { ComputedRef, Component } from 'vue';
 
 // components
-import BaseButtonDefault from '../BaseButtonDefault/BaseButtonDefault.vue';
-import BaseButtonLink from '../BaseButtonLink/BaseButtonLink.vue';
+import BaseButtonDefault from '@whirli-components/components/BaseButtonDefault/BaseButtonDefault.vue';
+import BaseButtonLink from '@whirli-components/components/BaseButtonLink/BaseButtonLink.vue';
 
 // Styles
 import styles from '@whirli-local/components/BaseButton/BaseButton.module.scss';
@@ -40,7 +40,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.button, ...makeClasses(ComponentStyles, props, styles)];
 

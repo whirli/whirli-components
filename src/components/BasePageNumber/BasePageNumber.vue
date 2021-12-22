@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, defineEmits, computed } from 'vue';
+import { defineEmits, computed } from 'vue';
 import type { ComputedRef } from 'vue';
 import { useRoute } from 'vue-router';
 
@@ -23,11 +23,11 @@ import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.modul
 
 // Data
 import { ConfigStyles, ConfigProps } from './BasePageNumber.config';
-import { PropKeys } from '../BasePageNumber/BasePageNumber.constants';
+import { PropKeys } from '@whirli-components/components/BasePageNumber/BasePageNumber.constants';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -43,7 +43,7 @@ const isActivePage: ComputedRef<boolean> = computed(
 const tag: ComputedRef<string> = computed(() => (isActivePage.value ? 'div' : 'a'));
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const defaultClasses = [styles['page-number'], ...makeClasses(ComponentStyles, props, styles)];
 const activeClasses: ComputedRef<string> = computed(() => (isActivePage.value ? styles['is-active'] : ''));

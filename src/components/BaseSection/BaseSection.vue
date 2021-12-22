@@ -10,14 +10,14 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 
 // Types
 import type { ComputedRef } from 'vue';
 import { ComputedSize } from './BaseSection.types';
 
 // Components
-import BaseSpacer from '../BaseSpacer/BaseSpacer.vue';
+import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue';
 
 // Styles
 import styles from '@whirli-local/components/BaseSection/BaseSection.module.scss';
@@ -30,7 +30,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.section, ...makeClasses(ComponentStyles, props, styles)];
 

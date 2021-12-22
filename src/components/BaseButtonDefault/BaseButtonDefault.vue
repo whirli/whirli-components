@@ -17,10 +17,10 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+;
 
 // constants
-import { LoadingStates } from '../BaseButton/BaseButton.constants';
+import { LoadingStates } from '@whirli-components/components/BaseButton/BaseButton.constants';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseButtonDefault.config';

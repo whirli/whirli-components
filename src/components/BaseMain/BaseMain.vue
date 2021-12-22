@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+;
 
 // Styles
 import styles from '@whirli-local/components/BaseMain/BaseMain.module.scss';
@@ -19,7 +19,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.main, ...makeClasses(ComponentStyles, props, styles)];
 </script>

@@ -1,7 +1,7 @@
 // @ts-ignore
 import { PropType } from 'vue';
-import * as PropHelpers from '../../helpers/props';
-import { ComponentStyles, ComponentProps } from '../../@types/components';
+import * as PropHelpers from '@whirli-components/helpers/props';
+import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 // Local config
 import config from '@whirli-local/components/BaseText/BaseText.config';

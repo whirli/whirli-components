@@ -1,4 +1,4 @@
-import { ConsoleWarnings } from '../constants/warnings';
+import { ConsoleWarnings } from '@whirli-components/constants/warnings';
 
 function baseWarning(warningType: string, warningDetail: string, error: string): void {
   console.warn(`[WHIRLI-COMPONENTS WARN]: ${warningType}: ${warningDetail} failed. ${error}`);

@@ -1,7 +1,7 @@
 // @ts-ignore
 import { PropType } from 'vue';
-import * as PropHelpers from '../../helpers/props';
-import { ComponentStyles, ComponentProps } from '../../@types/components';
+import * as PropHelpers from '@whirli-components/helpers/props';
+import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 // Local config
 import config from '@whirli-local/components/BaseModal/BaseModal.config';
@@ -11,8 +11,8 @@ import { PropKeys, PropValues } from './BaseModal.constants';
 import type { PropColor, PropSize } from './BaseModal.types';
 
 //Dependency config
-import { PropKeys as OverlayPropKeys } from '../BaseOverlay/BaseOverlay.constants';
-import { ConfigProps as OverlayConfigProps } from '../BaseOverlay/BaseOverlay.config';
+import { PropKeys as OverlayPropKeys } from '@whirli-components/components/BaseOverlay/BaseOverlay.constants';
+import { ConfigProps as OverlayConfigProps } from '@whirli-components/components/BaseOverlay/BaseOverlay.config';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

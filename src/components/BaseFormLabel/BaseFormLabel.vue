@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+;
 
 // Styles
 import styles from '@whirli-local/components/BaseFormLabel/BaseFormLabel.module.scss';
@@ -13,15 +13,15 @@ import styles from '@whirli-local/components/BaseFormLabel/BaseFormLabel.module.
 import { ConfigStyles, ConfigProps } from './BaseFormLabel.config';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: string[] = [styles.label, ...makeClasses(ComponentStyles, props, styles)];
 const requiredClass: string = props.required ? styles.required : '';

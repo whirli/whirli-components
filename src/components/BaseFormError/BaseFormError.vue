@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+
 
 // Styles
 import styles from '@whirli-local/components/BaseFormError/BaseFormError.module.scss';
@@ -13,16 +13,16 @@ import styles from '@whirli-local/components/BaseFormError/BaseFormError.module.
 import { ConfigStyles, ConfigProps } from './BaseFormError.config';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
-import BaseText from '../BaseText/BaseText.vue';
+import useClasses from '@whirli-components/@use/class';
+import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 const { makeClasses } = useClasses();
 const classes = [styles.error, ...makeClasses(ComponentStyles, props, styles)];
 </script>

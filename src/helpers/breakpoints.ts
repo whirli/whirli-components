@@ -1,4 +1,4 @@
-import Breakpoints from '../styles/Breakpoints.module.scss';
+import Breakpoints from '@whirli-components/styles/Breakpoints.module.scss';
 
 export const mapBreakpoints = (): Record<string, string> => {
   let mappedBreakpoints = {};
