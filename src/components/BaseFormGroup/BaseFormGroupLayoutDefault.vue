@@ -17,7 +17,6 @@
 <script setup lang="ts">
 // Vue
 
-
 // Data
 import { ConfigProps } from './BaseFormGroupLayout.config';
 

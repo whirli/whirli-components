@@ -1,5 +1,5 @@
 // @ts-ignore
-import { PropType } from 'vue';
+import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 

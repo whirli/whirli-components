@@ -17,8 +17,6 @@
 
 <script setup lang="ts">
 // Vue
-;
-
 // constants
 import { LoadingStates } from '@whirli-components/components/BaseButton/BaseButton.constants';
 

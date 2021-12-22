@@ -8,8 +8,8 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from 'vue';
-import { ComputedRef } from 'vue';
+import { computed } from '@composition';
+import { ComputedRef } from '@composition';
 
 // Styles
 import styles from '@whirli-local/components/BaseOverlay/BaseOverlay.module.scss';

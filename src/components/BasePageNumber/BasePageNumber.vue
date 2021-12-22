@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 // Vue
-import { defineEmits, computed } from 'vue';
-import type { ComputedRef } from 'vue';
+import { defineEmits, computed } from '@composition';
+import type { ComputedRef } from '@composition';
 import { useRoute } from 'vue-router';
 
 defineEmits(['page-number:click']);

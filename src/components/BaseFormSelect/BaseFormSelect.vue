@@ -9,7 +9,6 @@
 <script setup lang="ts">
 // Vue
 
-
 // Styles
 import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss';
 

@@ -10,10 +10,10 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from 'vue';
+import { computed } from '@composition';
 
 // Types
-import type { ComputedRef } from 'vue';
+import type { ComputedRef } from '@composition';
 import { ComputedSize } from './BaseSection.types';
 
 // Components

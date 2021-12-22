@@ -6,10 +6,8 @@
 
 <script setup lang="ts">
 // Vue
-;
-
 // Styles
-import styles from '@whirli-local/components/BaseMain/BaseMain.module.scss';
+import styles from '@whirli-local/components/BaseMain/BaseMain.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseMain.config';

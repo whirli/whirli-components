@@ -1,5 +1,5 @@
 export interface PaginationOption {
-  number?: number;
+  number: number;
   isCurrentPage?: boolean;
   isPlaceholder: boolean;
 }
