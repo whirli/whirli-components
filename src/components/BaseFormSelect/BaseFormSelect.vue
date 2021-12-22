@@ -8,27 +8,30 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+
 
 // Styles
 import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss';
 
 // Data
-import { ConfigStyles, ConfigProps } from '../BaseFormGroup/BaseFormGroupLayout.config';
+import {
+  ConfigStyles,
+  ConfigProps,
+} from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayout.config';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 const props: Props = defineProps(ConfigProps);
 
 // Components
-import BaseFormGroupLayoutDefault from '../BaseFormGroup/BaseFormGroupLayoutDefault.vue';
+import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.input, styles.select, ...makeClasses(ComponentStyles, props, styles)];
 </script>

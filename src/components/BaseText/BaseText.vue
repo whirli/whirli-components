@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps } from 'vue';
+
 
 // Styles
 import styles from '@whirli-local/components/BaseText/BaseText.module.scss';
@@ -17,7 +17,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.text, ...makeClasses(ComponentStyles, props, styles)];
 </script>

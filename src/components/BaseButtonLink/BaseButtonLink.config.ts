@@ -1,6 +1,6 @@
 // @ts-ignore
 import { PropType } from 'vue';
-import { ComponentStyles, ComponentProps } from '../../@types/components';
+import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 // Local config
 import config from '@whirli-local/components/BaseButtonLink/BaseButtonLink.config';

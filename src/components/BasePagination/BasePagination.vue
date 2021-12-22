@@ -57,7 +57,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, defineProps, defineEmits } from 'vue';
+import { computed, defineEmits } from 'vue';
 import type { ComputedRef } from 'vue';
 import { useRoute } from 'vue-router';
 
@@ -71,19 +71,19 @@ import styles from '@whirli-local/components/BasePagination/BasePagination.modul
 import { ConfigStyles, ConfigProps } from './BasePagination.config';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
-import type { PaginationOption } from '../../@types/pagination';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
+import type { PaginationOption } from '@whirli-components/@types/pagination';
 
 // Components
-import BaseGrid from '../BaseGrid/BaseGrid.vue';
-import BaseRow from '../BaseRow/BaseRow.vue';
-import BasePageNumber from '../BasePageNumber/BasePageNumber.vue';
-import BaseIconButton from '../BaseIconButton/BaseIconButton.vue';
-import BaseList from '../BaseList/BaseList.vue';
-import BaseListItem from '../BaseListItem/BaseListItem.vue';
-import BaseText from '../BaseText/BaseText.vue';
-import BaseFormSelect from '../BaseFormSelect/BaseFormSelect.vue';
+import BaseGrid from '@whirli-components/components/BaseGrid/BaseGrid.vue';
+import BaseRow from '@whirli-components/components/BaseRow/BaseRow.vue';
+import BasePageNumber from '@whirli-components/components/BasePageNumber/BasePageNumber.vue';
+import BaseIconButton from '@whirli-components/components/BaseIconButton/BaseIconButton.vue';
+import BaseList from '@whirli-components/components/BaseList/BaseList.vue';
+import BaseListItem from '@whirli-components/components/BaseListItem/BaseListItem.vue';
+import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
+import BaseFormSelect from '@whirli-components/components/BaseFormSelect/BaseFormSelect.vue';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -96,7 +96,7 @@ const isFirstPage: ComputedRef<boolean> = computed(() => currentPage.value === f
 const isLastPage: ComputedRef<boolean> = computed(() => currentPage.value === props.lastPage);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, props, styles)];
 

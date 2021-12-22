@@ -24,12 +24,12 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed, ref, onMounted, onUnmounted } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import type { ComputedRef, Ref } from 'vue';
 
 // Types
-import { ComponentStyles as ComponentStylesInterface } from '../../@types/components';
-import { Props } from '../../@types/props';
+import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
+import { Props } from '@whirli-components/@types/props';
 
 // Styles
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss';
@@ -55,7 +55,7 @@ const headerId = `${props.name}-header-id`;
 const bodyId = `${props.name}-content-id`;
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => [
   styles.accordion,

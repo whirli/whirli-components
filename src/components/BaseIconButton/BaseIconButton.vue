@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import type { ComputedRef } from 'vue';
 
 // Styles
@@ -14,17 +14,17 @@ import styles from '@whirli-local/components/BaseIconButton/BaseIconButton.modul
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseIconButton.config';
-import { PropKeys } from '../BaseIconButton/BaseIconButton.constants';
+import { PropKeys } from '@whirli-components/components/BaseIconButton/BaseIconButton.constants';
 
 // Components
-import BaseIcon from '../BaseIcon/BaseIcon.vue';
+import BaseIcon from '@whirli-components/components/BaseIcon/BaseIcon.vue';
 
 const ComponentStyles = ConfigStyles;
 
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: string[] = [styles['icon-button'], ...makeClasses(ComponentStyles, props, styles)];
 const disabledClasses: ComputedRef<string> = computed(() =>

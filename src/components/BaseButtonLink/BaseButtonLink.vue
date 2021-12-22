@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import type { ComputedRef } from 'vue';
 
 // Data

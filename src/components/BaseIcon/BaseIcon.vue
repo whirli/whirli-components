@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 
 // Types
 import type { ComputedRef, Component } from 'vue';
@@ -19,12 +19,12 @@ import { ConfigStyles, ConfigProps } from './BaseIcon.config';
 import Icons from './Icons';
 
 const ComponentStyles = ConfigStyles;
-import { PropKeys } from '../BaseIcon/BaseIcon.constants';
+import { PropKeys } from '@whirli-components/components/BaseIcon/BaseIcon.constants';
 
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.icon, ...makeClasses(ComponentStyles, props, styles)];
 

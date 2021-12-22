@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 
 // Types
 import type { ComputedRef, Ref } from 'vue';
@@ -36,7 +36,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.image__wrapper, ...makeClasses(ComponentStyles, props, styles)];
 const imageClasses = [styles.image];

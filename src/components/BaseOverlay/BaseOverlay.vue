@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import { ComputedRef } from 'vue';
 
 // Styles
@@ -22,7 +22,7 @@ const ComponentStyles = ConfigStyles;
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '../../@use/class';
+import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => {
   return [styles.overlay, ...makeClasses(ComponentStyles, props, styles)];

@@ -1,5 +1,5 @@
-import Breakpoints from '../styles/Breakpoints.module.scss';
-import { ComponentStyles } from '../@types/components';
+import Breakpoints from '@whirli-components/styles/Breakpoints.module.scss';
+import { ComponentStyles } from '@whirli-components/@types/components';
 
 interface Classes {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
