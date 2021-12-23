@@ -7,6 +7,7 @@ module.exports = {
       alias: {
         '@whirli-local': path.resolve(__dirname, 'whirli'),
         '@whirli-components': path.resolve(__dirname, 'src'),
+        '@composition': path.resolve(__dirname, 'node_modules/vue'),
       },
     },
   },

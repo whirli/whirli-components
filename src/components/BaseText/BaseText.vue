@@ -4,10 +4,8 @@
 
 <script setup lang="ts">
 // Vue
-
-
 // Styles
-import styles from '@whirli-local/components/BaseText/BaseText.module.scss';
+import styles from '@whirli-local/components/BaseText/BaseText.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseText.config';

@@ -4,10 +4,10 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from 'vue';
+import { computed } from '@composition';
 
 // Types
-import type { ComputedRef, Component } from 'vue';
+import type { ComputedRef } from '@composition';
 
 // Styles
 import styles from '@whirli-local/components/BaseIcon/BaseIcon.module.scss';
@@ -29,7 +29,7 @@ const { makeClasses } = useClasses();
 const classes = [styles.icon, ...makeClasses(ComponentStyles, props, styles)];
 
 // Get icon
-const iconComponent: ComputedRef<Component> = computed(() => {
+const iconComponent: ComputedRef<any> = computed((): any => {
   return Icons[props[PropKeys.ICON] as keyof typeof Icons];
 });
 </script>

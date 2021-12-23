@@ -25,8 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { Ref } from 'vue';
+import { ref } from '@composition';
+import type { Ref } from '@composition';
 
 import BaseText from '@/components/BaseText/BaseText.vue';
 import BaseSection from '@/components/BaseSection/BaseSection.vue';

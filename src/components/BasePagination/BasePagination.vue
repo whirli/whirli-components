@@ -20,7 +20,7 @@
               v-else-if="option"
               :is-disabled="props.busy"
               :page-number="option.number"
-              @page-number:click="goToPage(option.number ?? 1)"
+              @page-number:click="goToPage(option.number)"
             />
           </BaseListItem>
         </BaseList>
@@ -57,8 +57,8 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, defineEmits } from 'vue';
-import type { ComputedRef } from 'vue';
+import { computed, defineEmits } from '@composition';
+import type { ComputedRef } from '@composition';
 import { useRoute } from 'vue-router';
 
 const Route = useRoute();
@@ -130,7 +130,7 @@ const nextPageUrl: ComputedRef<string | boolean> = computed(() => {
 });
 
 const getPageNumbers: ComputedRef<PaginationOption[]> = computed(() => {
-  const placeholderOption: PaginationOption = { isPlaceholder: true };
+  const placeholderOption: PaginationOption = { number: 0, isPlaceholder: true };
 
   const lowerBound = Math.max(2, currentPage.value - (props.delta as number));
   const upperBound = Math.min((props.lastPage as number) - 1, currentPage.value + (props.delta as number));

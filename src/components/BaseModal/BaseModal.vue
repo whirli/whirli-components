@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 // Vue
-import { defineEmits } from 'vue';
+import { defineEmits } from '@composition';
 
 // Components
 import BaseOverlay from '@whirli-components/components/BaseOverlay/BaseOverlay.vue';

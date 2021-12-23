@@ -22,8 +22,8 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from 'vue';
-import type { ComputedRef, Component } from 'vue';
+import { computed } from '@composition';
+import type { ComputedRef } from '@composition';
 
 // components
 import BaseButtonDefault from '@whirli-components/components/BaseButtonDefault/BaseButtonDefault.vue';
@@ -44,7 +44,7 @@ import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.button, ...makeClasses(ComponentStyles, props, styles)];
 
-const button: ComputedRef<Component> = computed((): Component => {
+const button: ComputedRef<any> = computed((): any => {
   return props.url !== undefined ? BaseButtonLink : BaseButtonDefault;
 });
 </script>

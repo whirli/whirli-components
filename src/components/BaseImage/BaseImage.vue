@@ -16,10 +16,10 @@
 
 <script setup lang="ts">
 // Vue
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted } from '@composition';
 
 // Types
-import type { ComputedRef, Ref } from 'vue';
+import type { ComputedRef, Ref } from '@composition';
 import type { PropImage } from './BaseImage.types';
 
 // Constants

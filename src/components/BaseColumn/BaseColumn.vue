@@ -4,8 +4,6 @@
 
 <script setup lang="ts">
 // Vue
-;
-
 // Styles
 import styles from '@whirli-local/components/BaseColumn/BaseColumn.module.scss';
 

@@ -24,7 +24,10 @@
       ],
       "@whirli-components/*": [
         "src/*"
-      ]
+      ],
+      "@composition": [
+        "node_modules/vue"
+      ],
     },
     "lib": [
       "esnext",
