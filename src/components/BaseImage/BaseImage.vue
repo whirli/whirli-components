@@ -26,7 +26,7 @@ import type { PropImage } from './BaseImage.types';
 import { PropKeys } from './BaseImage.constants';
 
 // Styles
-import styles from '@whirli-local/components/BaseImage/BaseImage.module.scss';
+import styles from '@whirli-local/components/BaseImage/BaseImage.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseImage.config';

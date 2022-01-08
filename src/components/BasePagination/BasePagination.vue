@@ -65,7 +65,7 @@ const Route = useRoute();
 const Emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
 
 // Styles
-import styles from '@whirli-local/components/BasePagination/BasePagination.module.scss';
+import styles from '@whirli-local/components/BasePagination/BasePagination.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BasePagination.config';

@@ -5,7 +5,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
-import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss';
+import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseFormInput.config';

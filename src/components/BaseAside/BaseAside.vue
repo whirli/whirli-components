@@ -7,7 +7,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
-import styles from '@whirli-local/components/BaseAside/BaseAside.module.scss';
+import styles from '@whirli-local/components/BaseAside/BaseAside.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseAside.config';

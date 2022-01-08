@@ -10,7 +10,7 @@
 // Vue
 
 // Styles
-import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss';
+import styles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss?module';
 
 // Data
 import {

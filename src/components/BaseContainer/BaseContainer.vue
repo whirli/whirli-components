@@ -8,7 +8,7 @@
 // Vue
 
 // Styles
-import styles from '@whirli-local/components/BaseContainer/BaseContainer.module.scss';
+import styles from '@whirli-local/components/BaseContainer/BaseContainer.module.scss?module';
 
 const classes = [styles.container];
 </script>

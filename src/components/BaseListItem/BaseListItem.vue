@@ -7,7 +7,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
-import styles from '@whirli-local/components/BaseListItem/BaseListItem.module.scss';
+import styles from '@whirli-local/components/BaseListItem/BaseListItem.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseListItem.config';
