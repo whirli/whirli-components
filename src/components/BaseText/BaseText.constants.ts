@@ -15,6 +15,8 @@ export const PropValues = {
     'a',
     'nuxt-link',
     'router-link',
+    'address',
+    'time',
     'span',
     'p',
     'h1',
