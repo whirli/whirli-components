@@ -18,6 +18,8 @@ export const PropValues = {
     'address',
     'time',
     'span',
+    'strong',
+    'div',
     'p',
     'h1',
     'h2',
