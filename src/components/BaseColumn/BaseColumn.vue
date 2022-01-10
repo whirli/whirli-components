@@ -5,7 +5,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
-import styles from '@whirli-local/components/BaseColumn/BaseColumn.module.scss';
+import styles from '@whirli-local/components/BaseColumn/BaseColumn.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseColumn.config';

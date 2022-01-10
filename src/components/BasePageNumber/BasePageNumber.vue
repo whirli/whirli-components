@@ -19,7 +19,7 @@ defineEmits(['page-number:click']);
 const Route = useRoute();
 
 // Styles
-import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.module.scss';
+import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BasePageNumber.config';

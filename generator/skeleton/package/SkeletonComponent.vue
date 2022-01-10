@@ -6,7 +6,7 @@
 // Vue
 
 // Styles
-import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss';
+import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './SkeletonComponent.config';

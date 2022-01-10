@@ -5,7 +5,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
-import styles from '@whirli-local/components/BaseDivider/BaseDivider.module.scss';
+import styles from '@whirli-local/components/BaseDivider/BaseDivider.module.scss?module';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';

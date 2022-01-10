@@ -10,7 +10,7 @@ import { computed } from '@composition';
 import type { ComputedRef } from '@composition';
 
 // Styles
-import styles from '@whirli-local/components/BaseIcon/BaseIcon.module.scss';
+import styles from '@whirli-local/components/BaseIcon/BaseIcon.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseIcon.config';

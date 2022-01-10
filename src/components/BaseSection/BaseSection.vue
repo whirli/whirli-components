@@ -20,7 +20,7 @@ import { ComputedSize } from './BaseSection.types';
 import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue';
 
 // Styles
-import styles from '@whirli-local/components/BaseSection/BaseSection.module.scss';
+import styles from '@whirli-local/components/BaseSection/BaseSection.module.scss?module';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseSection.config';
