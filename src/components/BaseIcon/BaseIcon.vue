@@ -16,7 +16,10 @@ import styles from '@whirli-local/components/BaseIcon/BaseIcon.module.scss?modul
 import { ConfigStyles, ConfigProps } from './BaseIcon.config';
 
 // Components
-import Icons from './Icons';
+import PackageIcons from './Icons';
+import { LocalIcons } from '@whirli-local/components/BaseIcon/BaseIcon.config';
+
+const Icons = { ...PackageIcons, ...LocalIcons };
 
 const ComponentStyles = ConfigStyles;
 import { PropKeys } from '@whirli-components/components/BaseIcon/BaseIcon.constants';
