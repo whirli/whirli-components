@@ -4,7 +4,7 @@
       >Hello world</BaseText
     >
     <BaseSection>Hello</BaseSection>
-    <BaseAccordion :state="{ default: 'closed', tablet: 'open' }" name="test">
+    <BaseAccordion :state="{ default: 'closed', tablet: 'open' }" name="test" disable-toggle>
       <template v-slot:title>TESTING</template>
       <template v-slot:content>HELLO</template>
     </BaseAccordion>

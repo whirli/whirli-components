@@ -6,6 +6,7 @@
       :aria-controls="bodyId"
       :aria-expanded="isAccordionOpen"
       :id="headerId"
+      :disabled="props.disableToggle"
     >
       <slot name="title" />
     </button>
