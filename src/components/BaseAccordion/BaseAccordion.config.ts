@@ -26,6 +26,12 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.NAME]: {
     required: false,
     type: String as PropType<string>,
+    default: 'accordion',
+  },
+  [PropKeys.DISABLE_TOGGLE]: {
+    required: false,
+    type: Boolean as PropType<boolean>,
+    default: false,
   },
   [PropKeys.STATE]: {
     required: false,
