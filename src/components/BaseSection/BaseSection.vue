@@ -1,10 +1,10 @@
 <template>
   <section :class="classes">
-    <BaseSpacer :size="size.top" />
+    <BaseSpacer :size="gutter.top" />
     <div>
       <slot />
     </div>
-    <BaseSpacer :size="size.bottom" />
+    <BaseSpacer :size="gutter.bottom" />
   </section>
 </template>
 
@@ -32,9 +32,11 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes = [styles.section, ...makeClasses(ComponentStyles, props, styles)];
+const classes: ComputedRef<string[]> = computed((): string[] => {
+  return [styles.section, ...makeClasses(ComponentStyles, props, styles)];
+});
 
-const size: ComputedRef<ComputedSize> = computed(() => {
+const gutter: ComputedRef<ComputedSize> = computed(() => {
   return {
     top: props.size.top ? props.size.top : props.size.bottom ? undefined : props.size,
     bottom: props.size.bottom ? props.size.bottom : props.size.top ? undefined : props.size,
