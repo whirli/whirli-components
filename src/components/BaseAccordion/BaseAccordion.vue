@@ -33,6 +33,7 @@ import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/
 import { Props } from '@whirli-components/@types/props';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss?module';
 
 // Data
@@ -40,6 +41,7 @@ import { ConfigStyles, ConfigProps } from './BaseAccordion.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 const TOGGLE_STATES: Record<string, string> = {
@@ -58,10 +60,14 @@ const bodyId = `${props.name}-content-id`;
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses: ComputedRef<string[]> = computed(() => [
+const staticWrapperClasses = [...makeClasses(ComponentStyles, props, styles)];
+const dynamicWrapperClasses: ComputedRef<string[]> = computed(() => [
   styles.accordion,
   styles[accordionToggleState.value],
-  ...makeClasses(ComponentStyles, props, styles),
+]);
+const wrapperClasses: ComputedRef<string[]> = computed(() => [
+  ...staticWrapperClasses,
+  ...dynamicWrapperClasses.value,
 ]);
 const triggerClasses: string[] = [styles['accordion__trigger']];
 const contentClasses: string[] = [styles['accordion__content']];
@@ -77,6 +83,7 @@ function setAccordionToggleState(): void {
 }
 
 function setAccordionOpenState(): void {
+  console.log(accordionToggleState.value);
   // @todo - Revisit this function
   setTimeout(() => {
     isAccordionOpen.value = accordionContentWrapper.value.clientHeight > 0;

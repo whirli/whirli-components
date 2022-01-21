@@ -32,6 +32,7 @@
 
 :export {
     @each $name, $value in $breakpoints {
-        #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix')
+        defaultPrefix: null;
+        #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
     }
 }
