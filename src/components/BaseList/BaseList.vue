@@ -16,6 +16,7 @@ import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes

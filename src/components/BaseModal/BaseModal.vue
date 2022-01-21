@@ -31,8 +31,9 @@ import { ConfigStyles, ConfigProps } from './BaseModal.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
-
+// @ts-ignore
 const emits = defineEmits(['modal:close', 'modal:open']);
 
 // Classes

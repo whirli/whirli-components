@@ -62,7 +62,8 @@ import type { ComputedRef } from '@composition';
 import { useRoute } from 'vue-router';
 
 const Route = useRoute();
-const Emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
+// @ts-ignore
+const emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
 
 // Styles
 // @ts-ignore
@@ -88,6 +89,7 @@ import BaseFormSelect from '@whirli-components/components/BaseFormSelect/BaseFor
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 const firstPage = 1;
@@ -107,17 +109,17 @@ function isCurrentPage(number: number): boolean {
 
 function goToPage(page: number) {
   if (page < firstPage || page > props.lastPage) return;
-  Emit('pagination:go-to', page);
+  emit('pagination:go-to', page);
 }
 
 function goToNextPage() {
   if (currentPage.value === props.lastPage) return;
-  Emit('pagination:next');
+  emit('pagination:next');
 }
 
 function goToPreviousPage() {
   if (currentPage.value === firstPage) return;
-  Emit('pagination:previous');
+  emit('pagination:previous');
 }
 
 const previousPageUrl: ComputedRef<string | boolean> = computed(() => {

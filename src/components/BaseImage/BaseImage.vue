@@ -34,6 +34,7 @@ import { ConfigStyles, ConfigProps } from './BaseImage.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

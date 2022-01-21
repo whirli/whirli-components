@@ -38,6 +38,7 @@ import { ConfigStyles, ConfigProps } from './BaseButton.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

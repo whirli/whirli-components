@@ -14,6 +14,7 @@ import { ConfigStyles, ConfigProps } from './BaseMain.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

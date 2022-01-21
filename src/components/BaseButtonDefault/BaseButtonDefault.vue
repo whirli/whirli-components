@@ -22,5 +22,6 @@ import { LoadingStates } from '@whirli-components/components/BaseButton/BaseButt
 // Data
 import { ConfigStyles, ConfigProps } from './BaseButtonDefault.config';
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 </script>

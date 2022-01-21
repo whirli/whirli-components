@@ -12,6 +12,7 @@ import { ConfigStyles, ConfigProps } from './BaseColumn.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

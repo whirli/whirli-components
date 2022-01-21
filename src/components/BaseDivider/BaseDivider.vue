@@ -16,6 +16,7 @@ import { ConfigStyles, ConfigProps } from './BaseDivider.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes

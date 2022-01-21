@@ -41,6 +41,7 @@ import { ConfigStyles, ConfigProps } from './BaseAccordion.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 const TOGGLE_STATES: Record<string, string> = {

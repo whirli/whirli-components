@@ -20,6 +20,7 @@ import { ConfigStyles, ConfigProps } from './BaseOverlay.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

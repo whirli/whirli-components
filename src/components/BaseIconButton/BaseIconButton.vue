@@ -22,6 +22,7 @@ import BaseIcon from '@whirli-components/components/BaseIcon/BaseIcon.vue';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

@@ -12,6 +12,7 @@ import { ConfigStyles, ConfigProps } from './BaseGrid.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

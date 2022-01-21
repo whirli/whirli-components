@@ -25,6 +25,7 @@ const Icons = { ...PackageIcons, ...LocalIcons };
 const ComponentStyles = ConfigStyles;
 import { PropKeys } from '@whirli-components/components/BaseIcon/BaseIcon.constants';
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
