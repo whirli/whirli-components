@@ -19,6 +19,7 @@ defineEmits(['page-number:click']);
 const Route = useRoute();
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.module.scss?module';
 
 // Data
@@ -31,6 +32,7 @@ import { Props } from '@whirli-components/@types/props';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 const pageUrl: ComputedRef<string> = computed(() => `${Route.path}?page=${props.pageNumber}`);

@@ -16,12 +16,12 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // constants
 import { LoadingStates } from '@whirli-components/components/BaseButton/BaseButton.constants';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseButtonDefault.config';
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 </script>

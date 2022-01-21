@@ -11,6 +11,7 @@ import type { ComputedRef } from '@composition';
 // Data
 import { ConfigProps } from './BaseButtonLink.config';
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Component

@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseSpacer/BaseSpacer.module.scss?module';
 
 // Data
@@ -12,6 +12,7 @@ import { ConfigStyles, ConfigProps } from './BaseSpacer.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
