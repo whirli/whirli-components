@@ -7,6 +7,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseMain/BaseMain.module.scss?module';
 
 // Data

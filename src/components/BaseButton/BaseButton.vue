@@ -30,6 +30,7 @@ import BaseButtonDefault from '@whirli-components/components/BaseButtonDefault/B
 import BaseButtonLink from '@whirli-components/components/BaseButtonLink/BaseButtonLink.vue';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseButton/BaseButton.module.scss?module';
 
 // Data

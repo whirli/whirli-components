@@ -10,6 +10,7 @@ import { computed } from '@composition';
 import type { ComputedRef } from '@composition';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseIconButton/BaseIconButton.module.scss?module';
 
 // Data

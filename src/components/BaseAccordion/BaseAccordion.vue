@@ -33,6 +33,7 @@ import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/
 import { Props } from '@whirli-components/@types/props';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss?module';
 
 // Data

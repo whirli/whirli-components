@@ -5,6 +5,7 @@
 <script setup lang="ts">
 // Vue
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseFormLabel/BaseFormLabel.module.scss?module';
 
 // Data

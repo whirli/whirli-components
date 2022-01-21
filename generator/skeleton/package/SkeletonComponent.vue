@@ -6,6 +6,7 @@
 // Vue
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/SkeletonComponent/SkeletonComponent.module.scss?module';
 
 // Data

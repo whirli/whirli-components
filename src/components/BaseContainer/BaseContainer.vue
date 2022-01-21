@@ -8,6 +8,7 @@
 // Vue
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseContainer/BaseContainer.module.scss?module';
 
 const classes = [styles.container];

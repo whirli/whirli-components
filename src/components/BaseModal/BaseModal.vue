@@ -23,6 +23,7 @@ import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue'
 import BaseIconButton from '@whirli-components/components/BaseIconButton/BaseIconButton.vue';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseModal/BaseModal.module.scss?module';
 
 // Data
