@@ -23,6 +23,7 @@ import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue'
 import BaseIconButton from '@whirli-components/components/BaseIconButton/BaseIconButton.vue';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseModal/BaseModal.module.scss?module';
 
 // Data
@@ -30,8 +31,9 @@ import { ConfigStyles, ConfigProps } from './BaseModal.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
-
+// @ts-ignore
 const emits = defineEmits(['modal:close', 'modal:open']);
 
 // Classes

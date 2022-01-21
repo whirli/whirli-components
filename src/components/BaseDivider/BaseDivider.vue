@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseDivider/BaseDivider.module.scss?module';
 
 // Types
@@ -16,6 +16,7 @@ import { ConfigStyles, ConfigProps } from './BaseDivider.config';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes

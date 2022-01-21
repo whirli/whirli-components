@@ -15,14 +15,13 @@
 </template>
 
 <script setup lang="ts">
-// Vue
-
 // Data
 import { ConfigProps } from './BaseFormGroupLayout.config';
 
 // Types
 import { Props } from '@whirli-components/@types/props';
 
+// @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Components

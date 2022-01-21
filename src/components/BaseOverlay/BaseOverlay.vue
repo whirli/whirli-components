@@ -12,6 +12,7 @@ import { computed } from '@composition';
 import { ComputedRef } from '@composition';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseOverlay/BaseOverlay.module.scss?module';
 
 // Data
@@ -19,6 +20,7 @@ import { ConfigStyles, ConfigProps } from './BaseOverlay.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

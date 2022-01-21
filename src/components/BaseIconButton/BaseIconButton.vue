@@ -10,6 +10,7 @@ import { computed } from '@composition';
 import type { ComputedRef } from '@composition';
 
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseIconButton/BaseIconButton.module.scss?module';
 
 // Data
@@ -21,6 +22,7 @@ import BaseIcon from '@whirli-components/components/BaseIcon/BaseIcon.vue';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes

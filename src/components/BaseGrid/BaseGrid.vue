@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // Styles
+// @ts-ignore
 import styles from '@whirli-local/components/BaseGrid/BaseGrid.module.scss?module';
 
 // Data
@@ -12,6 +12,7 @@ import { ConfigStyles, ConfigProps } from './BaseGrid.config';
 
 const ComponentStyles = ConfigStyles;
 
+// @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
