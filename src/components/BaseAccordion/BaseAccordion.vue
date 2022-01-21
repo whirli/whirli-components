@@ -83,7 +83,6 @@ function setAccordionToggleState(): void {
 }
 
 function setAccordionOpenState(): void {
-  console.log(accordionToggleState.value);
   // @todo - Revisit this function
   setTimeout(() => {
     isAccordionOpen.value = accordionContentWrapper.value.clientHeight > 0;
