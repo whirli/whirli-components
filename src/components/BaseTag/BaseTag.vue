@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // Styles
 // @ts-ignore
 import styles from '@whirli-local/components/BaseTag/BaseTag.module.scss?module';

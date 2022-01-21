@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-// Vue
 // Styles
 // @ts-ignore
 import styles from '@whirli-local/components/BaseListItem/BaseListItem.module.scss?module';
