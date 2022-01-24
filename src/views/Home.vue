@@ -36,6 +36,13 @@
         <BaseFormSelectOption :selected="form.country" value="eng">England</BaseFormSelectOption>
         <BaseFormSelectOption :selected="form.country" value="scot">Scotland</BaseFormSelectOption>
       </BaseFormSelect>
+      <BaseFormCheckbox
+        name="consent"
+        label="Is it okay if we email you?"
+        v-model:value="form.consent"
+        @reset:errors="form.errors.clear('consent')"
+        :error="form.errors.get('consent')"
+      />
       <BaseButton type="submit">Login</BaseButton>
     </BaseFormWrapper>
     <BaseText :line-height="{ default: 'md', tablet: 'lg' }" :letter-spacing="{ default: 'md', tablet: 'lg' }"
@@ -79,6 +86,7 @@ import BaseFormWrapper from '@/components/BaseFormWrapper/BaseFormWrapper.vue';
 import BaseFormInput from '@/components/BaseFormInput/BaseFormInput.vue';
 import BaseFormSelect from '@/components/BaseFormSelect/BaseFormSelect.vue';
 import BaseFormSelectOption from '@/components/BaseFormSelectOption/BaseFormSelectOption.vue';
+import BaseFormCheckbox from '@/components/BaseFormCheckbox/BaseFormCheckbox.vue';
 import BaseButton from '@/components/BaseButton/BaseButton.vue';
 
 import { FormErrors } from '@whirli-components/helpers/forms';
@@ -88,6 +96,7 @@ interface MyForm {
   password: string;
   content: string;
   country: string;
+  consent: boolean;
   errors: FormErrors;
 }
 
@@ -96,6 +105,7 @@ const form: MyForm = reactive({
   password: '',
   content: '',
   country: '',
+  consent: false,
   errors: new FormErrors(),
 });
 const modalState: Ref<string> = ref('closed');

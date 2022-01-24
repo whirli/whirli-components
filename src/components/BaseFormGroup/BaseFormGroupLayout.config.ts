@@ -5,6 +5,7 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 
 // Local config
 import config from '@whirli-local/components/BaseFormGroup/BaseFormGroup.config';
+import { PropDirection } from '@whirli-components/components/BaseColumn/BaseColumn.types';
 import { PropKeys } from './BaseFormGroup.constants';
 
 export const ConfigStyles: ComponentStyles = {

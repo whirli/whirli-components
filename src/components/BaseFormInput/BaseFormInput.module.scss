@@ -1,7 +1,9 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
+.input-shared {}
+
 .input {}
-.select {}
+
 // breakpoint styles
 $packageBreakpointStyles: ();

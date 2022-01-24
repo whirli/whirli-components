@@ -1,10 +1,16 @@
 <template>
-  <BaseFormGroupLayoutDefault v-bind="$props" @change="updateValue">
-    <select :id="props.name" :name="props.name" :class="classes" :disabled="props.disabled">
-      <option :selected="!props.selected" disabled>{{ props.dropdownMessage }}</option>
-      <slot />
-    </select>
-  </BaseFormGroupLayoutDefault>
+  <BaseFormGroupLayoutSecondary v-bind="$props">
+    <input
+      type="checkbox"
+      :id="props.name"
+      :name="props.name"
+      :class="classes"
+      :disabled="props.disabled"
+      :aria-disabled="props.disabled"
+      :checked="props.value"
+      @change="updateValue"
+    />
+  </BaseFormGroupLayoutSecondary>
 </template>
 
 <script setup lang="ts">
@@ -14,10 +20,11 @@ import { defineEmits } from '@composition';
 // Styles
 // @ts-ignore
 import sharedStyles from '@whirli-local/components/BaseFormInput/BaseFormInput.module.scss?module';
-import styles from '@whirli-local/components/BaseFormSelect/BaseFormSelect.module.scss?module';
+// @ts-ignore
+import styles from '@whirli-local/components/BaseFormCheckbox/BaseFormCheckbox.module.scss?module';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BaseFormSelect.config';
+import { ConfigStyles, ConfigProps } from './BaseFormCheckbox.config';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
@@ -25,30 +32,30 @@ import { Props } from '@whirli-components/@types/props';
 
 // @ts-ignore
 const emit = defineEmits<{
-  (event: 'update:value', value: string): void;
+  (event: 'update:value', value: boolean): void;
   (event: 'reset:errors'): void;
 }>();
+
+// Components
+import BaseFormGroupLayoutSecondary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutSecondary.vue';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
-// Components
-import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
-
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [
   sharedStyles['input-shared'],
-  styles.select,
+  styles.checkbox,
   ...makeClasses(ComponentStyles, props, styles),
   ...makeClasses(ComponentStyles, props, sharedStyles),
 ];
 
 const updateValue: (event: Event) => void = (event: Event) => {
-  emit('update:value', (event.target as HTMLInputElement).value);
+  emit('update:value', (event.target as HTMLInputElement).checked);
   emit('reset:errors');
 };
 </script>

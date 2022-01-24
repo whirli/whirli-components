@@ -16,6 +16,10 @@
   flex-direction: row;
 }
 
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
 // breakpoint styles
 $packageBreakpointStyles: (
     span-1: ( grid-column: span 1 / span 1 ),

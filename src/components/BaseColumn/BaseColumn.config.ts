@@ -55,6 +55,7 @@ export const ConfigStyles: ComponentStyles = {
     classes: {
       default: 'direction-default',
       row: 'direction-row',
+      'row-reverse': 'direction-row-reverse',
       ...config.styles[PropKeys.DIRECTION]?.classes,
     } as Record<PropDirection, string>,
   },

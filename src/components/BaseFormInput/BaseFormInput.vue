@@ -65,7 +65,7 @@ import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGr
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = [styles['input-shared'], styles.input, ...makeClasses(ComponentStyles, props, styles)];
 
 const isTextarea = props[PropKeys.TYPE] === 'textarea';
 

@@ -1,7 +1,11 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
-.select {}
+.checkbox {}
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$packageBreakpointStyles: (
+    /*color-black: (
+        color: black,
+    ),*/
+);
