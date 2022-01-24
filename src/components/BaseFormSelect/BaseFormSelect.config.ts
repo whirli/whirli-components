@@ -21,6 +21,11 @@ export const ConfigProps: ComponentProps = {
     required: true,
     type: [String, Number] as PropType<string | number>,
   },
+  [PropKeys.HAS_DROPDOWN_MESSAGE]: {
+    required: false,
+    type: Boolean as PropType<boolean>,
+    default: true,
+  },
   [PropKeys.DROPDOWN_MESSAGE]: {
     required: false,
     type: String as PropType<string>,

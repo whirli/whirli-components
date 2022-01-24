@@ -1,7 +1,9 @@
 <template>
   <BaseFormGroupLayoutDefault v-bind="$props" @change="updateValue">
     <select :id="props.name" :name="props.name" :class="classes" :disabled="props.disabled">
-      <option :selected="!props.selected" disabled>{{ props.dropdownMessage }}</option>
+      <option v-if="props.hasDropdownMessage" :selected="!props.selected" disabled>
+        {{ props.dropdownMessage }}
+      </option>
       <slot />
     </select>
   </BaseFormGroupLayoutDefault>

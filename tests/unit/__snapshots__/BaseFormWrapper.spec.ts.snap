@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormWrapper.vue - Single classes renders the component 1`] = `
+<form
+  enctype="application/x-www-form-urlencoded"
+  method="post"
+>
+  
+  Hello World
+  
+</form>
+`;

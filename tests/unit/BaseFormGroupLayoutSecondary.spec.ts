@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import BaseFormGroupLayoutDefault from '@/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
+import BaseFormGroupLayoutSecondary from '@/components/BaseFormGroup/BaseFormGroupLayoutSecondary.vue';
 import BaseFormGroup from '@/components/BaseFormGroup/BaseFormGroup.vue';
 import BaseFormLabel from '@/components/BaseFormLabel/BaseFormLabel.vue';
 import BaseFormError from '@/components/BaseFormError/BaseFormError.vue';
@@ -9,9 +9,9 @@ const label = 'Hello World';
 const content = 'Hello Content';
 const error = 'Hello Error';
 
-describe('BaseFormGroupLayoutDefault.vue', () => {
+describe('BaseFormGroupLayoutSecondary.spec.vue', () => {
   beforeEach(() => {
-    wrapper = mount(BaseFormGroupLayoutDefault, {
+    wrapper = mount(BaseFormGroupLayoutSecondary, {
       slots: {
         default: content,
       },

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
+exports[`BaseFormGroupLayoutSecondary.spec.vue renders the component 1`] = `
 <div
   class=""
 >
@@ -21,14 +21,7 @@ exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
         Hello World
         
       </label>
-      
-      
-    </div>
-    <div
-      class=""
-    >
-      
-      
+       
       
       Hello Content
       

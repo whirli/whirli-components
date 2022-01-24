@@ -45,6 +45,7 @@
           label="Jump to"
           @change="goToPage($event.target.value)"
           :value="currentPage"
+          :has-dropdown-message="false"
         >
           <BaseFormSelectOption
             v-for="(number, index) in props.lastPage"
