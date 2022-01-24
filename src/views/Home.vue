@@ -1,5 +1,43 @@
 <template>
   <div class="home">
+    <BaseFormWrapper action="Test" @submit.prevent="alertMe()">
+      <BaseFormInput
+        type="email"
+        name="email"
+        label="Email"
+        disabled
+        v-model:value="form.email"
+        @reset:errors="form.errors.clear('email')"
+        :error="form.errors.get('email')"
+      />
+      <BaseFormInput
+        type="password"
+        name="password"
+        label="Password"
+        v-model:value="form.password"
+        @reset:errors="form.errors.clear('password')"
+        :error="form.errors.get('password')"
+      />
+      <BaseFormInput
+        type="textarea"
+        name="content"
+        label="Content"
+        v-model:value="form.content"
+        @reset:errors="form.errors.clear('content')"
+        :error="form.errors.get('content')"
+      />
+      <BaseFormSelect
+        name="country"
+        label="Country"
+        v-model:value="form.country"
+        @reset:errors="form.errors.clear('country')"
+        :error="form.errors.get('country')"
+      >
+        <BaseFormSelectOption :selected="form.country" value="eng">England</BaseFormSelectOption>
+        <BaseFormSelectOption :selected="form.country" value="scot">Scotland</BaseFormSelectOption>
+      </BaseFormSelect>
+      <BaseButton type="submit">Login</BaseButton>
+    </BaseFormWrapper>
     <BaseText :line-height="{ default: 'md', tablet: 'lg' }" :letter-spacing="{ default: 'md', tablet: 'lg' }"
       >Hello world</BaseText
     >
@@ -25,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from '@composition';
+import { ref, reactive } from '@composition';
 import type { Ref } from '@composition';
 
 import BaseText from '@/components/BaseText/BaseText.vue';
@@ -37,9 +75,33 @@ import BaseListItem from '@/components/BaseListItem/BaseListItem.vue';
 import BaseDivider from '@/components/BaseDivider/BaseDivider.vue';
 import BaseTag from '@/components/BaseTag/BaseTag.vue';
 import BasePagination from '@/components/BasePagination/BasePagination.vue';
+import BaseFormWrapper from '@/components/BaseFormWrapper/BaseFormWrapper.vue';
+import BaseFormInput from '@/components/BaseFormInput/BaseFormInput.vue';
+import BaseFormSelect from '@/components/BaseFormSelect/BaseFormSelect.vue';
+import BaseFormSelectOption from '@/components/BaseFormSelectOption/BaseFormSelectOption.vue';
+import BaseButton from '@/components/BaseButton/BaseButton.vue';
 
+import { FormErrors } from '@whirli-components/helpers/forms';
+
+interface MyForm {
+  email: string;
+  password: string;
+  content: string;
+  country: string;
+  errors: FormErrors;
+}
+
+const form: MyForm = reactive({
+  email: '',
+  password: '',
+  content: '',
+  country: '',
+  errors: new FormErrors(),
+});
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {
   modalState.value = state;
 };
+
+const alertMe = () => alert('LOGGIN');
 </script>

@@ -40,15 +40,20 @@
         />
       </BaseRow>
       <BaseRow class="until-tablet">
-        <BaseFormSelect name="pagination" label="Jump to" @change="goToPage($event.target.value)">
-          <option
+        <BaseFormSelect
+          name="pagination"
+          label="Jump to"
+          @change="goToPage($event.target.value)"
+          :value="currentPage"
+        >
+          <BaseFormSelectOption
             v-for="(number, index) in props.lastPage"
             :key="index"
             :value="number"
-            :selected="number === currentPage"
+            :selected="currentPage"
           >
             {{ number }}
-          </option>
+          </BaseFormSelectOption>
         </BaseFormSelect>
       </BaseRow>
     </BaseGrid>
@@ -86,6 +91,7 @@ import BaseList from '@whirli-components/components/BaseList/BaseList.vue';
 import BaseListItem from '@whirli-components/components/BaseListItem/BaseListItem.vue';
 import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 import BaseFormSelect from '@whirli-components/components/BaseFormSelect/BaseFormSelect.vue';
+import BaseFormSelectOption from '@whirli-components/components/BaseFormSelectOption/BaseFormSelectOption.vue';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
