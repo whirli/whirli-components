@@ -61,13 +61,12 @@ const props: Props = defineProps(ConfigProps);
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => [
+  styles['radio-button-wrapper'],
   ...makeClasses(ComponentStyles, props, styles),
 ]);
-const inputClasses: ComputedRef<string[]> = computed(() => [...makeClasses(ComponentStyles, props, styles)]);
-const displayClasses: ComputedRef<string[]> = computed(() => [
-  ...makeClasses(ComponentStyles, props, styles),
-]);
-const fakerClasses: ComputedRef<string[]> = computed(() => [...makeClasses(ComponentStyles, props, styles)]);
+const inputClasses: ComputedRef<string[]> = computed(() => [styles['radio-button-input']]);
+const displayClasses: ComputedRef<string[]> = computed(() => [styles['radio-button-display']]);
+const fakerClasses: ComputedRef<string[]> = computed(() => [styles['radio-button-faker']]);
 
 const isChecked: ComputedRef<boolean> = computed(() => props.value == props.modelValue);
 const id: ComputedRef<string> = computed(() => `${props.group}-${props.value}`);
