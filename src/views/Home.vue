@@ -43,6 +43,27 @@
         @reset:errors="form.errors.clear('consent')"
         :error="form.errors.get('consent')"
       />
+      <div class="radio-buttons">
+        <BaseFormRadioButton
+          group="test"
+          value="testing-1"
+          label="Label"
+          v-model:modelValue="form.radio"
+          @reset:errors="form.errors.clear('radio')"
+          :error="form.errors.get('radio')"
+        >
+          <template #preLabel>Before label</template>
+          <template #postInput>After input</template>
+        </BaseFormRadioButton>
+        <BaseFormRadioButton
+          group="test"
+          label="Label2"
+          v-model:modelValue="form.radio"
+          value="testing-2"
+          @reset:errors="form.errors.clear('radio')"
+          :error="form.errors.get('radio')"
+        />
+      </div>
       <BaseButton type="submit">Login</BaseButton>
     </BaseFormWrapper>
     <BaseText :line-height="{ default: 'md', tablet: 'lg' }" :letter-spacing="{ default: 'md', tablet: 'lg' }"
@@ -88,6 +109,7 @@ import BaseFormSelect from '@/components/BaseFormSelect/BaseFormSelect.vue';
 import BaseFormSelectOption from '@/components/BaseFormSelectOption/BaseFormSelectOption.vue';
 import BaseFormCheckbox from '@/components/BaseFormCheckbox/BaseFormCheckbox.vue';
 import BaseButton from '@/components/BaseButton/BaseButton.vue';
+import BaseFormRadioButton from '@/components/BaseFormRadioButton/BaseFormRadioButton.vue';
 
 import { FormErrors } from '@whirli-components/helpers/forms';
 
@@ -97,6 +119,7 @@ interface MyForm {
   content: string;
   country: string;
   consent: boolean;
+  radio: string | number;
   errors: FormErrors;
 }
 
@@ -106,6 +129,7 @@ const form: MyForm = reactive({
   content: '',
   country: '',
   consent: false,
+  radio: 'testing-1',
   errors: new FormErrors(),
 });
 const modalState: Ref<string> = ref('closed');

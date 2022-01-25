@@ -1,5 +1,5 @@
 export const PropKeys: Record<string, string> = {
-  VALUE: 'value',
+  MODAL_VALUE: 'modelValue',
   HAS_DROPDOWN_MESSAGE: 'hasDropdownMessage',
   DROPDOWN_MESSAGE: 'dropdownMessage',
   SELECTED: 'selected',

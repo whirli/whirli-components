@@ -7,7 +7,7 @@
       :class="classes"
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
-      :checked="props.value"
+      :checked="props.modelValue"
       @change="updateValue"
     />
   </BaseFormGroupLayoutSecondary>

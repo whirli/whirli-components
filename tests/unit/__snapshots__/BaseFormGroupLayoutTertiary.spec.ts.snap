@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormGroupLayoutTertiary.spec.vue renders the component 1`] = `
+<div
+  class=""
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      <div
+        class=""
+      >
+        
+        
+        <div
+          class=""
+        >
+          
+          <!--v-if-->
+          <div
+            class=""
+          >
+            
+            
+            <label
+              class=""
+            >
+              
+              Hello World
+              
+            </label>
+            
+            
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      <div
+        class=""
+      >
+        
+        
+        <div
+          class=""
+        >
+          
+          <div
+            class=""
+          >
+            
+            
+            
+            Hello Content
+            
+            
+            
+          </div>
+          <!--v-if-->
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;

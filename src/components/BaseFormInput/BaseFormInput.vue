@@ -21,7 +21,7 @@
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
       :multiple="props.multiple"
-      :value="props.value"
+      :value="props.modelValue"
       @keyup="updateValue"
       @keydown="resetErrors"
       @change="onChange"
