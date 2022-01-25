@@ -16,7 +16,7 @@ $breakpoints: (
         min-width: 1312px
     ),
     huge_desk: (
-        name: hd,
+        prefix: hd,
         min-width: 1584px
     ),
 );
@@ -25,6 +25,6 @@ $breakpoints: (
     prefix: $breakpointPrefix;
     BREAKPOINT_default: 0px;
     @each $name, $value in $breakpoints {
-        BREAKPOINT_#{$name}: map-deep-get($breakpoints, #{$name}, 'min-width')
+        #{$breakpointPrefix}#{$name}: map-deep-get($breakpoints, #{$name}, 'min-width')
     }
 }

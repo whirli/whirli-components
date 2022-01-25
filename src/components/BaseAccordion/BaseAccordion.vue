@@ -60,10 +60,14 @@ const bodyId = `${props.name}-content-id`;
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses: ComputedRef<string[]> = computed(() => [
+const staticWrapperClasses = [...makeClasses(ComponentStyles, props, styles)];
+const dynamicWrapperClasses: ComputedRef<string[]> = computed(() => [
   styles.accordion,
   styles[accordionToggleState.value],
-  ...makeClasses(ComponentStyles, props, styles),
+]);
+const wrapperClasses: ComputedRef<string[]> = computed(() => [
+  ...staticWrapperClasses,
+  ...dynamicWrapperClasses.value,
 ]);
 const triggerClasses: string[] = [styles['accordion__trigger']];
 const contentClasses: string[] = [styles['accordion__content']];
