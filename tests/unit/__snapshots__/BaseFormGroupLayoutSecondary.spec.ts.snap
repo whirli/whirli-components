@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormGroupLayoutSecondary.spec.vue renders the component 1`] = `
+<div
+  class=""
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <label
+        class=""
+      >
+        
+        Hello World
+        
+      </label>
+       
+      
+      Hello Content
+      
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;

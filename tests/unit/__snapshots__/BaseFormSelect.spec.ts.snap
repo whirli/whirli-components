@@ -3,6 +3,10 @@
 exports[`BaseFormSelect.vue renders the component 1`] = `
 <div
   class=""
+  disabled="false"
+  dropdownmessage="Please select an option"
+  hasdropdownmessage="true"
+  selected=""
 >
   
   <div
@@ -36,6 +40,11 @@ exports[`BaseFormSelect.vue renders the component 1`] = `
         id="select-name"
         name="select-name"
       >
+        <option
+          disabled=""
+        >
+          Please select an option
+        </option>
         
         Hello Content
         

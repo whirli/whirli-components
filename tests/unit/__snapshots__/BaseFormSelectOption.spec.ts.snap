@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormSelectOption.vue renders the component 1`] = `
+<option
+  value="hello-world"
+>
+  
+  Hello
+  
+</option>
+`;

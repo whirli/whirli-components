@@ -1,6 +1,6 @@
 <template>
   <BaseFormGroup>
-    <BaseGrid>
+    <BaseGrid gap="0">
       <BaseRow>
         <BaseFormLabel :name="props.name">{{ props.label }}</BaseFormLabel>
       </BaseRow>

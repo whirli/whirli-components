@@ -9,7 +9,7 @@ const label = 'Hello World';
 const content = 'Hello Content';
 const error = 'Hello Error';
 
-describe('BaseFormGroup.vue', () => {
+describe('BaseFormGroupLayoutDefault.vue', () => {
   beforeEach(() => {
     wrapper = mount(BaseFormGroupLayoutDefault, {
       slots: {

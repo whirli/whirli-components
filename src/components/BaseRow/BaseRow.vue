@@ -1,5 +1,5 @@
 <template>
-  <BaseColumn direction="row" v-bind="$attrs" :class="classes"><slot /></BaseColumn>
+  <BaseColumn :direction="props.direction" v-bind="$attrs" :class="classes"><slot /></BaseColumn>
 </template>
 
 <script setup lang="ts">

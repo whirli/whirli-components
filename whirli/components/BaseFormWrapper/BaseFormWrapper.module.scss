@@ -1,0 +1,8 @@
+@import '@whirli-components/components/BaseFormWrapper/BaseFormWrapper.module.scss';
+
+// Standard styles
+
+// Breakpoint styles
+$localBreakpointStyles: ();
+
+@include createBreakpointClasses(map-merge($packageBreakpointStyles, $localBreakpointStyles));

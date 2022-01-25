@@ -1,3 +1,7 @@
-export const PropKeys: Record<string, string> = {};
+export const PropKeys: Record<string, string> = {
+  DIRECTION: 'direction',
+};
 
-export const PropValues: Record<string, string[]> = {};
+export const PropValues: Record<string, string[]> = {
+  [PropKeys.DIRECTION]: ['row', 'row-reverse'],
+};

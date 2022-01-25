@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseFormGroup.vue renders the component 1`] = `
+exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
 <div
   class=""
 >

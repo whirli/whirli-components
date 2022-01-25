@@ -22,11 +22,11 @@ describe('BaseSection.vue - Single classes: Equal top and bottom', () => {
   });
 
   it('returns the correct top spacer value', () => {
-    expect(wrapper.vm.size.top).toBe('md');
+    expect(wrapper.vm.gutter.top).toBe('md');
   });
 
   it('returns the correct bottom spacer value', () => {
-    expect(wrapper.vm.size.bottom).toBe('md');
+    expect(wrapper.vm.gutter.bottom).toBe('md');
   });
 
   it('displays the correct content', () => {
@@ -54,11 +54,11 @@ describe('BaseSection.vue - Single classes: Seperate top and bottom', () => {
   });
 
   it('returns the correct top spacer value', () => {
-    expect(wrapper.vm.size.top).toBe('md');
+    expect(wrapper.vm.gutter.top).toBe('md');
   });
 
   it('returns the correct bottom spacer value', () => {
-    expect(wrapper.vm.size.bottom).toBe('lg');
+    expect(wrapper.vm.gutter.bottom).toBe('lg');
   });
 
   it('displays the correct content', () => {
