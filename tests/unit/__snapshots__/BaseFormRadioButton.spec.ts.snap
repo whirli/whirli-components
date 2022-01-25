@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormRadioButton.vue renders the component 1`] = `
+<div
+  class=""
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      <div
+        class=""
+      >
+        
+        
+        <div
+          class=""
+        >
+          
+          <div
+            class=""
+          >
+            
+            
+          </div>
+          <div
+            class=""
+          >
+            
+            
+            <label
+              class=""
+              for="input-group-input-value"
+            >
+              
+              Hello World
+              
+            </label>
+            
+            
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      <div
+        class=""
+      >
+        
+        
+        <div
+          class=""
+        >
+          
+          <div
+            class=""
+          >
+            
+            
+            
+            <span
+              class=""
+            >
+              <input
+                class=""
+                error="Hello Error"
+                id="input-group-input-value"
+                label="Hello World"
+                name="input-group"
+                type="radio"
+                value="input-value"
+              />
+              <span
+                class=""
+              />
+              <div
+                class=""
+                role="radio"
+              >
+                
+                Hello Content
+                
+              </div>
+            </span>
+            
+            
+            
+          </div>
+          <div
+            class=""
+          >
+            
+            
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;

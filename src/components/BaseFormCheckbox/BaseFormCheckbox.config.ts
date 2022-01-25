@@ -16,7 +16,7 @@ export const ConfigStyles: ComponentStyles = {
 };
 
 export const ConfigProps: ComponentProps = {
-  [PropKeys.VALUE]: {
+  [PropKeys.MODEL_VALUE]: {
     required: true,
     type: Boolean as PropType<boolean>,
   },

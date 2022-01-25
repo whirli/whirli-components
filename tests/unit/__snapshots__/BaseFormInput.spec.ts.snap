@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormInput.vue renders the component 1`] = `
+<div
+  class=""
+  disabled="false"
+  multiple="false"
+  type="text"
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <label
+        class=""
+        for="input-name"
+      >
+        
+        Hello World
+        
+      </label>
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      
+      <input
+        aria-disabled="false"
+        class=""
+        id="input-name"
+        name="input-name"
+        type="text"
+      />
+      
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;
