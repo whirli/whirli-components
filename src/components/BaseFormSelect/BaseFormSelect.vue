@@ -27,7 +27,7 @@ import { Props } from '@whirli-components/@types/props';
 
 // @ts-ignore
 const emit = defineEmits<{
-  (event: 'update:value', value: string): void;
+  (event: 'update:modelValue', value: string): void;
   (event: 'reset:errors'): void;
 }>();
 
@@ -50,7 +50,7 @@ const classes = [
 ];
 
 const updateValue: (event: Event) => void = (event: Event) => {
-  emit('update:value', (event.target as HTMLInputElement).value);
+  emit('update:modelValue', (event.target as HTMLInputElement).value);
   emit('reset:errors');
 };
 </script>

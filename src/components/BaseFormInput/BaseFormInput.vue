@@ -54,7 +54,7 @@ const props: Props = defineProps(ConfigProps);
 
 // @ts-ignore
 const emit = defineEmits<{
-  (event: 'update:value', value: string): void;
+  (event: 'update:modelValue', value: string): void;
   (event: 'reset:errors'): void;
   (event: 'update:image', value: FileList | null): void;
 }>();
@@ -70,7 +70,7 @@ const classes = [styles['input-shared'], styles.input, ...makeClasses(ComponentS
 const isTextarea = props[PropKeys.TYPE] === 'textarea';
 
 const updateValue: (event: Event) => void = (event: Event) => {
-  emit('update:value', (event.target as HTMLInputElement).value);
+  emit('update:modelValue', (event.target as HTMLInputElement).value);
 };
 
 const resetErrors: () => void = () => {

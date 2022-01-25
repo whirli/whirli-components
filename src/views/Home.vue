@@ -6,7 +6,7 @@
         name="email"
         label="Email"
         disabled
-        v-model:value="form.email"
+        v-model:modelValue="form.email"
         @reset:errors="form.errors.clear('email')"
         :error="form.errors.get('email')"
       />
@@ -14,7 +14,7 @@
         type="password"
         name="password"
         label="Password"
-        v-model:value="form.password"
+        v-model:modelValue="form.password"
         @reset:errors="form.errors.clear('password')"
         :error="form.errors.get('password')"
       />
@@ -22,14 +22,14 @@
         type="textarea"
         name="content"
         label="Content"
-        v-model:value="form.content"
+        v-model:modelValue="form.content"
         @reset:errors="form.errors.clear('content')"
         :error="form.errors.get('content')"
       />
       <BaseFormSelect
         name="country"
         label="Country"
-        v-model:value="form.country"
+        v-model:modelValue="form.country"
         @reset:errors="form.errors.clear('country')"
         :error="form.errors.get('country')"
       >
@@ -39,7 +39,7 @@
       <BaseFormCheckbox
         name="consent"
         label="Is it okay if we email you?"
-        v-model:value="form.consent"
+        v-model:modelValue="form.consent"
         @reset:errors="form.errors.clear('consent')"
         :error="form.errors.get('consent')"
       />

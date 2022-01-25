@@ -4,7 +4,7 @@ export const PropKeys: Record<string, string> = {
   MULTIPLE: 'multiple',
   NAME: 'name',
   TYPE: 'type',
-  VALUE: 'value',
+  VALUE: 'modelValue',
 };
 
 export const PropValues: Record<string, string[]> = {
