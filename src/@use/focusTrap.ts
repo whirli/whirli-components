@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ref, nextTick, Ref } from '@composition';
 
 interface FocusTrap {

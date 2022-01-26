@@ -23,7 +23,7 @@ $breakpoints: (
 
 :export {
     prefix: $breakpointPrefix;
-    BREAKPOINT_default: 0px;
+    #{$breakpointPrefix}default: 0px;
     @each $name, $value in $breakpoints {
         #{$breakpointPrefix}#{$name}: map-deep-get($breakpoints, #{$name}, 'min-width')
     }

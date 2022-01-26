@@ -12,14 +12,6 @@ import type { PropState } from './BaseAccordion.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
-  [PropKeys.STATE]: {
-    generateBreakpoints: true,
-    classes: {
-      closed: 'state-closed',
-      open: 'state-open',
-      ...config.styles[PropKeys.STATE]?.classes,
-    } as Record<PropState, string>,
-  },
 };
 
 export const ConfigProps: ComponentProps = {
@@ -37,7 +29,6 @@ export const ConfigProps: ComponentProps = {
     required: false,
     type: [String, Object] as PropType<PropState>,
     default: 'closed',
-    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.STATE),
   },
   ...config.props,
 };

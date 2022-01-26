@@ -9,23 +9,21 @@ import { PropKeys } from '@/components/BaseModal/BaseModal.constants';
 import { ConfigStyles } from '@/components/BaseModal/BaseModal.config';
 
 let wrapper: any;
-const text = 'Hello World';
+const title = 'Modal title';
+const content = 'Hello World';
 
 describe('BaseModal.vue - Single classes', () => {
   beforeEach(() => {
     wrapper = mount(BaseModal, {
       slots: {
-        default: text,
+        title: title,
+        content: content,
       },
     });
   });
 
   it('renders the component', () => {
     expect(wrapper.element).toMatchSnapshot();
-  });
-
-  it('renders the correct data', () => {
-    expect(wrapper.text()).toBe(text);
   });
 
   it('renders the close button', () => {
