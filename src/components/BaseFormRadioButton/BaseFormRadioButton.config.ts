@@ -14,7 +14,7 @@ export const ConfigStyles: ComponentStyles = {
 };
 
 export const ConfigProps: ComponentProps = {
-  [PropKeys.MODAL_VALUE]: {
+  [PropKeys.MODEL_VALUE]: {
     required: true,
     type: [String, Number] as PropType<string | number>,
   },

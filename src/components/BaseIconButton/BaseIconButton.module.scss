@@ -8,6 +8,10 @@
     color: inherit;
     cursor: pointer;
     display: inline-block;
+
+    &:focus {
+        outline: solid;
+    }
 }
 
 .is-disabled {
