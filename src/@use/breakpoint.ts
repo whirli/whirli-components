@@ -1,5 +1,6 @@
-import styles from '@whirli-local/components/config.scss';
+// @ts-ignore
 import { computed, ComputedRef } from '@composition';
+import styles from '@whirli-local/components/config.scss';
 
 interface Breakpoint {
   getBreakpoints: ComputedRef<Record<string, string>[]>;
