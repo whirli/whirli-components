@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, ref, onMounted, onUnmounted, reactive, ComputedRef, Ref } from '@composition';
+import { computed, ref, onMounted, reactive, ComputedRef, Ref } from '@composition';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';

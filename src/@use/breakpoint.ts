@@ -2,14 +2,16 @@
 import { computed, ComputedRef } from '@composition';
 import styles from '@whirli-local/components/config.scss';
 
+import { Breakpoint as BreakpointObject } from '@whirli-components/@types/breakpoints';
+
 interface Breakpoint {
-  getBreakpoints: ComputedRef<Record<string, string>[]>;
+  getBreakpoints: ComputedRef<BreakpointObject[]>;
   activeBreakpoint: ComputedRef<string>;
 }
 
 export default function useBreakpoint(): Breakpoint {
-  const getBreakpoints: ComputedRef<Record<string, string>[]> = computed(() => {
-    const breakpoints: Record<string, string>[] = [];
+  const getBreakpoints: ComputedRef<BreakpointObject[]> = computed(() => {
+    const breakpoints: BreakpointObject[] = [];
     for (const [key, value] of Object.entries(styles)) {
       if (key.startsWith(styles.prefix)) {
         const preparedKey: string = key.replace(styles.prefix, '');
