@@ -1,5 +1,5 @@
 // @ts-ignore
-import { ref, Ref, onUnmounted } from '@composition';
+import { ref, Ref, onBeforeUnmount } from '@composition';
 
 interface Screen {
   screenWidth: Ref<number>;
@@ -26,7 +26,7 @@ export default function useScreen(): Screen {
   window.addEventListener('resize', debounceSetScreenWidth);
   setScreenWidth();
 
-  onUnmounted(() => {
+  onBeforeUnmount(() => {
     window.removeEventListener('resize', debounceSetScreenWidth);
   });
 
