@@ -4,6 +4,8 @@ import styles from '@whirli-local/components/config.scss';
 
 import { Breakpoint as BreakpointObject } from '@whirli-components/@types/breakpoints';
 
+import useScreen from '@whirli-components/@use/screen';
+
 interface Breakpoint {
   getBreakpoints: ComputedRef<BreakpointObject[]>;
   activeBreakpoint: ComputedRef<string>;
@@ -26,10 +28,10 @@ export default function useBreakpoint(): Breakpoint {
   });
 
   const activeBreakpoint: ComputedRef<string> = computed(() => {
-    const windowSize = window.outerWidth;
+    const { screenWidth } = useScreen();
     let activeSize = 'default';
     for (const breakpoint of getBreakpoints.value) {
-      if (windowSize > parseInt(breakpoint.minWidth)) {
+      if (screenWidth.value > parseInt(breakpoint.minWidth)) {
         activeSize = breakpoint.key;
       } else {
         break;
