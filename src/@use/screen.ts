@@ -1,5 +1,5 @@
 // @ts-ignore
-import { ref, Ref, onBeforeMount } from '@composition';
+import { ref, Ref, onUnmounted } from '@composition';
 
 interface Screen {
   screenWidth: Ref<number>;
@@ -20,8 +20,15 @@ export default function useScreen(): Screen {
     }, 100);
   };
 
+  // Cant call onMounted / onBeforeMount - Get following error:
+  // onBeforeMount / onMounted is called when there is no active component instance to be associated with.
+  // This works
   window.addEventListener('resize', debounceSetScreenWidth);
   setScreenWidth();
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', debounceSetScreenWidth);
+  });
 
   return {
     screenWidth,
