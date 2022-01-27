@@ -6,7 +6,7 @@ interface Screen {
 }
 
 export default function useScreen(): Screen {
-  let canSetScreenWith: any;
+  let canSetScreenWith: number;
   const screenWidth: Ref<number> = ref(0);
 
   const setScreenWidth = (): void => {
