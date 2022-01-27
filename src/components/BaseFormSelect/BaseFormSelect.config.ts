@@ -10,17 +10,13 @@ import config from '@whirli-local/components/BaseFormSelect/BaseFormSelect.confi
 import { SharedConfigProps } from '@whirli-components/components/BaseFormInput/BaseFormInput.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseFormSelect.constants';
+import { PropKeys } from './BaseFormSelect.constants';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
 };
 
 export const ConfigProps: ComponentProps = {
-  [PropKeys.MODAL_VALUE]: {
-    required: true,
-    type: [String, Number] as PropType<string | number>,
-  },
   [PropKeys.HAS_DROPDOWN_MESSAGE]: {
     required: false,
     type: Boolean as PropType<boolean>,

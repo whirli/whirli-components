@@ -9,16 +9,43 @@ exports[`BaseModal.vue - Single classes renders the component 1`] = `
   >
     
     <div
+      aria-hidden="true"
+      aria-labelledby="7d732246-8cd9-464b-bb37-6aac5a0c8a97"
+      aria-modal="true"
       class=""
+      role="dialog"
     >
+      <div
+        class=""
+      />
+      <div
+        class=""
+        id="7d732246-8cd9-464b-bb37-6aac5a0c8a97"
+      >
+        
+        Modal title
+        
+      </div>
+      <div
+        class=""
+      >
+        
+        Hello World
+        
+      </div>
+      <div
+        class=""
+      />
       <div
         class=""
       >
         <button
+          aria-label="Close modal"
           class=""
           icon="Cross"
         >
           <svg
+            aria-label="Close modal"
             class=""
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,19 +58,6 @@ exports[`BaseModal.vue - Single classes renders the component 1`] = `
           </svg>
         </button>
       </div>
-      <div
-        class=""
-      />
-      <div
-        class=""
-      >
-        
-        Hello World
-        
-      </div>
-      <div
-        class=""
-      />
     </div>
     
   </div>

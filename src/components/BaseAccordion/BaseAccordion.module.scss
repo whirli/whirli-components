@@ -16,31 +16,14 @@
   transition: max-height ease-in-out 0.5s;
 }
 
-.state-open.toggle-default .accordion__content {
+[data-state="open"] .accordion__content {
     max-height: auto;
     max-height: var(--accordion-height);
 }
 
-.state-open.toggle-alt .accordion__content {
-    max-height: auto;
-    max-height: var(--accordion-height);
+[data-state="closed"] .accordion__content {
+    max-height: 0;
 }
 
 // breakpoint styles
-$packageBreakpointStyles: (
-    'state-open.toggle-default .accordion__content': (
-        max-height: var(--accordion-height),
-    ),
-
-    'state-open.toggle-alt .accordion__content': (
-        max-height: 0,
-    ),
-
-    'state-closed.toggle-default .accordion__content': (
-        max-height: 0,
-    ),
-
-    'state-closed.toggle-alt .accordion__content': (
-        max-height: var(--accordion-height),
-    ),
-);
+$packageBreakpointStyles: ();

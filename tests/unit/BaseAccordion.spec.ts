@@ -22,7 +22,7 @@ describe('BaseAccordion.vue - Single classes', () => {
         state: 'open',
       },
     });
-    wrapper.vm.setAccordionToggleState = jest.fn();
+    wrapper.vm.updateAccordionState = jest.fn();
   });
 
   it('renders the component', () => {
@@ -37,14 +37,10 @@ describe('BaseAccordion.vue - Single classes', () => {
     expect(wrapper.find('#accordion-content-id').text()).toBe(content);
   });
 
-  it('is the correct state', () => {
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.STATE, 'state-open')).toBe(true);
-  });
-
-  it('calls setAccordionToggleState on Button click', async () => {
+  it('calls updateAccordionState on Button click', async () => {
     wrapper.find('#accordion-header-id').trigger('click');
     await wrapper.vm.$nextTick();
-    expect(wrapper.vm.setAccordionToggleState).toHaveBeenCalled();
+    expect(wrapper.vm.updateAccordionState).toHaveBeenCalled();
   });
 });
 
@@ -72,14 +68,5 @@ describe('BaseAccordion.vue - Breakpoint classes', () => {
 
   it('renders the correct content', () => {
     expect(wrapper.find('#accordion-content-id').text()).toBe(content);
-  });
-
-  it('is the correct breakpoint states', () => {
-    expect(
-      propReturnsBreakpointClasses(wrapper, ConfigStyles, PropKeys.STATE, {
-        default: 'state-open',
-        tablet: 'state-closed',
-      })
-    ).toBe(true);
   });
 });

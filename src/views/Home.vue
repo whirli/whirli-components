@@ -70,16 +70,27 @@
       >Hello world</BaseText
     >
     <BaseSection>Hello</BaseSection>
-    <BaseAccordion :state="{ default: 'closed', tablet: 'open' }" name="test" disable-toggle>
+    <BaseAccordion :state="{ tablet: 'open' }">
       <template v-slot:title>TESTING</template>
       <template v-slot:content>HELLO</template>
     </BaseAccordion>
-    <BaseModal :state="modalState" @modal:close="setModalState('closed')">Hello world</BaseModal>
+    <BaseModal :state="modalState" @modal:close="setModalState('closed')">
+      <template v-slot:title>TESTING 1</template>
+      <template v-slot:content>HELLO 1 <button>One</button><button>Two</button></template>
+    </BaseModal>
+
+    <BaseModal :state="modalState2" @modal:close="setModalState2('closed')">
+      <template v-slot:title>TESTING 2</template>
+      <template v-slot:content>HELLO 2</template>
+    </BaseModal>
 
     <BaseDivider />
 
     <button @click="setModalState('closed')">Close</button>
     <button @click="setModalState('open')">Open</button>
+
+    <button @click="setModalState2('closed')">Close2</button>
+    <button @click="setModalState2('open')">Open2</button>
 
     <BaseList>
       <BaseListItem>Hello world</BaseListItem>
@@ -135,6 +146,11 @@ const form: MyForm = reactive({
 const modalState: Ref<string> = ref('closed');
 const setModalState = (state: string) => {
   modalState.value = state;
+};
+
+const modalState2: Ref<string> = ref('closed');
+const setModalState2 = (state: string) => {
+  modalState2.value = state;
 };
 
 const alertMe = () => alert('LOGGIN');

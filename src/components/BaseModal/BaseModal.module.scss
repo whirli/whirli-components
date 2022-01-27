@@ -17,7 +17,8 @@
     right: $spacerXl;
 }
 
-.modal__content {
+.modal__title,
+.modal__content  {
     width: toRems(800);
     max-width: 100%;
 }

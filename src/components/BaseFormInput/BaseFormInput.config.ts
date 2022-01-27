@@ -37,7 +37,7 @@ export const ConfigProps: ComponentProps = {
     type: String as PropType<PropInputType>,
     default: 'text',
   },
-  [PropKeys.MODAL_VALUE]: {
+  [PropKeys.MODEL_VALUE]: {
     required: true,
     type: String as PropType<string>,
   },
