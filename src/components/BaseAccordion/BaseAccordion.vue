@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, ref, onMounted, reactive, ComputedRef, Ref } from '@composition';
+import { computed, ref, onMounted, reactive, ComputedRef, Ref, onBeforeMount } from '@composition';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
@@ -36,7 +36,7 @@ import { Props } from '@whirli-components/@types/props';
 import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.scss?module';
 
 // Composables
-import useBreakpoint from '@/@use/breakpoint';
+import useBreakpoint from '@whirli-components/@use/breakpoint';
 
 const { getBreakpoints, activeBreakpoint } = useBreakpoint();
 
@@ -69,7 +69,11 @@ const wrapperClasses: ComputedRef<string[]> = computed(() => [
 const triggerClasses: string[] = [styles['accordion__trigger']];
 const contentClasses: string[] = [styles['accordion__content']];
 
-const activeBreakpointState: ComputedRef<string> = computed(() => accordionState[activeBreakpoint.value]);
+const activeBreakpointState: Ref<string> = ref('closed');
+
+const updateActiveBreakpointState = (): void => {
+  activeBreakpointState.value = accordionState[activeBreakpoint.value];
+};
 
 const isActiveBreakpointStateOpen: ComputedRef<boolean> = computed(
   () => accordionState[activeBreakpoint.value] === 'open'
@@ -79,6 +83,7 @@ const toggleState = (state: string): string => (state === 'open' ? 'closed' : 'o
 
 const updateAccordionState = (): void => {
   accordionState[activeBreakpoint.value] = toggleState(accordionState[activeBreakpoint.value]);
+  updateActiveBreakpointState();
 };
 
 function updateAccordionHeight(): void {
@@ -96,6 +101,7 @@ const setAccordionState = (): void => {
           isOpenInitialState[breakpoint.key];
     lastKey = breakpoint.key;
   }
+  updateActiveBreakpointState();
 };
 
 const initInitialState = (): void => {
@@ -105,12 +111,11 @@ const initInitialState = (): void => {
   setAccordionState();
 };
 
-const initAccordion = (): void => {
+onBeforeMount(() => {
   initInitialState();
-  updateAccordionHeight();
-};
+});
 
 onMounted(() => {
-  initAccordion();
+  updateAccordionHeight();
 });
 </script>
