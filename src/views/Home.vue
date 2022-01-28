@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <BaseBox>Hello world</BaseBox>
     <BaseFormWrapper action="Test" @submit.prevent="alertMe()">
       <BaseFormInput
         type="email"
@@ -123,6 +124,7 @@ import BaseButton from '@/components/BaseButton/BaseButton.vue';
 import BaseFormRadioButton from '@/components/BaseFormRadioButton/BaseFormRadioButton.vue';
 
 import { FormErrors } from '@whirli-components/helpers/forms';
+import BaseBox from '@/components/BaseBox/BaseBox.vue';
 
 interface MyForm {
   email: string;

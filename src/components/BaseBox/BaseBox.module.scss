@@ -1,0 +1,44 @@
+@import '@whirli-components/styles/Breakpoints.module.scss';
+@import '@whirli-components/styles/Spacers.scss';
+
+// default styles
+.base-box {}
+
+$sides: top, right, bottom, left;
+
+@each $side in $sides {
+    .padding-#{$side}-none {
+        padding-#{$side}: $spacerNone;
+    }
+    .padding-#{$side}-2xs {
+        padding-#{$side}: $spacer2Xs;
+    }
+    .padding-#{$side}-xs {
+        padding-#{$side}: $spacerXs;
+    }
+    .padding-#{$side}-sm {
+        padding-#{$side}: $spacerSm;
+    }
+    .padding-#{$side}-base {
+        padding-#{$side}: $spacerDefault;
+    }
+    .padding-#{$side}-md {
+        padding-#{$side}: $spacerMd;
+    }
+    .padding-#{side}-lg {
+        padding-#{$side}: $spacerLg;
+    }
+    .padding-#{$side}-xl {
+        padding-#{$side}: $spacerXl;
+    }
+    .padding-#{$side}-2xl {
+        padding-#{$side}: $spacer2Xl;
+    }
+}
+
+// breakpoint styles
+$packageBreakpointStyles: (
+    /*color-black: (
+        color: black,
+    ),*/
+);
