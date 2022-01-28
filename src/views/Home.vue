@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <BaseFlex :direction="{ default: 'row', tablet: 'column' }">
+      <BaseBox>Hello world</BaseBox><BaseBox>Hello world</BaseBox>
+    </BaseFlex>
     <BaseBox>Hello world</BaseBox>
     <BaseFormWrapper action="Test" @submit.prevent="alertMe()">
       <BaseFormInput
@@ -125,6 +128,7 @@ import BaseFormRadioButton from '@/components/BaseFormRadioButton/BaseFormRadioB
 
 import { FormErrors } from '@whirli-components/helpers/forms';
 import BaseBox from '@/components/BaseBox/BaseBox.vue';
+import BaseFlex from '@/components/BaseFlex/BaseFlex.vue';
 
 interface MyForm {
   email: string;
