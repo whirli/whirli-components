@@ -5,6 +5,7 @@ export const PropKeys: Record<string, string> = {
 export const PropValues: Record<string, string[]> = {
   [PropKeys.SIZE]: [
     '0',
+    'none',
     '4xs',
     '3xs',
     '2xs',
@@ -18,5 +19,7 @@ export const PropValues: Record<string, string[]> = {
     '3xl',
     '4xl',
     '5xl',
+    '6xl',
+    '7xl',
   ],
 };

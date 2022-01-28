@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFlex.vue renders the component 1`] = `
+<div>
+  <div
+    class=""
+  >
+    
+    Hello world
+    
+  </div>
+</div>
+`;
