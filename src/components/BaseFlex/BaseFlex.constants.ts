@@ -3,6 +3,11 @@ import {
   PropValues as SpacerPropValues,
 } from '@whirli-components/components/BaseSpacer/BaseSpacer.constants';
 
+import {
+  PropKeys as ColumnPropKeys,
+  PropValues as ColumnPropValues,
+} from '@whirli-components/components/BaseColumn/BaseColumn.constants';
+
 // Local config
 import config from '@whirli-local/components/BaseFlex/BaseFlex.config';
 
@@ -13,6 +18,7 @@ export const PropKeys: Record<string, string> = {
   WRAP: 'wrap',
   SPACING: 'spacing',
   TAG: 'tag',
+  SPANS: 'spans',
 };
 
 const localValues = {
@@ -66,5 +72,6 @@ export const PropValues: Record<string, string[]> = {
     ...localValues[PropKeys.WRAP],
   ],
   [PropKeys.SPACING]: SpacerPropValues[SpacerPropKeys.SIZE],
+  [PropKeys.SPANS]: ['auto', ...ColumnPropValues[ColumnPropKeys.SPANS]],
   [PropKeys.TAG]: ['div'],
 };
