@@ -47,7 +47,7 @@ const tag: ComputedRef<string> = computed(() => (isActivePage.value ? 'div' : 'a
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const defaultClasses = [styles['page-number'], ...makeClasses(ComponentStyles, props, styles)];
+const defaultClasses = [styles['page-number'], ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const activeClasses: ComputedRef<string> = computed(() => (isActivePage.value ? styles['is-active'] : ''));
 const disabledClasses: ComputedRef<string> = computed(() =>
   props[PropKeys.IS_DISABLED] ? styles['is-disabled'] : ''

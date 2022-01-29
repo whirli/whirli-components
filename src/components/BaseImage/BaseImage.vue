@@ -40,7 +40,7 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses = [styles.image__wrapper, ...makeClasses(ComponentStyles, props, styles)];
+const wrapperClasses = [styles.image__wrapper, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const imageClasses = [styles.image];
 
 // Component specific

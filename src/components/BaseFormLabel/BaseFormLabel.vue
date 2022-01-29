@@ -22,6 +22,6 @@ const props: Props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes: string[] = [styles.label, ...makeClasses(ComponentStyles, props, styles)];
+const classes: string[] = [styles.label, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const requiredClass: string = props.required ? styles.required : '';
 </script>

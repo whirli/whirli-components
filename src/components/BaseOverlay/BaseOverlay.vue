@@ -27,7 +27,7 @@ const props = defineProps(ConfigProps);
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => {
-  return [styles.overlay, ...makeClasses(ComponentStyles, props, styles)];
+  return [styles.overlay, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 });
 
 const contentClasses = [styles['overlay__content']];

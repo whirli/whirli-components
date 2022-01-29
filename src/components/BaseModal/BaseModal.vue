@@ -56,7 +56,7 @@ const emit = defineEmits(['modal:close', 'modal:open']);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses = [styles.modal, ...makeClasses(ComponentStyles, props, styles)];
+const wrapperClasses = [styles.modal, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const titleClasses = [styles['modal__title']];
 const contentClasses = [styles['modal__content']];
 

@@ -18,5 +18,5 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes = [styles.grid, ...makeClasses(ComponentStyles, props, styles)];
+const classes = [styles.grid, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

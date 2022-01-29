@@ -108,7 +108,7 @@ const isLastPage: ComputedRef<boolean> = computed(() => currentPage.value === pr
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, props, styles)];
+const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 
 function isCurrentPage(number: number): boolean {
   return number === currentPage.value;

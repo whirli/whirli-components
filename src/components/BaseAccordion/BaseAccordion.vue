@@ -60,7 +60,7 @@ const accordionState: Record<string, string> = reactive({});
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const staticWrapperClasses = [...makeClasses(ComponentStyles, props, styles)];
+const staticWrapperClasses = [...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const dynamicWrapperClasses: ComputedRef<string[]> = computed(() => [styles.accordion]);
 const wrapperClasses: ComputedRef<string[]> = computed(() => [
   ...staticWrapperClasses,

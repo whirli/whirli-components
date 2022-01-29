@@ -50,8 +50,8 @@ const { makeClasses } = useClasses();
 const classes = [
   sharedStyles['input-shared'],
   styles.checkbox,
-  ...makeClasses(ComponentStyles, props, styles),
-  ...makeClasses(ComponentStyles, props, sharedStyles),
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
+  ...makeClasses(ComponentStyles, ConfigProps, props, sharedStyles),
 ];
 
 const updateValue: (event: Event) => void = (event: Event) => {

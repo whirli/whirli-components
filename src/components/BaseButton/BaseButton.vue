@@ -44,7 +44,7 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes = [styles.button, ...makeClasses(ComponentStyles, props, styles)];
+const classes = [styles.button, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 
 const button: ComputedRef<any> = computed((): any => {
   return props.url !== undefined ? BaseButtonLink : BaseButtonDefault;

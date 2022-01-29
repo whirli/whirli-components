@@ -23,5 +23,5 @@ const props: Props = defineProps(ConfigProps);
 import useClasses from '@whirli-components/@use/class';
 import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 const { makeClasses } = useClasses();
-const classes = [styles.error, ...makeClasses(ComponentStyles, props, styles)];
+const classes = [styles.error, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

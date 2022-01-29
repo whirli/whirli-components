@@ -32,7 +32,7 @@ const props = defineProps(ConfigProps);
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: ComputedRef<string[]> = computed((): string[] => {
-  return [styles.icon, ...makeClasses(ComponentStyles, props, styles)];
+  return [styles.icon, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 });
 
 // Get icon
