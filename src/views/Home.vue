@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <BaseFlex :direction="{ default: 'row', tablet: 'column' }">
+    <BaseFlex :direction="{ tablet: 'column' }">
       <BaseBox>Hello world</BaseBox><BaseBox>Hello world</BaseBox>
     </BaseFlex>
-    <BaseBox>Hello world</BaseBox>
+    <!--<BaseBox>Hello world</BaseBox>
     <BaseFormWrapper action="Test" @submit.prevent="alertMe()">
       <BaseFormInput
         type="email"
@@ -101,7 +101,7 @@
     </BaseList>
     <BaseTag>Hello world</BaseTag>
 
-    <BasePagination :first-page="1" :last-page="30" />
+    <BasePagination :first-page="1" :last-page="30" />-->
   </div>
 </template>
 

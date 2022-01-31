@@ -62,7 +62,7 @@ import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => [
   styles['radio-button-wrapper'],
-  ...makeClasses(ComponentStyles, props, styles),
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
 ]);
 const inputClasses: ComputedRef<string[]> = computed(() => [styles['radio-button-input']]);
 const displayClasses: ComputedRef<string[]> = computed(() => [styles['radio-button-display']]);

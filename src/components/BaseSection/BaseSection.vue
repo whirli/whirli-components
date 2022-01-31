@@ -35,7 +35,7 @@ const props = defineProps(ConfigProps);
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: ComputedRef<string[]> = computed((): string[] => {
-  return [styles.section, ...makeClasses(ComponentStyles, props, styles)];
+  return [styles.section, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 });
 
 const gutter: ComputedRef<ComputedSize> = computed(() => {

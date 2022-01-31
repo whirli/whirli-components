@@ -28,7 +28,10 @@ const props = defineProps(ConfigProps);
 // Classes
 import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes: string[] = [styles['icon-button'], ...makeClasses(ComponentStyles, props, styles)];
+const classes: string[] = [
+  styles['icon-button'],
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
+];
 const disabledClasses: ComputedRef<string> = computed(() =>
   props[PropKeys.IS_DISABLED] ? styles['is-disabled'] : ''
 );

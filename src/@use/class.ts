@@ -1,15 +1,22 @@
 import Breakpoints from '@whirli-components/styles/Breakpoints.module.scss';
-import { ComponentStyles } from '@whirli-components/@types/components';
+import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 interface Classes {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
-  makeClasses: (config: ComponentStyles, props: Readonly<any>, styles: Record<string, string>) => string[];
+  makeClasses: (
+    config: ComponentStyles,
+    configProps: ComponentProps,
+    props: Readonly<any>,
+    styles: Record<string, string>
+  ) => string[];
   /* eslint-enable  @typescript-eslint/no-explicit-any */
 }
 
 export default function (): Classes {
   const makeClasses = (
     config: ComponentStyles,
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
+    configProps: ComponentProps,
     /* eslint-disable  @typescript-eslint/no-explicit-any */
     props: Readonly<any>,
     /* enable-disable  @typescript-eslint/no-explicit-any */
@@ -33,10 +40,12 @@ export default function (): Classes {
         } else {
           if (props[propKey]?.default) {
             defaultStyleKey = config[propKey].classes[props[propKey].default];
-            // Generate the default style
-            if (styles[defaultStyleKey]) {
-              classes.push(styles[defaultStyleKey]);
-            }
+          } else if (configProps[propKey].default) {
+            defaultStyleKey = config[propKey].classes[configProps[propKey].default];
+          }
+          // Generate the default style
+          if (defaultStyleKey && styles[defaultStyleKey]) {
+            classes.push(styles[defaultStyleKey]);
           }
         }
         // Generate the breakpoint styles
@@ -49,6 +58,7 @@ export default function (): Classes {
             classes.push(styles[breakpointStyleKey]);
           }
         });
+        console.log(classes);
       }
       // If there's no need to create breakpoint styles
       else {
