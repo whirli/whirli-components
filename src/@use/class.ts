@@ -58,7 +58,6 @@ export default function (): Classes {
             classes.push(styles[breakpointStyleKey]);
           }
         });
-        console.log(classes);
       }
       // If there's no need to create breakpoint styles
       else {

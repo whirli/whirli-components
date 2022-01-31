@@ -87,7 +87,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.WRAP]: {
     required: false,
     type: [String, Object] as PropType<PropWrap>,
-    default: 'nowrap',
+    default: 'wrap',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.WRAP),
   },
   [PropKeys.SPACING]: {
@@ -103,7 +103,7 @@ export const ConfigProps: ComponentProps = {
   },
   [PropKeys.SPANS]: {
     required: false,
-    type: String as PropType<PropSpans>,
+    type: String as PropType<PropSpans | Record<string, PropSpans>>,
     default: 'auto',
   },
   ...config.props,
