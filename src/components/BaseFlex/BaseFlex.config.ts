@@ -9,7 +9,15 @@ import config from '@whirli-local/components/BaseFlex/BaseFlex.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseFlex.constants';
-import type { PropAlign, PropJustify, PropDirection, PropWrap, PropSpacing, PropTag } from './BaseFlex.types';
+import type {
+  PropAlign,
+  PropJustify,
+  PropDirection,
+  PropWrap,
+  PropSpacing,
+  PropTag,
+  PropSpans,
+} from './BaseFlex.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
@@ -46,6 +54,13 @@ export const ConfigStyles: ComponentStyles = {
     classes: {
       ...createClassesFromPropValues(PropValues, PropKeys.SPACING),
       ...config.styles[PropKeys.SPACING]?.classes,
+    } as Record<PropSpacing, string>,
+  },
+  [PropKeys.SPANS]: {
+    generateBreakpoints: true,
+    classes: {
+      ...createClassesFromPropValues(PropValues, PropKeys.SPANS),
+      ...config.styles[PropKeys.SPANS]?.classes,
     } as Record<PropSpacing, string>,
   },
 };
@@ -85,6 +100,11 @@ export const ConfigProps: ComponentProps = {
     required: false,
     type: String as PropType<PropTag>,
     default: 'div',
+  },
+  [PropKeys.SPANS]: {
+    required: false,
+    type: String as PropType<PropSpans>,
+    default: 'auto',
   },
   ...config.props,
 };

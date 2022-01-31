@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '@whirli-components/styles/Breakpoints.module.scss';
 @import '@whirli-components/styles/Spacers.scss';
 
@@ -179,4 +180,42 @@ $packageBreakpointStyles: (
     wrap-unset: (
         flex-wrap: unset
     ),
+
+    spans-auto: (
+        width: auto
+    ),
+
+    spans-1: (
+        width: #{math.div(1, 12) * 100}#{'%'}
+    ),
+    spans-2: (
+        width: #{math.div(2, 12) * 100}#{'%'}
+    ),
+    spans-3: (
+        width: #{math.div(3, 12) * 100}#{'%'}
+    ),
+    spans-4: (
+        width: #{math.div(4, 12) * 100}#{'%'}
+    ),
+    spans-5: (
+        width: #{math.div(5, 12) * 100}#{'%'}
+    ),
+    spans-6: (
+        width: #{math.div(6, 12) * 100}#{'%'}
+    ),
+    spans-7: (
+        width: #{math.div(8, 12) * 100}#{'%'}
+    ),
+    spans-9: (
+        width: #{math.div(9, 12) * 100}#{'%'}
+    ),
+    spans-10: (
+        width: #{math.div(10, 12) * 100}#{'%'}
+    ),
+    spans-11: (
+        width: #{math.div(11, 12) * 100}#{'%'}
+    ),
+    spans-12: (
+        width: 100%
+    )
 );
