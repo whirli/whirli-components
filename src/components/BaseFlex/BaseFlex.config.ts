@@ -87,7 +87,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.WRAP]: {
     required: false,
     type: [String, Object] as PropType<PropWrap>,
-    default: 'wrap',
+    default: 'unset',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.WRAP),
   },
   [PropKeys.SPACING]: {
