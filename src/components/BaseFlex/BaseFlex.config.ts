@@ -103,7 +103,7 @@ export const ConfigProps: ComponentProps = {
   },
   [PropKeys.SPANS]: {
     required: false,
-    type: String as PropType<PropSpans | Record<string, PropSpans>>,
+    type: [String, Object] as PropType<PropSpans | Record<string, PropSpans>>,
     default: 'auto',
   },
   ...config.props,

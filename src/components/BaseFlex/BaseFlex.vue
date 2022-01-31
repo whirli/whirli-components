@@ -1,6 +1,6 @@
 <template>
-  <component :is="tag">
-    <div :class="classes"><slot /></div>
+  <component :is="props.tag" :class="classes">
+    <slot />
   </component>
 </template>
 
