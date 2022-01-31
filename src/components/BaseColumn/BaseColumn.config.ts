@@ -7,58 +7,46 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseColumn/BaseColumn.config';
 
 // Package config
-import { PropKeys } from './BaseColumn.constants';
-import type { PropSpans, PropAlign, PropJustify, PropDirection } from './BaseColumn.types';
+import { PropKeys, PropValues } from './BaseColumn.constants';
+import type { PropSpans, PropAlign, PropJustify, PropDirection, PropStart } from './BaseColumn.types';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.SPANS]: {
     generateBreakpoints: true,
     classes: {
-      '1': 'span-1',
-      '2': 'span-2',
-      '3': 'span-3',
-      '4': 'span-4',
-      '5': 'span-5',
-      '6': 'span-6',
-      '7': 'span-7',
-      '8': 'span-8',
-      '9': 'span-9',
-      '10': 'span-10',
-      '11': 'span-11',
-      '12': 'span-12',
+      ...createClassesFromPropValues(PropValues, PropKeys.SPANS),
       ...config.styles[PropKeys.SPANS]?.classes,
     } as Record<PropSpans, string>,
   },
   [PropKeys.ALIGN]: {
     generateBreakpoints: true,
     classes: {
-      default: 'align-default',
-      center: 'align-center',
-      end: 'align-end',
-      between: 'align-between',
+      ...createClassesFromPropValues(PropValues, PropKeys.ALIGN),
       ...config.styles[PropKeys.ALIGN]?.classes,
     } as Record<PropAlign, string>,
   },
   [PropKeys.JUSTIFY]: {
     generateBreakpoints: true,
     classes: {
-      default: 'justify-default',
-      center: 'justify-center',
-      end: 'justify-end',
-      between: 'justify-between',
+      ...createClassesFromPropValues(PropValues, PropKeys.JUSTIFY),
       ...config.styles[PropKeys.JUSTIFY]?.classes,
     } as Record<PropJustify, string>,
   },
   [PropKeys.DIRECTION]: {
     generateBreakpoints: true,
     classes: {
-      default: 'direction-default',
-      row: 'direction-row',
-      'row-reverse': 'direction-row-reverse',
-      'column-reverse': 'direction-column-reverse',
+      ...createClassesFromPropValues(PropValues, PropKeys.DIRECTION),
       reverse: 'direction-column-reverse', // Alias for column-reverse
       ...config.styles[PropKeys.DIRECTION]?.classes,
+    } as Record<PropDirection, string>,
+  },
+  [PropKeys.START]: {
+    generateBreakpoints: true,
+    classes: {
+      ...createClassesFromPropValues(PropValues, PropKeys.START),
+      ...config.styles[PropKeys.START]?.classes,
     } as Record<PropDirection, string>,
   },
 };
@@ -87,6 +75,12 @@ export const ConfigProps: ComponentProps = {
     type: [String, Object] as PropType<PropDirection | Record<string, PropDirection>>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.DIRECTION),
+  },
+  [PropKeys.START]: {
+    required: false,
+    type: [String, Object] as PropType<PropStart | Record<string, PropStart>>,
+    default: 'default',
+    ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.START),
   },
   ...config.props,
 };

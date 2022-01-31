@@ -37,7 +37,7 @@ export const ConfigStyles: ComponentStyles = {
 export const ConfigProps: ComponentProps = {
   [PropKeys.SIZE]: {
     required: false,
-    type: [String, Object] as PropType<PropSize>,
+    type: [String, Object] as PropType<PropSize | Record<string, PropSize>>,
     default: 'default',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.SIZE),
   },

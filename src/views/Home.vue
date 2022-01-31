@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <BaseGrid>
+      <BaseColumn :start="{ tablet: 2 }" spans="6">TEST</BaseColumn>
+    </BaseGrid>
     <BaseFlex :direction="{ tablet: 'column' }" :spans="{ tablet: 6 }">
       <BaseBox>Hello world</BaseBox><BaseBox>Hello world</BaseBox>
     </BaseFlex>
@@ -129,6 +132,8 @@ import BaseFormRadioButton from '@/components/BaseFormRadioButton/BaseFormRadioB
 import { FormErrors } from '@whirli-components/helpers/forms';
 import BaseBox from '@/components/BaseBox/BaseBox.vue';
 import BaseFlex from '@/components/BaseFlex/BaseFlex.vue';
+import BaseGrid from '@/components/BaseGrid/BaseGrid.vue';
+import BaseColumn from '@/components/BaseColumn/BaseColumn.vue';
 
 interface MyForm {
   email: string;
