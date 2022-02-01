@@ -10,7 +10,7 @@ exports[`BaseModal.vue - Single classes renders the component 1`] = `
     
     <div
       aria-hidden="true"
-      aria-labelledby="3c4f051b-6e6f-4f27-a77b-12bfd51958c7"
+      aria-labelledby="a6b78bf0-3178-49bd-91ea-2419fc5b057a"
       aria-modal="true"
       class=""
       role="dialog"
@@ -20,7 +20,7 @@ exports[`BaseModal.vue - Single classes renders the component 1`] = `
       />
       <div
         class=""
-        id="3c4f051b-6e6f-4f27-a77b-12bfd51958c7"
+        id="a6b78bf0-3178-49bd-91ea-2419fc5b057a"
       >
         
         Modal title

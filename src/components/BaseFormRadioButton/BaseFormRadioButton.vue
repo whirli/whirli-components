@@ -18,7 +18,7 @@
         :id="id"
         :value="props.value"
         :checked="isChecked"
-        @change="updateValue"
+        @change="updateValue()"
       />
       <span :class="displayClasses" />
       <div ref="renderElement" :aria-checked="props.modelValue" :class="fakerClasses" role="radio">
@@ -74,7 +74,7 @@ const fakerClasses: ComputedRef<string[]> = computed(() => [styles['radio-button
 const isChecked: ComputedRef<boolean> = computed(() => props.value == props.modelValue);
 const id: ComputedRef<string> = computed(() => `${props.group}-${props.value}`);
 
-const updateValue: (event: Event) => void = (event: Event) => {
+const updateValue = (): void => {
   emit('update:modelValue', props.value);
   emit('reset:errors');
 };

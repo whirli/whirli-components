@@ -1,11 +1,12 @@
 <template>
-  <BaseFormGroupLayoutDefault v-bind="$props" @change="updateValue">
+  <BaseFormGroupLayoutDefault v-bind="$props">
     <select
       :id="props.name"
       :name="props.name"
       :class="classes"
       :disabled="props.disabled"
       :aria-describedby="getErrorId(props.name, $props.error)"
+      @change="updateValue($event)"
     >
       <option v-if="props.hasDropdownMessage" :selected="!props.selected" disabled>
         {{ props.dropdownMessage }}

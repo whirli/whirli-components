@@ -9,7 +9,7 @@
       :aria-disabled="props.disabled"
       :aria-describedby="getErrorId(props.name, $props.error)"
       :checked="props.modelValue"
-      @change="updateValue"
+      @change="updateValue($event)"
     />
   </BaseFormGroupLayoutSecondary>
 </template>

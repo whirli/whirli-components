@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseFormCheckbox.vue renders the component 1`] = `
+<div
+  class=""
+  disabled="false"
+  modelvalue="false"
+>
+  
+  <div
+    class=""
+  >
+    
+    <div
+      class=""
+    >
+      
+      
+      <label
+        class=""
+        for="input-name"
+      >
+        
+        Hello World
+        
+      </label>
+      
+      <input
+        aria-disabled="false"
+        class=""
+        id="input-name"
+        name="input-name"
+        type="checkbox"
+      />
+      
+      
+      
+    </div>
+    <div
+      class=""
+    >
+      
+      
+      <span
+        class=""
+        id="input-name-error"
+      >
+        
+        
+        Hello Error
+        
+        
+      </span>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;

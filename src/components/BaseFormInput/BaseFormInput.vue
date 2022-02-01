@@ -24,9 +24,9 @@
       :aria-disabled="props.disabled"
       :multiple="props.multiple"
       :value="props.modelValue"
-      @keyup="updateValue"
-      @keydown="resetErrors"
-      @change="onChange"
+      @keyup="updateValue($event)"
+      @keydown="resetErrors()"
+      @change="onChange($event)"
     />
   </BaseFormGroupLayoutDefault>
 </template>
