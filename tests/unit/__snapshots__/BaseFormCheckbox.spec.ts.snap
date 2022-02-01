@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
+exports[`BaseFormCheckbox.vue renders the component 1`] = `
 <div
   class=""
+  disabled="false"
+  modelvalue="false"
 >
   
   <div
@@ -16,21 +18,20 @@ exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
       
       <label
         class=""
+        for="input-name"
       >
         
         Hello World
         
       </label>
       
-      
-    </div>
-    <div
-      class=""
-    >
-      
-      
-      
-      Hello Content
+      <input
+        aria-disabled="false"
+        class=""
+        id="input-name"
+        name="input-name"
+        type="checkbox"
+      />
       
       
       
@@ -42,7 +43,7 @@ exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
       
       <span
         class=""
-        id="undefined-error"
+        id="input-name-error"
       >
         
         

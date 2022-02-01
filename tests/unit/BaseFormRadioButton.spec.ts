@@ -24,6 +24,7 @@ describe('BaseFormRadioButton.vue', () => {
         value,
       },
     });
+    wrapper.vm.updateValue = jest.fn();
   });
 
   it('renders the component', () => {
@@ -40,5 +41,11 @@ describe('BaseFormRadioButton.vue', () => {
 
   it('radio has the correct id', () => {
     expect(wrapper.find('input').element.getAttribute('id')).toBe(id);
+  });
+
+  it('updates value on change', async () => {
+    wrapper.find('input').trigger('change');
+    await wrapper.vm.$nextTick();
+    expect(wrapper.vm.updateValue).toHaveBeenCalled();
   });
 });

@@ -27,7 +27,7 @@
     </BaseGrid>
     <BaseGrid gap="0">
       <BaseRow v-if="props.error">
-        <BaseFormError>{{ props.error }}</BaseFormError>
+        <BaseFormError :id="getErrorId(props.name, props.error)">{{ props.error }}</BaseFormError>
       </BaseRow>
     </BaseGrid>
   </BaseFormGroup>
@@ -45,9 +45,6 @@ import { PropDirection } from './BaseFormGroup.types';
 // Constants
 import { PropKeys } from './BaseFormGroup.constants';
 
-// @ts-ignore
-const props: Props = defineProps({ ...SharedConfigProps, ...ConfigProps });
-
 // Components
 import BaseFormGroup from '@whirli-components/components/BaseFormGroup/BaseFormGroup.vue';
 import BaseGrid from '@whirli-components/components/BaseGrid/BaseGrid.vue';
@@ -56,5 +53,13 @@ import BaseFormLabel from '@whirli-components/components/BaseFormLabel/BaseFormL
 import BaseFormError from '@whirli-components/components/BaseFormError/BaseFormError.vue';
 import BaseColumn from '../BaseColumn/BaseColumn.vue';
 
+// Composables
+import useForm from '@whirli-components/@use/form';
+
+// @ts-ignore
+const props: Props = defineProps({ ...SharedConfigProps, ...ConfigProps });
+
 const columnDirection: PropDirection = props[PropKeys.DIRECTION] === 'reverse' ? 'column-reverse' : 'default';
+
+const { getErrorId } = useForm();
 </script>

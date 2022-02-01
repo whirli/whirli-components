@@ -27,5 +27,5 @@ const props: Props = defineProps(ConfigProps);
 
 // Classes
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = makeClasses(ComponentStyles, ConfigProps, props, styles);
 </script>

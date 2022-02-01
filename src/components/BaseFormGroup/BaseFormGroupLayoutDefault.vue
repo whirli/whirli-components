@@ -8,7 +8,7 @@
         <slot />
       </BaseRow>
       <BaseRow v-if="props.error">
-        <BaseFormError>{{ props.error }}</BaseFormError>
+        <BaseFormError :id="getErrorId(props.name, props.error)">{{ props.error }}</BaseFormError>
       </BaseRow>
     </BaseGrid>
   </BaseFormGroup>
@@ -21,13 +21,18 @@ import { ConfigProps } from './BaseFormGroupLayout.config';
 // Types
 import { Props } from '@whirli-components/@types/props';
 
-// @ts-ignore
-const props: Props = defineProps(ConfigProps);
-
 // Components
 import BaseFormGroup from '@whirli-components/components/BaseFormGroup/BaseFormGroup.vue';
 import BaseGrid from '@whirli-components/components/BaseGrid/BaseGrid.vue';
 import BaseRow from '@whirli-components/components/BaseRow/BaseRow.vue';
 import BaseFormLabel from '@whirli-components/components/BaseFormLabel/BaseFormLabel.vue';
 import BaseFormError from '@whirli-components/components/BaseFormError/BaseFormError.vue';
+
+// Composables
+import useForm from '@whirli-components/@use/form';
+
+// @ts-ignore
+const props: Props = defineProps(ConfigProps);
+
+const { getErrorId } = useForm();
 </script>

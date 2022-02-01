@@ -1,6 +1,13 @@
 <template>
-  <BaseFormGroupLayoutDefault v-bind="$props" @change="updateValue">
-    <select :id="props.name" :name="props.name" :class="classes" :disabled="props.disabled">
+  <BaseFormGroupLayoutDefault v-bind="$props">
+    <select
+      :id="props.name"
+      :name="props.name"
+      :class="classes"
+      :disabled="props.disabled"
+      :aria-describedby="getErrorId(props.name, $props.error)"
+      @change="updateValue($event)"
+    >
       <option v-if="props.hasDropdownMessage" :selected="!props.selected" disabled>
         {{ props.dropdownMessage }}
       </option>
@@ -30,6 +37,7 @@ import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGr
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import useForm from '@whirli-components/@use/form';
 
 // @ts-ignore
 const emit = defineEmits<{
@@ -55,4 +63,6 @@ const updateValue: (event: Event) => void = (event: Event) => {
   emit('update:modelValue', (event.target as HTMLInputElement).value);
   emit('reset:errors');
 };
+
+const { getErrorId } = useForm();
 </script>

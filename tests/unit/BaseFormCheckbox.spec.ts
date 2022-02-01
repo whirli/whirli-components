@@ -1,27 +1,22 @@
 import { mount } from '@vue/test-utils';
-import BaseFormInput from '@/components/BaseFormInput/BaseFormInput.vue';
+import BaseFormCheckbox from '@/components/BaseFormCheckbox/BaseFormCheckbox.vue';
 import BaseFormLabel from '@/components/BaseFormLabel/BaseFormLabel.vue';
 import BaseFormError from '@/components/BaseFormError/BaseFormError.vue';
 
 let wrapper: any;
 const label = 'Hello World';
-const content = 'Hello Content';
 const error = 'Hello Error';
 const name = 'input-name';
 
-describe('BaseFormInput.vue', () => {
+describe('BaseFormCheckbox.vue', () => {
   beforeEach(() => {
-    wrapper = mount(BaseFormInput, {
-      slots: {
-        default: content,
-      },
+    wrapper = mount(BaseFormCheckbox, {
       props: {
         label,
         error,
         name,
       },
     });
-    wrapper.vm.resetErrors = jest.fn();
     wrapper.vm.updateValue = jest.fn();
   });
 
@@ -41,14 +36,8 @@ describe('BaseFormInput.vue', () => {
     expect(wrapper.find('input').element.getAttribute('name')).toBe(name);
   });
 
-  it('clears errors on keydown', async () => {
-    wrapper.find('input').trigger('keydown');
-    await wrapper.vm.$nextTick();
-    expect(wrapper.vm.resetErrors).toHaveBeenCalled();
-  });
-
-  it('updates value on keyup', async () => {
-    wrapper.find('input').trigger('keyup');
+  it('updates value on change', async () => {
+    wrapper.find('input').trigger('change');
     await wrapper.vm.$nextTick();
     expect(wrapper.vm.updateValue).toHaveBeenCalled();
   });
