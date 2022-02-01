@@ -1,5 +1,5 @@
 // @ts-ignore
-import type { PropType } from '@composition';
+import { PropType } from '@composition';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 // Local config
@@ -7,7 +7,7 @@ import config from '@whirli-local/components/BaseIconButton/BaseIconButton.confi
 
 // Package config
 import { PropKeys, PropValues } from './BaseIconButton.constants';
-import type { PropTag } from './BaseIconButton.types';
+import { PropTag } from './BaseIconButton.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

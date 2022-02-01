@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseGrid/BaseGrid.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseGrid.constants';
-import type { PropGap } from './BaseGrid.types';
+import { PropKeys } from './BaseGrid.constants';
+import { PropGap } from './BaseGrid.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

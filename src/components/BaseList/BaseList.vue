@@ -14,13 +14,15 @@ import { ConfigStyles, ConfigProps } from './BaseList.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.list, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

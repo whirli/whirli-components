@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseImage/BaseImage.config';
 
 // Package config
 import { PropKeys } from './BaseImage.constants';
-import type { PropImage } from './BaseImage.types';
+import { PropImage } from './BaseImage.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

@@ -9,7 +9,7 @@ import config from '@whirli-local/components/BaseSpacer/BaseSpacer.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseSpacer.constants';
-import type { PropSize } from './BaseSpacer.types';
+import { PropSize } from './BaseSpacer.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

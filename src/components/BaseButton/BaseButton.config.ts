@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseButton/BaseButton.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseButton.constants';
-import type { PropButtonType, PropColor, PropSize, PropState } from './BaseButton.types';
+import { PropButtonType, PropColor, PropSize, PropState } from './BaseButton.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

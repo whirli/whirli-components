@@ -14,13 +14,15 @@ import { Props } from '@whirli-components/@types/props';
 // Data
 import { ConfigStyles, ConfigProps } from './BaseDivider.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.divider, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

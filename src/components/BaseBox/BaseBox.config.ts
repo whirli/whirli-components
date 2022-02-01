@@ -7,7 +7,7 @@ import config from '@whirli-local/components/BaseBox/BaseBox.config';
 
 // Package config
 import { PropKeys } from './BaseBox.constants';
-import type { PropTag, PropPadding } from './BaseBox.types';
+import { PropTag, PropPadding } from './BaseBox.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

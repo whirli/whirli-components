@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseDivider/BaseDivider.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseDivider.constants';
-import type { PropColor, PropSize } from './BaseDivider.types';
+import { PropKeys } from './BaseDivider.constants';
+import { PropColor, PropSize } from './BaseDivider.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

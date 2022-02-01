@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseText/BaseText.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseText.constants';
-import type {
+import {
   PropColor,
   PropSize,
   PropTag,

@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseListItem/BaseListItem.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseListItem.constants';
-import type { PropTag } from './BaseListItem.types';
+import { PropKeys } from './BaseListItem.constants';
+import { PropTag } from './BaseListItem.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

@@ -10,10 +10,9 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from '@composition';
+import { computed, ComputedRef } from '@composition';
 
 // Types
-import type { ComputedRef } from '@composition';
 import { ComputedSize } from './BaseSection.types';
 
 // Components
@@ -26,13 +25,15 @@ import styles from '@whirli-local/components/BaseSection/BaseSection.module.scss
 // Data
 import { ConfigStyles, ConfigProps } from './BaseSection.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: ComputedRef<string[]> = computed((): string[] => {
   return [styles.section, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];

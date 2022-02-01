@@ -30,14 +30,17 @@ import { ConfigStyles, ConfigProps } from './BaseFormCheckbox.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Components
+import BaseFormGroupLayoutSecondary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutSecondary.vue';
+
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 // @ts-ignore
 const emit = defineEmits<{
   (event: 'update:modelValue', value: boolean): void;
   (event: 'reset:errors'): void;
 }>();
-
-// Components
-import BaseFormGroupLayoutSecondary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutSecondary.vue';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -45,7 +48,6 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [
   sharedStyles['input-shared'],

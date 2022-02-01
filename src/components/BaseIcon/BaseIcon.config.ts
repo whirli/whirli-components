@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseIcon/BaseIcon.config';
 
 // Package config
 import { PropKeys } from './BaseIcon.constants';
-import type { PropIcon, PropBackdrop, PropSize, PropTheme, PropRotate } from './BaseIcon.types';
+import { PropIcon, PropBackdrop, PropSize, PropTheme, PropRotate } from './BaseIcon.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseOverlay/BaseOverlay.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseOverlay.constants';
-import type { PropColor, PropState } from './BaseOverlay.types';
+import { PropKeys } from './BaseOverlay.constants';
+import { PropColor, PropState } from './BaseOverlay.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

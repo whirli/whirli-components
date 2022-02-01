@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseColumn/BaseColumn.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseColumn.constants';
-import type { PropSpans, PropAlign, PropJustify, PropDirection, PropStart } from './BaseColumn.types';
+import { PropSpans, PropAlign, PropJustify, PropDirection, PropStart } from './BaseColumn.types';
 import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 export const ConfigStyles: ComponentStyles = {

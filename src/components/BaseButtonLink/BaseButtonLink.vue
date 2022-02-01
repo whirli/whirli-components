@@ -5,8 +5,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from '@composition';
-import type { ComputedRef } from '@composition';
+import { computed, ComputedRef } from '@composition';
 
 // Data
 import { ConfigProps } from './BaseButtonLink.config';

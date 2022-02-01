@@ -29,8 +29,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, defineEmits } from '@composition';
-import type { ComputedRef } from '@composition';
+import { computed, defineEmits, ComputedRef } from '@composition';
 
 // Styles
 // @ts-ignore
@@ -52,13 +51,15 @@ const emit = defineEmits<{
 // Components
 import BaseFormGroupLayoutTertiary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutTertiary.vue';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => [
   styles['radio-button-wrapper'],

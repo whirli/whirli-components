@@ -6,8 +6,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseFormInput/BaseFormInput.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseFormInput.constants';
-import type { PropType as PropInputType } from './BaseFormInput.types';
+import { PropKeys } from './BaseFormInput.constants';
+import { PropType as PropInputType } from './BaseFormInput.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

@@ -8,7 +8,7 @@ import config from '@whirli-local/components/SkeletonComponent/SkeletonComponent
 
 // Package config
 import { PropKeys, PropValues } from './SkeletonComponent.constants';
-// import type { PropColor } from './SkeletonComponent.types';
+// import { PropColor } from './SkeletonComponent.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

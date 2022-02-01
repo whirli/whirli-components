@@ -12,13 +12,15 @@ import styles from '@whirli-local/components/BaseMain/BaseMain.module.scss?modul
 // Data
 import { ConfigStyles, ConfigProps } from './BaseMain.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.main, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

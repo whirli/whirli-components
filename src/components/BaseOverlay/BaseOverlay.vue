@@ -18,13 +18,15 @@ import styles from '@whirli-local/components/BaseOverlay/BaseOverlay.module.scss
 // Data
 import { ConfigStyles, ConfigProps } from './BaseOverlay.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses: ComputedRef<string[]> = computed(() => {
   return [styles.overlay, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];

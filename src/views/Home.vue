@@ -109,8 +109,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from '@composition';
-import type { Ref } from '@composition';
+import { ref, reactive, Ref } from '@composition';
 
 import BaseText from '@/components/BaseText/BaseText.vue';
 import BaseSection from '@/components/BaseSection/BaseSection.vue';

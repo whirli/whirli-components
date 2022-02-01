@@ -1,4 +1,4 @@
-import type { PropType } from '@composition';
+import { PropType } from '@composition';
 
 export type Props = Readonly<
   {

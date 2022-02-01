@@ -6,8 +6,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from '@composition';
-import type { ComputedRef } from '@composition';
+import { computed, ComputedRef } from '@composition';
 
 // Styles
 // @ts-ignore
@@ -20,13 +19,15 @@ import { PropKeys } from '@whirli-components/components/BaseIconButton/BaseIconB
 // Components
 import BaseIcon from '@whirli-components/components/BaseIcon/BaseIcon.vue';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: string[] = [
   styles['icon-button'],

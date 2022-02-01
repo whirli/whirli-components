@@ -1,5 +1,5 @@
 // @ts-ignore
-import type { PropType } from '@composition';
+import { PropType } from '@composition';
 
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 

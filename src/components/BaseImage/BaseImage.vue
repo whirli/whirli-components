@@ -16,11 +16,10 @@
 
 <script setup lang="ts">
 // Vue
-import { ref, computed, onMounted } from '@composition';
+import { ref, computed, onMounted, ComputedRef, Ref } from '@composition';
 
 // Types
-import type { ComputedRef, Ref } from '@composition';
-import type { PropImage } from './BaseImage.types';
+import { PropImage } from './BaseImage.types';
 
 // Constants
 import { PropKeys } from './BaseImage.constants';
@@ -32,13 +31,15 @@ import styles from '@whirli-local/components/BaseImage/BaseImage.module.scss?mod
 // Data
 import { ConfigStyles, ConfigProps } from './BaseImage.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.image__wrapper, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const imageClasses = [styles.image];
