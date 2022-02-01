@@ -7,6 +7,7 @@
       :class="classes"
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
+      :aria-describedby="getErrorId(props.name, $props.error)"
       :checked="props.modelValue"
       @change="updateValue"
     />
@@ -35,6 +36,7 @@ import BaseFormGroupLayoutSecondary from '@whirli-components/components/BaseForm
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import useForm from '@whirli-components/@use/form';
 
 // @ts-ignore
 const emit = defineEmits<{
@@ -60,4 +62,6 @@ const updateValue: (event: Event) => void = (event: Event) => {
   emit('update:modelValue', Boolean((event.target as HTMLInputElement).checked));
   emit('reset:errors');
 };
+
+const { getErrorId } = useForm();
 </script>

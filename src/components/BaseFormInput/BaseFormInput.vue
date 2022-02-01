@@ -7,6 +7,7 @@
       :class="classes"
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
+      :aria-describedby="getErrorId(props.name, $props.error)"
       :value="props.value"
       @keyup="updateValue"
       @keydown="resetErrors"
@@ -19,6 +20,7 @@
       :name="props.name"
       :class="classes"
       :disabled="props.disabled"
+      :aria-describedby="getErrorId(props.name, $props.error)"
       :aria-disabled="props.disabled"
       :multiple="props.multiple"
       :value="props.modelValue"
@@ -52,6 +54,7 @@ import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGr
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import useForm from '@whirli-components/@use/form';
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -85,4 +88,6 @@ const resetErrors: () => void = () => {
 const onChange: (event: Event) => void = (event: Event) => {
   emit('update:image', (event.target as HTMLInputElement).files);
 };
+
+const { getErrorId } = useForm();
 </script>

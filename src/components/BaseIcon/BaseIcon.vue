@@ -36,6 +36,7 @@ const classes: ComputedRef<string[]> = computed((): string[] => {
 });
 
 // Get icon
+// eslint-disable-next-line
 const iconComponent: ComputedRef<any> = computed((): any => {
   return Icons[props[PropKeys.ICON] as keyof typeof Icons];
 });

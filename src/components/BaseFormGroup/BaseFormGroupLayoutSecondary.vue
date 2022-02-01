@@ -2,10 +2,11 @@
   <BaseFormGroup>
     <BaseGrid gap="0">
       <BaseRow :direction="rowDirection">
-        <BaseFormLabel :name="props.name">{{ props.label }}</BaseFormLabel> <slot />
+        <BaseFormLabel :name="props.name">{{ props.label }}</BaseFormLabel>
+        <slot />
       </BaseRow>
       <BaseRow v-if="props.error">
-        <BaseFormError>{{ props.error }}</BaseFormError>
+        <BaseFormError :id="getErrorId(props.name, props.error)">{{ props.error }}</BaseFormError>
       </BaseRow>
     </BaseGrid>
   </BaseFormGroup>
@@ -20,9 +21,6 @@ import { ConfigProps } from './BaseFormGroupLayoutSecondary.config';
 import { Props } from '@whirli-components/@types/props';
 import { PropDirection } from './BaseFormGroup.types';
 
-// @ts-ignore
-const props: Props = defineProps({ ...SharedConfigProps, ...ConfigProps });
-
 // Constants
 import { PropKeys } from './BaseFormGroup.constants';
 
@@ -33,5 +31,13 @@ import BaseRow from '@whirli-components/components/BaseRow/BaseRow.vue';
 import BaseFormLabel from '@whirli-components/components/BaseFormLabel/BaseFormLabel.vue';
 import BaseFormError from '@whirli-components/components/BaseFormError/BaseFormError.vue';
 
+// Composables
+import useForm from '@whirli-components/@use/form';
+
+// @ts-ignore
+const props: Props = defineProps({ ...SharedConfigProps, ...ConfigProps });
+
 const rowDirection: PropDirection = props[PropKeys.DIRECTION] === 'reverse' ? 'row-reverse' : 'row';
+
+const { getErrorId } = useForm();
 </script>

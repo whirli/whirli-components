@@ -13,6 +13,7 @@
         v-bind="$attrs"
         :disabled="props.disabled"
         :aria-disabled="props.disabled"
+        :aria-describedby="getErrorId(props.name, $props.error)"
         :name="props.group"
         :id="id"
         :value="props.value"
@@ -42,17 +43,18 @@ import { ConfigStyles, ConfigProps } from './BaseFormRadioButton.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
-// @ts-ignore
-const emit = defineEmits<{
-  (event: 'update:modelValue', value: string): void;
-  (event: 'reset:errors'): void;
-}>();
-
 // Components
 import BaseFormGroupLayoutTertiary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutTertiary.vue';
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import useForm from '@whirli-components/@use/form';
+
+// @ts-ignore
+const emit = defineEmits<{
+  (event: 'update:modelValue', value: string): void;
+  (event: 'reset:errors'): void;
+}>();
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -76,4 +78,6 @@ const updateValue: (event: Event) => void = (event: Event) => {
   emit('update:modelValue', props.value);
   emit('reset:errors');
 };
+
+const { getErrorId } = useForm();
 </script>
