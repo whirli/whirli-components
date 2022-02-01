@@ -12,6 +12,7 @@ export const PropValues: Record<string, string[]> = {
     'xs',
     'sm',
     'base',
+    'default', // Alias for base
     'md',
     'lg',
     'xl',
