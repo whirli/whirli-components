@@ -60,6 +60,7 @@ exports[`BaseFormSelect.vue renders the component 1`] = `
       
       <span
         class=""
+        id="select-name-error"
       >
         
         

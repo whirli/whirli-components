@@ -118,6 +118,7 @@ exports[`BaseFormRadioButton.vue renders the component 1`] = `
       
       <span
         class=""
+        id="input-group-input-value-error"
       >
         
         

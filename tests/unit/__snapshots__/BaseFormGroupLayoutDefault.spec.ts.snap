@@ -42,6 +42,7 @@ exports[`BaseFormGroupLayoutDefault.vue renders the component 1`] = `
       
       <span
         class=""
+        id="undefined-error"
       >
         
         

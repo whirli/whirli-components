@@ -21,7 +21,6 @@ exports[`BaseFormGroupLayoutSecondary.spec.vue renders the component 1`] = `
         Hello World
         
       </label>
-       
       
       Hello Content
       
@@ -35,6 +34,7 @@ exports[`BaseFormGroupLayoutSecondary.spec.vue renders the component 1`] = `
       
       <span
         class=""
+        id="undefined-error"
       >
         
         
