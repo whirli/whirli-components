@@ -24,7 +24,10 @@ $packageBreakpointStyles: (
     size-sm: (
         height: $spacerSm,
     ),
-    size-default: (
+    size-base: (
+        height: $spacerDefault,
+    ),
+    size-default: ( // Alias for base
         height: $spacerDefault,
     ),
     size-md: (

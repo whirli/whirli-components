@@ -2,12 +2,13 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseSpacer/BaseSpacer.config';
 
 // Package config
-import { PropKeys } from './BaseSpacer.constants';
+import { PropKeys, PropValues } from './BaseSpacer.constants';
 import type { PropSize } from './BaseSpacer.types';
 
 export const ConfigStyles: ComponentStyles = {
@@ -15,20 +16,7 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
-      '0': 'size-0',
-      '4xs': 'size-4xs',
-      '3xs': 'size-3xs',
-      '2xs': 'size-2xs',
-      xs: 'size-xs',
-      sm: 'size-sm',
-      default: 'size-default',
-      md: 'size-md',
-      lg: 'size-lg',
-      xl: 'size-xl',
-      '2xl': 'size-2xl',
-      '3xl': 'size-3xl',
-      '4xl': 'size-4xl',
-      '5xl': 'size-5xl',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },
