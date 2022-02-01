@@ -4,10 +4,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed } from '@composition';
-
-// Types
-import type { ComputedRef } from '@composition';
+import { computed, ComputedRef } from '@composition';
 
 // Styles
 // @ts-ignore
@@ -20,16 +17,19 @@ import { ConfigStyles, ConfigProps } from './BaseIcon.config';
 import PackageIcons from './Icons';
 import { LocalIcons } from '@whirli-local/components/BaseIcon/BaseIcon.config';
 
+import { PropKeys } from '@whirli-components/components/BaseIcon/BaseIcon.constants';
+
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const Icons = { ...PackageIcons, ...LocalIcons };
 
 const ComponentStyles = ConfigStyles;
-import { PropKeys } from '@whirli-components/components/BaseIcon/BaseIcon.constants';
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes: ComputedRef<string[]> = computed((): string[] => {
   return [styles.icon, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];

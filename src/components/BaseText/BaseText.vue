@@ -10,13 +10,15 @@ import styles from '@whirli-local/components/BaseText/BaseText.module.scss?modul
 // Data
 import { ConfigStyles, ConfigProps } from './BaseText.config';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles = ConfigStyles;
 
 // @ts-ignore
 const props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [styles.text, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

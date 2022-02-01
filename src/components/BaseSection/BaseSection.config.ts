@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseSection/BaseSection.config';
 
 // Package config
 import { PropKeys } from './BaseSection.constants';
-import type { PropBackground } from './BaseSection.types';
+import { PropBackground } from './BaseSection.types';
 
 // Types
 import { PropSize } from './BaseSection.types';

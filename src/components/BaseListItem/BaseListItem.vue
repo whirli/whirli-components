@@ -16,14 +16,16 @@ import { ConfigStyles, ConfigProps } from './BaseListItem.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const wrapperClasses = [styles['list-item'], makeClasses(ComponentStyles, props, styles)];
+const wrapperClasses = [styles['list-item'], makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const contentClasses = [styles['list-item__content']];
 </script>

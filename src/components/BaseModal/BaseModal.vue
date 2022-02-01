@@ -42,6 +42,7 @@ import { ConfigStyles, ConfigProps } from './BaseModal.config';
 // Composables
 import useComponent from '@whirli-components/@use/component';
 import useFocusTrap from '@whirli-components/@use/focusTrap';
+import useClasses from '@whirli-components/@use/class';
 
 const { uniqueId } = useComponent();
 const { initFocusTrap, destroyFocusTrap } = useFocusTrap();
@@ -54,7 +55,6 @@ const props = defineProps(ConfigProps);
 const emit = defineEmits(['modal:close', 'modal:open']);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.modal, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const titleClasses = [styles['modal__title']];

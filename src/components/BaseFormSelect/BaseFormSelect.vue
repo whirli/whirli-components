@@ -25,6 +25,12 @@ import { ConfigStyles, ConfigProps } from './BaseFormSelect.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Components
+import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
+
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 // @ts-ignore
 const emit = defineEmits<{
   (event: 'update:modelValue', value: string | number): void;
@@ -36,11 +42,7 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
-// Components
-import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
-
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const classes = [
   sharedStyles['input-shared'],

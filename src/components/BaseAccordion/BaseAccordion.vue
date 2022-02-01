@@ -37,8 +37,7 @@ import styles from '@whirli-local/components/BaseAccordion/BaseAccordion.module.
 
 // Composables
 import useBreakpoint from '@whirli-components/@use/breakpoint';
-
-const { getBreakpoints, activeBreakpoint } = useBreakpoint();
+import useClasses from '@whirli-components/@use/class';
 
 // Data
 import { ConfigStyles, ConfigProps } from './BaseAccordion.config';
@@ -47,6 +46,8 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
+
+const { getBreakpoints, activeBreakpoint } = useBreakpoint();
 
 const accordionContentWrapper: Ref<HTMLElement> = ref({} as HTMLElement);
 const accordionContent: Ref<HTMLElement> = ref({} as HTMLElement);
@@ -58,7 +59,6 @@ const isOpenInitialState: Record<string, string> = reactive({});
 const accordionState: Record<string, string> = reactive({});
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const staticWrapperClasses = [...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 const dynamicWrapperClasses: ComputedRef<string[]> = computed(() => [styles.accordion]);

@@ -63,13 +63,8 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, defineEmits } from '@composition';
-import type { ComputedRef } from '@composition';
+import { computed, defineEmits, ComputedRef } from '@composition';
 import { useRoute } from 'vue-router';
-
-const Route = useRoute();
-// @ts-ignore
-const emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
 
 // Styles
 // @ts-ignore
@@ -81,7 +76,7 @@ import { ConfigStyles, ConfigProps } from './BasePagination.config';
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
-import type { PaginationOption } from '@whirli-components/@types/pagination';
+import { PaginationOption } from '@whirli-components/@types/pagination';
 
 // Components
 import BaseGrid from '@whirli-components/components/BaseGrid/BaseGrid.vue';
@@ -93,6 +88,13 @@ import BaseListItem from '@whirli-components/components/BaseListItem/BaseListIte
 import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 import BaseFormSelect from '@whirli-components/components/BaseFormSelect/BaseFormSelect.vue';
 import BaseFormSelectOption from '@whirli-components/components/BaseFormSelectOption/BaseFormSelectOption.vue';
+
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
+const Route = useRoute();
+// @ts-ignore
+const emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
@@ -106,7 +108,6 @@ const isFirstPage: ComputedRef<boolean> = computed(() => currentPage.value === f
 const isLastPage: ComputedRef<boolean> = computed(() => currentPage.value === props.lastPage);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 

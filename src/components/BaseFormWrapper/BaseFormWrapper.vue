@@ -1,5 +1,5 @@
 <template>
-  <form :action="props.action" :method="props.method" :enctype="attributes[PropKeys.ENCODE]">
+  <form :class="classes" :action="props.action" :method="props.method" :enctype="attributes[PropKeys.ENCODE]">
     <slot />
   </form>
 </template>
@@ -19,6 +19,9 @@ import { PropKeys } from './BaseFormWrapper.constants';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Composables
+import useClasses from '@whirli-components/@use/class';
+
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 const ComponentAttributes: Record<string, Record<string, string>> = ConfigAttributes;
 
@@ -26,9 +29,8 @@ const ComponentAttributes: Record<string, Record<string, string>> = ConfigAttrib
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import useClasses from '@whirli-components/@use/class';
 const { makeClasses } = useClasses();
-const classes = makeClasses(ComponentStyles, props, styles);
+const classes = makeClasses(ComponentStyles, ConfigProps, props, styles);
 
 // Attributes
 const attributes: Record<string, string> = {

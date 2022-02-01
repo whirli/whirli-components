@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseFormWrapper/BaseFormWrapper.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseFormWrapper.constants';
-import type { PropMethod, PropEncode } from './BaseFormWrapper.types';
+import { PropKeys } from './BaseFormWrapper.constants';
+import { PropMethod, PropEncode } from './BaseFormWrapper.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

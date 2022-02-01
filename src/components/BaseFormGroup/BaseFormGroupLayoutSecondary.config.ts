@@ -1,5 +1,5 @@
 // @ts-ignore
-import type { PropType } from '@composition';
+import { PropType } from '@composition';
 import { PropDirection } from './BaseFormGroup.types';
 
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';

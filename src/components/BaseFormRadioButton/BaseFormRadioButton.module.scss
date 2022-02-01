@@ -1,6 +1,10 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
+.radio-button-wrapper {}
+.radio-button-input {}
+.radio-button-display {}
+.radio-button-faker {}
 
 // breakpoint styles
 $packageBreakpointStyles: (

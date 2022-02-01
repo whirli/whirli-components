@@ -3,8 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from '@composition';
-import type { ComputedRef } from '@composition';
+import { computed, ComputedRef } from '@composition';
 
 // Data
 import { ConfigProps } from './BaseFormSelectOption.config';

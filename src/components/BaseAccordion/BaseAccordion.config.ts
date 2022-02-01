@@ -8,7 +8,7 @@ import config from '@whirli-local/components/BaseAccordion/BaseAccordion.config'
 
 // Package config
 import { PropKeys } from './BaseAccordion.constants';
-import type { PropState } from './BaseAccordion.types';
+import { PropState } from './BaseAccordion.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,

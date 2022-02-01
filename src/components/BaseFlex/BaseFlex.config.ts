@@ -9,7 +9,7 @@ import config from '@whirli-local/components/BaseFlex/BaseFlex.config';
 
 // Package config
 import { PropKeys, PropValues } from './BaseFlex.constants';
-import type {
+import {
   PropAlign,
   PropJustify,
   PropDirection,

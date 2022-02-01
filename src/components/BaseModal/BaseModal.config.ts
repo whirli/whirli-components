@@ -7,8 +7,8 @@ import { ComponentStyles, ComponentProps } from '@whirli-components/@types/compo
 import config from '@whirli-local/components/BaseModal/BaseModal.config';
 
 // Package config
-import { PropKeys, PropValues } from './BaseModal.constants';
-import type { PropColor, PropSize } from './BaseModal.types';
+import { PropKeys } from './BaseModal.constants';
+import { PropColor, PropSize } from './BaseModal.types';
 
 //Dependency config
 import { PropKeys as OverlayPropKeys } from '@whirli-components/components/BaseOverlay/BaseOverlay.constants';
