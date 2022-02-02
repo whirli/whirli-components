@@ -10,4 +10,5 @@ module.exports = {
     '^@whirli-local(.*)$': '<rootDir>/whirli/$1',
     '^@composition$': 'vue',
   },
+  setupFilesAfterEnv: ['./tests/setup.js'],
 };
