@@ -111,14 +111,14 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    align-top: (
-        align-items: top,
+    align-start: (
+        align-items: flex-start,
     ),
-    align-middle: (
-        align-items: middle,
+    align-center: (
+        align-items: center,
     ),
-    align-bottom: (
-        align-items: bottom,
+    align-end: (
+        align-items: flex-end,
     ),
     align-baseline: (
         align-items: baseline,
