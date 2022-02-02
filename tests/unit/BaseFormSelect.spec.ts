@@ -22,6 +22,7 @@ describe('BaseFormSelect.vue', () => {
         name,
       },
     });
+    wrapper.vm.updateValue = jest.fn();
   });
 
   it('renders the component', () => {
@@ -38,5 +39,11 @@ describe('BaseFormSelect.vue', () => {
 
   it('select has the correct name', () => {
     expect(wrapper.find('select').element.getAttribute('name')).toBe(name);
+  });
+
+  it('updates value on change', async () => {
+    wrapper.find('select').trigger('change');
+    await wrapper.vm.$nextTick();
+    expect(wrapper.vm.updateValue).toHaveBeenCalled();
   });
 });

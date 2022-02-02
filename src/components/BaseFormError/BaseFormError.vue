@@ -14,6 +14,9 @@ import { ConfigStyles, ConfigProps } from './BaseFormError.config';
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
 import { Props } from '@whirli-components/@types/props';
 
+// Components
+import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
+
 // Composables
 import useClasses from '@whirli-components/@use/class';
 
@@ -23,7 +26,6 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 const props: Props = defineProps(ConfigProps);
 
 // Classes
-import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 const { makeClasses } = useClasses();
 const classes = [styles.error, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 </script>

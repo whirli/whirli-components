@@ -68,6 +68,6 @@ const paddingClasses: ComputedRef<string[]> = computed(() => {
 const classes: ComputedRef<string[]> = computed(() => [
   styles['base-box'],
   ...paddingClasses.value,
-  makeClasses(ComponentStyles, props, styles),
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
 ]);
 </script>

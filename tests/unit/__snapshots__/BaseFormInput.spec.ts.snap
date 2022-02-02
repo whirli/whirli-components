@@ -52,6 +52,7 @@ exports[`BaseFormInput.vue renders the component 1`] = `
       
       <span
         class=""
+        id="input-name-error"
       >
         
         
