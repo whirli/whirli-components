@@ -15,7 +15,7 @@ describe('BaseFlex.vue', () => {
     wrapper = shallowMount(BaseFlex, {
       props: {
         tag: 'div',
-        align: 'middle',
+        align: 'center',
         justify: 'center',
         direction: 'column',
         wrap: 'nowrap',
@@ -36,7 +36,7 @@ describe('BaseFlex.vue', () => {
   });
 
   it('is the correct align', () => {
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.ALIGN, 'align-middle')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.ALIGN, 'align-center')).toBe(true);
   });
 
   it('is the correct justify', () => {

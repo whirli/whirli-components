@@ -69,7 +69,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.ALIGN]: {
     required: false,
     type: [String, Object] as PropType<PropAlign>,
-    default: 'middle',
+    default: 'center',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
   },
   [PropKeys.JUSTIFY]: {
