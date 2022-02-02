@@ -2,6 +2,7 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseButton/BaseButton.config';
@@ -15,14 +16,14 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.COLOR]: {
     generateBreakpoints: true,
     classes: {
-      default: 'color-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.COLOR),
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
-      default: 'size-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },

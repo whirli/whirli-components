@@ -2,12 +2,13 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseOverlay/BaseOverlay.config';
 
 // Package config
-import { PropKeys } from './BaseOverlay.constants';
+import { PropKeys, PropValues } from './BaseOverlay.constants';
 import { PropColor, PropState } from './BaseOverlay.types';
 
 export const ConfigStyles: ComponentStyles = {
@@ -15,7 +16,7 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.COLOR]: {
     generateBreakpoints: true,
     classes: {
-      default: 'color-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.COLOR),
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },

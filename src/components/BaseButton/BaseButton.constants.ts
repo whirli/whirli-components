@@ -1,3 +1,9 @@
+// Local config
+import config from '@whirli-local/components/BaseButton/BaseButton.config';
+
+// Helpers
+import { getLocalPropValues } from '@whirli-components/helpers/props';
+
 export const LoadingStates: Record<string, string> = {
   DEFAULT: 'default',
   LOADING: 'loading',
@@ -13,10 +19,12 @@ export const PropKeys: Record<string, string> = {
   STATE: 'state',
 };
 
+const localValues = getLocalPropValues(PropKeys, config);
+
 export const PropValues: Record<string, string[]> = {
   [PropKeys.TYPE]: ['button', 'submit'],
-  [PropKeys.COLOR]: ['default'],
-  [PropKeys.SIZE]: ['default'],
+  [PropKeys.COLOR]: ['default', ...localValues[PropKeys.COLOR]],
+  [PropKeys.SIZE]: ['default', ...localValues[PropKeys.SIZE]],
   [PropKeys.STATE]: [
     LoadingStates.DEFAULT,
     LoadingStates.LOADING,

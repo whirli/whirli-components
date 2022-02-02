@@ -35,6 +35,6 @@ describe('BaseList.vue - Single classes', () => {
   });
 
   it('is the correct classes', () => {
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LIST_STYLE, 'style-none')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LIST_STYLE, 'listStyle-none')).toBe(true);
   });
 });

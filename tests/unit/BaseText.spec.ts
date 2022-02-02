@@ -42,8 +42,8 @@ describe('BaseText.vue - Single classes', () => {
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.FONT, 'font-bold')).toBe(true);
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.COLOR, 'color-inherit')).toBe(true);
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.SIZE, 'size-xl')).toBe(true);
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LINE_HEIGHT, 'line-height-xs')).toBe(true);
-    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LETTER_SPACING, 'letter-spacing-md')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LINE_HEIGHT, 'lineHeight-xs')).toBe(true);
+    expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.LETTER_SPACING, 'letterSpacing-md')).toBe(true);
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.TRANSFORM, 'transform-uppercase')).toBe(true);
     expect(propReturnsClass(wrapper, ConfigStyles, PropKeys.ALIGN, 'align-center')).toBe(true);
   });

@@ -2,25 +2,26 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseDivider/BaseDivider.config';
 
 // Package config
-import { PropKeys } from './BaseDivider.constants';
+import { PropKeys, PropValues } from './BaseDivider.constants';
 import { PropColor, PropSize } from './BaseDivider.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.COLOR]: {
     classes: {
-      default: 'color-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.COLOR),
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
   [PropKeys.SIZE]: {
     classes: {
-      default: 'size-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },

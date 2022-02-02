@@ -2,20 +2,20 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseGrid/BaseGrid.config';
 
 // Package config
-import { PropKeys } from './BaseGrid.constants';
+import { PropKeys, PropValues } from './BaseGrid.constants';
 import { PropGap } from './BaseGrid.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.GAP]: {
     classes: {
-      default: 'gap-default',
-      '0': 'gap-0',
+      ...createClassesFromPropValues(PropValues, PropKeys.GAP),
       ...config.styles[PropKeys.GAP]?.classes,
     } as Record<PropGap, string>,
   },
