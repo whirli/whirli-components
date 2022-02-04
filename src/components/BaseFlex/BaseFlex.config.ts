@@ -69,13 +69,13 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.ALIGN]: {
     required: false,
     type: [String, Object] as PropType<PropAlign>,
-    default: 'center',
+    default: 'normal',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.ALIGN),
   },
   [PropKeys.JUSTIFY]: {
     required: false,
     type: [String, Object] as PropType<PropJustify>,
-    default: 'center',
+    default: 'normal',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.JUSTIFY),
   },
   [PropKeys.DIRECTION]: {
@@ -87,13 +87,13 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.WRAP]: {
     required: false,
     type: [String, Object] as PropType<PropWrap>,
-    default: 'unset',
+    default: 'wrap',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.WRAP),
   },
   [PropKeys.SPACING]: {
     required: false,
     type: String as PropType<PropSpacing>,
-    default: 'lg',
+    default: 'none',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.SPACING),
   },
   [PropKeys.TAG]: {
@@ -104,7 +104,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.SPANS]: {
     required: false,
     type: [String, Object] as PropType<PropSpans | Record<string, PropSpans>>,
-    default: 'auto',
+    default: '12',
   },
   ...config.props,
 };

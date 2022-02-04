@@ -25,7 +25,16 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, ref, onMounted, reactive, ComputedRef, Ref, onBeforeMount } from '@composition';
+import {
+  computed,
+  ref,
+  onMounted,
+  reactive,
+  ComputedRef,
+  Ref,
+  onBeforeMount,
+  onBeforeUnmount,
+} from '@composition';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
@@ -115,7 +124,20 @@ onBeforeMount(() => {
   initInitialState();
 });
 
+const observer = new MutationObserver(updateAccordionHeight);
+
 onMounted(() => {
   updateAccordionHeight();
+
+  observer.observe(accordionContent.value, {
+    attributes: true,
+    childList: true,
+    characterData: true,
+    subtree: true,
+  });
+});
+
+onBeforeUnmount(() => {
+  observer.disconnect();
 });
 </script>
