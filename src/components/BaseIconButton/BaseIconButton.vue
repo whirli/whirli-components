@@ -17,6 +17,7 @@ import { ConfigStyles, ConfigProps } from './BaseIconButton.config';
 import { PropKeys } from '@whirli-components/components/BaseIconButton/BaseIconButton.constants';
 
 // Components
+// @ts-ignore
 import BaseIcon from '@whirli-components/components/BaseIcon/BaseIcon.vue';
 
 // Composables

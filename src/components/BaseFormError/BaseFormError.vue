@@ -15,6 +15,7 @@ import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/
 import { Props } from '@whirli-components/@types/props';
 
 // Components
+// @ts-ignore
 import BaseText from '@whirli-components/components/BaseText/BaseText.vue';
 
 // Composables

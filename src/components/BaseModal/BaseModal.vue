@@ -28,8 +28,11 @@
 import { defineEmits, watch, ref, computed, Ref, ComputedRef } from '@composition';
 
 // Components
+// @ts-ignore
 import BaseOverlay from '@whirli-components/components/BaseOverlay/BaseOverlay.vue';
+// @ts-ignore
 import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue';
+// @ts-ignore
 import BaseIconButton from '@whirli-components/components/BaseIconButton/BaseIconButton.vue';
 
 // Styles

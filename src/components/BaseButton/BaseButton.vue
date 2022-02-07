@@ -25,7 +25,9 @@
 import { computed, ComputedRef } from '@composition';
 
 // components
+// @ts-ignore
 import BaseButtonDefault from '@whirli-components/components/BaseButtonDefault/BaseButtonDefault.vue';
+// @ts-ignore
 import BaseButtonLink from '@whirli-components/components/BaseButtonLink/BaseButtonLink.vue';
 
 // Styles

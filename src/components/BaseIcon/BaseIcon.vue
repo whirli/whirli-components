@@ -14,6 +14,7 @@ import styles from '@whirli-local/components/BaseIcon/BaseIcon.module.scss?modul
 import { ConfigStyles, ConfigProps } from './BaseIcon.config';
 
 // Components
+// @ts-ignore
 import PackageIcons from './Icons';
 import { LocalIcons } from '@whirli-local/components/BaseIcon/BaseIcon.config';
 

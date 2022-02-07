@@ -32,6 +32,7 @@ import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/
 import { Props } from '@whirli-components/@types/props';
 
 // Components
+// @ts-ignore
 import BaseFormGroupLayoutSecondary from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutSecondary.vue';
 
 // Composables
