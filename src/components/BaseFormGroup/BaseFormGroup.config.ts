@@ -1,6 +1,3 @@
-// @ts-ignore
-import { PropType } from '@composition';
-
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
 
 // Local config

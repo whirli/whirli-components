@@ -20,6 +20,7 @@ describe('BaseModal.vue - Single classes', () => {
         content: content,
       },
     });
+    wrapper.vm.uniqueId = 'abc';
   });
 
   it('renders the component', () => {

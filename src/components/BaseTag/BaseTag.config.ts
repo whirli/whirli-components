@@ -2,6 +2,7 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseTag/BaseTag.config';
@@ -14,13 +15,13 @@ export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.SIZE]: {
     classes: {
-      default: 'size-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },
   [PropKeys.THEME]: {
     classes: {
-      default: 'theme-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.THEME),
       ...config.styles[PropKeys.THEME]?.classes,
     } as Record<PropTheme, string>,
   },

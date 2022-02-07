@@ -2,6 +2,7 @@
 import { PropType } from '@composition';
 // @ts-ignore
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseRow/BaseRow.config';

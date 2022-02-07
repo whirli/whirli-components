@@ -2,6 +2,7 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseText/BaseText.config';
@@ -24,78 +25,48 @@ export const ConfigStyles: ComponentStyles = {
   [PropKeys.COLOR]: {
     generateBreakpoints: true,
     classes: {
-      default: 'color-inherit',
+      ...createClassesFromPropValues(PropValues, PropKeys.COLOR),
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
-      '3xs': 'size-3xs',
-      '2xs': 'size-2xs',
-      xs: 'size-xs',
-      sm: 'size-sm',
-      default: 'size-default',
-      md: 'size-md',
-      lg: 'size-lg',
-      xl: 'size-xl',
-      '2xl': 'size-2xl',
-      '3xl': 'size-3xl',
-      '4xl': 'size-4xl',
-      '5xl': 'size-5xl',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },
   [PropKeys.FONT]: {
     generateBreakpoints: true,
     classes: {
-      default: 'font-sans',
-      bold: 'font-bold',
-      mono: 'font-mono',
+      ...createClassesFromPropValues(PropValues, PropKeys.FONT),
       ...config.styles[PropKeys.FONT]?.classes,
     } as Record<PropFont, string>,
   },
   [PropKeys.TRANSFORM]: {
     classes: {
-      default: 'transform-default',
-      uppercase: 'transform-uppercase',
+      ...createClassesFromPropValues(PropValues, PropKeys.TRANSFORM),
       ...config.styles[PropKeys.TRANSFORM]?.classes,
     } as Record<PropTransform, string>,
   },
   [PropKeys.LETTER_SPACING]: {
     generateBreakpoints: true,
     classes: {
-      default: 'letter-spacing-default',
-      md: 'letter-spacing-md',
-      lg: 'letter-spacing-lg',
-      xl: 'letter-spacing-xl',
+      ...createClassesFromPropValues(PropValues, PropKeys.LETTER_SPACING),
       ...config.styles[PropKeys.LETTER_SPACING]?.classes,
     } as Record<PropLetterSpacing, string>,
   },
   [PropKeys.LINE_HEIGHT]: {
     generateBreakpoints: true,
     classes: {
-      '3xs': 'line-height-3xs',
-      '2xs': 'line-height-2xs',
-      xs: 'line-height-xs',
-      sm: 'line-height-sm',
-      default: 'line-height-default',
-      md: 'line-height-md',
-      lg: 'line-height-lg',
-      xl: 'line-height-xl',
-      '2xl': 'line-height-2xl',
-      '3xl': 'line-height-3xl',
-      '4xl': 'line-height-4xl',
-      '5xl': 'line-height-5xl',
+      ...createClassesFromPropValues(PropValues, PropKeys.LINE_HEIGHT),
       ...config.styles[PropKeys.LINE_HEIGHT]?.classes,
     } as Record<PropLineHeight, string>,
   },
   [PropKeys.ALIGN]: {
     generateBreakpoints: true,
     classes: {
-      default: 'align-default',
-      center: 'align-center',
-      right: 'align-right',
+      ...createClassesFromPropValues(PropValues, PropKeys.ALIGN),
       ...config.styles[PropKeys.ALIGN]?.classes,
     } as Record<PropAlign, string>,
   },
@@ -105,7 +76,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.COLOR]: {
     required: false,
     type: [String, Object] as PropType<PropColor>,
-    default: 'default',
+    default: 'inherit',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.COLOR),
   },
   [PropKeys.TAG]: {

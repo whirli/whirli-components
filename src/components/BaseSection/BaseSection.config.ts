@@ -2,12 +2,13 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseSection/BaseSection.config';
 
 // Package config
-import { PropKeys } from './BaseSection.constants';
+import { PropKeys, PropValues } from './BaseSection.constants';
 import { PropBackground } from './BaseSection.types';
 
 // Types
@@ -19,6 +20,7 @@ export const ConfigStyles: ComponentStyles = {
     generateBreakpoints: true,
     classes: {
       default: 'background-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.BACKGROUND),
       ...config.styles[PropKeys.BACKGROUND]?.classes,
     } as Record<PropBackground, string>,
   },

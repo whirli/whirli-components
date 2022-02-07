@@ -2,12 +2,13 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseModal/BaseModal.config';
 
 // Package config
-import { PropKeys } from './BaseModal.constants';
+import { PropKeys, PropValues } from './BaseModal.constants';
 import { PropColor, PropSize } from './BaseModal.types';
 
 //Dependency config
@@ -18,15 +19,14 @@ export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.COLOR]: {
     classes: {
-      default: 'color-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.COLOR),
       ...config.styles[PropKeys.COLOR]?.classes,
     } as Record<PropColor, string>,
   },
   [PropKeys.SIZE]: {
     classes: {
-      default: 'size-default',
-      small: 'size-small',
-      ...config.styles[PropKeys.COLOR]?.classes,
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
+      ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropColor, string>,
   },
 };

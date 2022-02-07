@@ -38,7 +38,6 @@ export const ConfigStyles: ComponentStyles = {
     generateBreakpoints: true,
     classes: {
       ...createClassesFromPropValues(PropValues, PropKeys.DIRECTION),
-      reverse: 'direction-column-reverse', // Alias for column-reverse
       ...config.styles[PropKeys.DIRECTION]?.classes,
     } as Record<PropDirection, string>,
   },

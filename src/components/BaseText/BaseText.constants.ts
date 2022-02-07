@@ -1,3 +1,9 @@
+// Local config
+import config from '@whirli-local/components/BaseText/BaseText.config';
+
+// Helpers
+import { getLocalPropValues } from '@whirli-components/helpers/props';
+
 export const PropKeys = {
   COLOR: 'color',
   TAG: 'tag',
@@ -8,6 +14,8 @@ export const PropKeys = {
   LINE_HEIGHT: 'lineHeight',
   ALIGN: 'align',
 };
+
+const localValues = getLocalPropValues(PropKeys, config);
 
 export const PropValues = {
   [PropKeys.COLOR]: ['inherit'],
@@ -34,10 +42,38 @@ export const PropValues = {
     'dd',
     'figcaption',
   ],
-  [PropKeys.SIZE]: ['3xs', '2xs', 'xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
-  [PropKeys.FONT]: ['default', 'bold', 'mono'],
-  [PropKeys.TRANSFORM]: ['default', 'uppercase'],
-  [PropKeys.LETTER_SPACING]: ['default', 'md', 'lg', 'xl'],
-  [PropKeys.LINE_HEIGHT]: ['3xs', '2xs', 'xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
-  [PropKeys.ALIGN]: ['default', 'center', 'right'],
+  [PropKeys.SIZE]: [
+    '3xs',
+    '2xs',
+    'xs',
+    'sm',
+    'base',
+    'md',
+    'lg',
+    'xl',
+    '2xl',
+    '3xl',
+    '4xl',
+    '5xl',
+    ...localValues[PropKeys.SIZE],
+  ],
+  [PropKeys.FONT]: ['default', 'bold', 'mono', ...localValues[PropKeys.FONT]],
+  [PropKeys.TRANSFORM]: ['default', 'uppercase', ...localValues[PropKeys.TRANSFORM]],
+  [PropKeys.LETTER_SPACING]: ['default', 'md', 'lg', 'xl', ...localValues[PropKeys.LETTER_SPACING]],
+  [PropKeys.LINE_HEIGHT]: [
+    '3xs',
+    '2xs',
+    'xs',
+    'sm',
+    'base',
+    'md',
+    'lg',
+    'xl',
+    '2xl',
+    '3xl',
+    '4xl',
+    '5xl',
+    ...localValues[PropKeys.LINE_HEIGHT],
+  ],
+  [PropKeys.ALIGN]: ['default', 'center', 'right', ...localValues[PropKeys.ALIGN]],
 };

@@ -1,6 +1,7 @@
 import Breakpoints from '@whirli-components/styles/Breakpoints.module.scss';
 import { invalidBreakpointWarning, invalidStyleWarning } from './warnings';
 import { ComponentStyles } from '@whirli-components/@types/components';
+import { ComponentConfig } from '@whirli-components/@types/components';
 
 interface PropValidation {
   /* eslint-disable-next-line */
@@ -50,4 +51,16 @@ export const breakpointStylePropValidation = (
       return passesValidation;
     },
   };
+};
+
+export const getLocalPropValues = (
+  propKeys: Record<string, string>,
+  config: ComponentConfig
+): Record<string, string[]> => {
+  const localValues: Record<string, string[]> = {};
+  Object.values(propKeys).forEach((propKey: string) => {
+    localValues[propKey] = config.styles[propKey]?.classes ? Object.keys(config.styles[propKey].classes) : [];
+  });
+
+  return localValues;
 };

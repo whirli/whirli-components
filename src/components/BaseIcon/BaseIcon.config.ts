@@ -2,54 +2,39 @@
 import { PropType } from '@composition';
 import * as PropHelpers from '@whirli-components/helpers/props';
 import { ComponentStyles, ComponentProps } from '@whirli-components/@types/components';
+import { createClassesFromPropValues } from '@whirli-components/helpers/classes';
 
 // Local config
 import config from '@whirli-local/components/BaseIcon/BaseIcon.config';
 
 // Package config
-import { PropKeys } from './BaseIcon.constants';
+import { PropKeys, PropValues } from './BaseIcon.constants';
 import { PropIcon, PropBackdrop, PropSize, PropTheme, PropRotate } from './BaseIcon.types';
 
 export const ConfigStyles: ComponentStyles = {
   ...config.styles,
   [PropKeys.BACKDROP]: {
     classes: {
-      default: 'backdrop-default',
-      circle: 'backdrop-circle',
-      square: 'backdrop-square',
+      ...createClassesFromPropValues(PropValues, PropKeys.BACKDROP),
       ...config.styles[PropKeys.BACKDROP]?.classes,
     } as Record<PropBackdrop, string>,
   },
   [PropKeys.THEME]: {
     classes: {
-      default: 'theme-default',
+      ...createClassesFromPropValues(PropValues, PropKeys.THEME),
       ...config.styles[PropKeys.THEME]?.classes,
     } as Record<PropTheme, string>,
   },
   [PropKeys.SIZE]: {
     generateBreakpoints: true,
     classes: {
-      '3xs': 'size-3xs',
-      '2xs': 'size-2xs',
-      xs: 'size-xs',
-      sm: 'size-sm',
-      default: 'size-default',
-      md: 'size-md',
-      lg: 'size-lg',
-      xl: 'size-xl',
+      ...createClassesFromPropValues(PropValues, PropKeys.SIZE),
       ...config.styles[PropKeys.SIZE]?.classes,
     } as Record<PropSize, string>,
   },
   [PropKeys.ROTATE]: {
     classes: {
-      default: 'rotate-default',
-      '45': 'rotate-45',
-      '90': 'rotate-90',
-      '135': 'rotate-135',
-      '180': 'rotate-180',
-      '225': 'rotate-225',
-      '270': 'rotate-270',
-      '315': 'rotate-315',
+      ...createClassesFromPropValues(PropValues, PropKeys.ROTATE),
       ...config.styles[PropKeys.ROTATE]?.classes,
     } as Record<PropRotate, string>,
   },

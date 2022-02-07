@@ -11,6 +11,9 @@ import {
 // Local config
 import config from '@whirli-local/components/BaseFlex/BaseFlex.config';
 
+// Helpers
+import { getLocalPropValues } from '@whirli-components/helpers/props';
+
 export const PropKeys: Record<string, string> = {
   ALIGN: 'align',
   JUSTIFY: 'justify',
@@ -21,20 +24,7 @@ export const PropKeys: Record<string, string> = {
   SPANS: 'spans',
 };
 
-const localValues = {
-  [PropKeys.ALIGN]: config.styles[PropKeys.ALIGN]?.classes
-    ? Object.keys(config.styles[PropKeys.ALIGN].classes)
-    : [],
-  [PropKeys.JUSTIFY]: config.styles[PropKeys.JUSTIFY]?.classes
-    ? Object.keys(config.styles[PropKeys.JUSTIFY].classes)
-    : [],
-  [PropKeys.DIRECTION]: config.styles[PropKeys.DIRECTION]?.classes
-    ? Object.keys(config.styles[PropKeys.DIRECTION].classes)
-    : [],
-  [PropKeys.WRAP]: config.styles[PropKeys.WRAP]?.classes
-    ? Object.keys(config.styles[PropKeys.WRAP].classes)
-    : [],
-};
+const localValues = getLocalPropValues(PropKeys, config);
 
 export const PropValues: Record<string, string[]> = {
   [PropKeys.ALIGN]: [
