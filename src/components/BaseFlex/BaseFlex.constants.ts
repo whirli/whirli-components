@@ -28,9 +28,9 @@ const localValues = getLocalPropValues(PropKeys, config);
 
 export const PropValues: Record<string, string[]> = {
   [PropKeys.ALIGN]: [
-    'top',
-    'middle',
-    'bottom',
+    'start',
+    'center',
+    'end',
     'baseline',
     'stretch',
     'normal',

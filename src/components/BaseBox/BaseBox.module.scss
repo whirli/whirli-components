@@ -2,7 +2,9 @@
 @import '@whirli-components/styles/Spacers.scss';
 
 // default styles
-.base-box {}
+.base-box {
+    width: 100%;
+}
 
 $sides: top, right, bottom, left;
 

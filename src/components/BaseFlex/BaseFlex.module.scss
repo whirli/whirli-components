@@ -111,14 +111,14 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    align-top: (
-        align-items: top,
+    align-start: (
+        align-items: flex-start,
     ),
-    align-middle: (
-        align-items: middle,
+    align-center: (
+        align-items: center,
     ),
-    align-bottom: (
-        align-items: bottom,
+    align-end: (
+        align-items: flex-end,
     ),
     align-baseline: (
         align-items: baseline,
@@ -147,6 +147,9 @@ $packageBreakpointStyles: (
     ),
     justify-evenly: (
         justify-content: space-evenly,
+    ),
+    justify-normal: (
+        justify-content: normal,
     ),
 
     direction-row: (
@@ -204,6 +207,9 @@ $packageBreakpointStyles: (
         width: #{math.div(6, 12) * 100}#{'%'}
     ),
     spans-7: (
+        width: #{math.div(7, 12) * 100}#{'%'}
+    ),
+    spans-8: (
         width: #{math.div(8, 12) * 100}#{'%'}
     ),
     spans-9: (
