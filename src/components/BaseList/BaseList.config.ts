@@ -37,7 +37,7 @@ export const ConfigProps: ComponentProps = {
   [PropKeys.DIRECTION]: {
     required: false,
     type: [String, Object] as PropType<PropDirection | Record<string, PropDirection>>,
-    default: 'default',
+    default: 'column',
     ...PropHelpers.breakpointStylePropValidation(ConfigStyles, PropKeys.DIRECTION),
   },
   [PropKeys.LIST_STYLE]: {
