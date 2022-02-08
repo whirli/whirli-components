@@ -16,6 +16,7 @@ import { computed, ComputedRef } from '@composition';
 import { ComputedSize } from './BaseSection.types';
 
 // Components
+// @ts-ignore
 import BaseSpacer from '@whirli-components/components/BaseSpacer/BaseSpacer.vue';
 
 // Styles

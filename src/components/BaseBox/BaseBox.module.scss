@@ -27,7 +27,7 @@ $sides: top, right, bottom, left;
     .padding-#{$side}-md {
         padding-#{$side}: $spacerMd;
     }
-    .padding-#{side}-lg {
+    .padding-#{$side}-lg {
         padding-#{$side}: $spacerLg;
     }
     .padding-#{$side}-xl {

@@ -33,6 +33,7 @@ import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/
 import { Props } from '@whirli-components/@types/props';
 
 // Components
+// @ts-ignore
 import BaseFormGroupLayoutDefault from '@whirli-components/components/BaseFormGroup/BaseFormGroupLayoutDefault.vue';
 
 // Composables

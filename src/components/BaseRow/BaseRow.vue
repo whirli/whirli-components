@@ -11,6 +11,7 @@ import styles from '@whirli-local/components/BaseRow/BaseRow.module.scss?module'
 import { ConfigStyles, ConfigProps } from './BaseRow.config';
 
 // Components
+// @ts-ignore
 import BaseColumn from '@whirli-components/components/BaseColumn/BaseColumn.vue';
 
 // Types
