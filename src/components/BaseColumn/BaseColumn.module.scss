@@ -52,6 +52,9 @@ $packageBreakpointStyles: (
     align-between: (
       align-items: space-between,
     ),
+    align-normal: (
+      align-items: normal,
+    ),
 
     justify-default: (
       justify-content: flex-start,
@@ -64,6 +67,9 @@ $packageBreakpointStyles: (
     ),
     justify-between: (
       justify-content: space-between,
+    ),
+    justify-normal: (
+      justify-content: normal,
     ),
 
     start-default: ( grid-column-start: auto ),

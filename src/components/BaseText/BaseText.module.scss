@@ -61,6 +61,9 @@ $packageBreakpointStyles: (
     size-default: (
         font-size: toRems(16),
     ),
+    size-base: (
+        font-size: toRems(16),
+    ),
     size-md: (
         font-size: toRems(18),
     ),
@@ -95,6 +98,9 @@ $packageBreakpointStyles: (
         line-height: toRems(22),
     ),
     lineHeight-default: (
+        line-height: toRems(24),
+    ),
+    lineHeight-base: (
         line-height: toRems(24),
     ),
     lineHeight-md: (

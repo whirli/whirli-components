@@ -43,6 +43,7 @@ export const PropValues: Record<string, string[]> = {
     'between',
     'around',
     'evenly',
+    'normal',
     ...localValues[PropKeys.JUSTIFY],
   ],
   [PropKeys.DIRECTION]: [
