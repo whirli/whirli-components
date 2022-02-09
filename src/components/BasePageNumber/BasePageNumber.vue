@@ -11,15 +11,13 @@
 
 <script setup lang="ts">
 // Vue
-import { defineEmits, computed, ComputedRef } from '@composition';
-import { useRoute } from 'vue-router';
+import { computed, ComputedRef } from '@composition';
 
 // Styles
 // @ts-ignore
 import styles from '@whirli-local/components/BasePageNumber/BasePageNumber.module.scss?module';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BasePageNumber.config';
 import { PropKeys } from '@whirli-components/components/BasePageNumber/BasePageNumber.constants';
 
 // Types
@@ -28,21 +26,18 @@ import { Props } from '@whirli-components/@types/props';
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import { ConfigStyles, ConfigProps } from './BasePageNumber.config';
 
+// @ts-ignore
 defineEmits(['page-number:click']);
-const Route = useRoute();
 
 const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 
 // @ts-ignore
 const props: Props = defineProps(ConfigProps);
 
-const pageUrl: ComputedRef<string> = computed(() => `${Route.path}?page=${props.pageNumber}`);
-const isActivePage: ComputedRef<boolean> = computed(
-  () =>
-    (Route.query.page && +Route.query.page === props.pageNumber) ||
-    (!Route.query.page && props.pageNumber === 1)
-);
+const pageUrl: ComputedRef<string> = computed(() => `?page=${props.pageNumber}`);
+const isActivePage: ComputedRef<boolean> = computed(() => props.currentPage === props.pageNumber);
 
 const tag: ComputedRef<string> = computed(() => (isActivePage.value ? 'div' : 'a'));
 
