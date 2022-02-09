@@ -15,5 +15,5 @@ const localValues = getLocalPropValues(PropKeys, config);
 export const PropValues: Record<string, string[]> = {
   [PropKeys.TAG]: ['ul', 'ol'],
   [PropKeys.LIST_STYLE]: ['none', 'disc', ...localValues[PropKeys.LIST_STYLE]],
-  [PropKeys.DIRECTION]: ['default', 'row', ...localValues[PropKeys.DIRECTION]],
+  [PropKeys.DIRECTION]: ['default', 'column', 'row', ...localValues[PropKeys.DIRECTION]],
 };
