@@ -3,7 +3,7 @@
 exports[`BaseFormLabel.vue renders the component 1`] = `
 <a
   class=""
-  href="undefined?page=2"
+  href="?page=2"
   tag="a"
 >
   2
