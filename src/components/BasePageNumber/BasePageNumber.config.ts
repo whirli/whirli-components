@@ -18,6 +18,10 @@ export const ConfigProps: ComponentProps = {
     required: true,
     type: Number as PropType<number>,
   },
+  [PropKeys.CURRENT_PAGE]: {
+    required: true,
+    type: Number as PropType<number>,
+  },
   [PropKeys.IS_DISABLED]: {
     required: false,
     type: Boolean as PropType<boolean>,

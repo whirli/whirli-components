@@ -3,55 +3,58 @@
     <BaseGrid>
       <BaseRow justify="between" align="center">
         <BaseIconButton
+          ref="previousButton"
           tag="a"
           icon="ArrowCenter"
           :href="previousPageUrl"
-          @click.prevent="goToPreviousPage()"
           backdrop="circle"
+          size="lg"
           rotate="90"
-          ref="previousButton"
           :is-disabled="isFirstPage"
           aria-label="Previous page"
+          @click.native.prevent="goToPreviousPage()"
         />
-        <BaseList direction="row" class="from-tablet">
+        <BaseList direction="row" :class="styles['pages-list']">
           <BaseListItem v-for="(option, index) in getPageNumbers" :key="`page-number-${index}`">
             <BaseText v-if="option.isPlaceholder">{{ props.placeholder }}</BaseText>
             <BasePageNumber
               v-else-if="option"
               :is-disabled="props.busy"
+              :current-page="props.currentPage"
               :page-number="option.number"
               @page-number:click="goToPage(option.number)"
             />
           </BaseListItem>
         </BaseList>
-        <BaseText ref="pageCount" class="until-tablet">
-          Page {{ currentPage }} of {{ props.lastPage }}
+        <BaseText ref="pageCount" :class="styles['pages-of']">
+          Page {{ props.currentPage }} of {{ props.lastPage }}
         </BaseText>
         <BaseIconButton
+          ref="nextButton"
           tag="a"
           icon="ArrowCenter"
           :href="nextPageUrl"
-          @click.prevent="goToNextPage()"
           backdrop="circle"
+          size="lg"
           rotate="270"
-          ref="nextButton"
           :is-disabled="isLastPage"
           aria-label="Next page"
+          @click.native.prevent="goToNextPage()"
         />
       </BaseRow>
-      <BaseRow class="until-tablet">
+      <BaseRow :class="styles['pages-select']">
         <BaseFormSelect
           name="pagination"
           label="Jump to"
-          @change="goToPage($event.target.value)"
-          :value="currentPage"
+          :value="props.currentPage"
           :has-dropdown-message="false"
+          @change="goToPage($event.target.value)"
         >
           <BaseFormSelectOption
             v-for="(number, index) in props.lastPage"
             :key="index"
             :value="number"
-            :selected="currentPage"
+            :selected="props.currentPage"
           >
             {{ number }}
           </BaseFormSelectOption>
@@ -63,15 +66,13 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, defineEmits, ComputedRef } from '@composition';
-import { useRoute } from 'vue-router';
+import { computed, ComputedRef } from '@composition';
 
 // Styles
 // @ts-ignore
 import styles from '@whirli-local/components/BasePagination/BasePagination.module.scss?module';
 
 // Data
-import { ConfigStyles, ConfigProps } from './BasePagination.config';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
@@ -100,7 +101,9 @@ import BaseFormSelectOption from '@whirli-components/components/BaseFormSelectOp
 
 // Composables
 import useClasses from '@whirli-components/@use/class';
+import { ConfigStyles, ConfigProps } from './BasePagination.config';
 
+// @ts-ignore
 const Route = useRoute();
 // @ts-ignore
 const emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
@@ -111,17 +114,16 @@ const ComponentStyles: ComponentStylesInterface = ConfigStyles;
 const props: Props = defineProps(ConfigProps);
 
 const firstPage = 1;
-const currentPage: ComputedRef<number> = computed(() => (Route.query.page ? +Route.query.page : 1));
 
-const isFirstPage: ComputedRef<boolean> = computed(() => currentPage.value === firstPage);
-const isLastPage: ComputedRef<boolean> = computed(() => currentPage.value === props.lastPage);
+const isFirstPage: ComputedRef<boolean> = computed(() => props.currentPage === firstPage);
+const isLastPage: ComputedRef<boolean> = computed(() => props.currentPage === props.lastPage);
 
 // Classes
 const { makeClasses } = useClasses();
 const wrapperClasses = [styles.pagination, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
 
 function isCurrentPage(number: number): boolean {
-  return number === currentPage.value;
+  return number === props.currentPage;
 }
 
 function goToPage(page: number) {
@@ -130,39 +132,39 @@ function goToPage(page: number) {
 }
 
 function goToNextPage() {
-  if (currentPage.value === props.lastPage) return;
+  if (props.currentPage === props.lastPage) return;
   emit('pagination:next');
 }
 
 function goToPreviousPage() {
-  if (currentPage.value === firstPage) return;
+  if (props.currentPage === firstPage) return;
   emit('pagination:previous');
 }
 
 const previousPageUrl: ComputedRef<string | boolean> = computed(() => {
-  const previousPageNumber: number = currentPage.value - 1;
+  const previousPageNumber: number = props.currentPage - 1;
   return previousPageNumber < 1 ? false : `${Route.path}?page=${previousPageNumber}`;
 });
 
 const nextPageUrl: ComputedRef<string | boolean> = computed(() => {
-  const nextPageNumber: number = currentPage.value + 1;
+  const nextPageNumber: number = props.currentPage + 1;
   return nextPageNumber > props.lastPage ? false : `${Route.path}?page=${nextPageNumber}`;
 });
 
 const getPageNumbers: ComputedRef<PaginationOption[]> = computed(() => {
   const placeholderOption: PaginationOption = { number: 0, isPlaceholder: true };
 
-  const lowerBound = Math.max(2, currentPage.value - (props.delta as number));
-  const upperBound = Math.min((props.lastPage as number) - 1, currentPage.value + (props.delta as number));
+  const lowerBound = Math.max(2, props.currentPage - (props.delta as number));
+  const upperBound = Math.min((props.lastPage as number) - 1, props.currentPage + (props.delta as number));
 
   const range = [];
   for (let pageNumber = lowerBound; pageNumber <= upperBound; pageNumber += 1) {
     range.push({ number: pageNumber, isPlaceholder: false, isCurrentPage: isCurrentPage(pageNumber) });
   }
 
-  if (currentPage.value - (props.delta as number) > 2) range.unshift(placeholderOption);
+  if (props.currentPage - (props.delta as number) > 2) range.unshift(placeholderOption);
 
-  if (currentPage.value + (props.delta as number) < (props.lastPage as number) - 1)
+  if (props.currentPage + (props.delta as number) < (props.lastPage as number) - 1)
     range.push(placeholderOption);
 
   range.unshift({ number: 1, isPlaceholder: false, isCurrentPage: isCurrentPage(1) });
