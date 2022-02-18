@@ -47,7 +47,10 @@ const props = defineProps(ConfigProps);
 
 // Classes
 const { makeClasses } = useClasses();
-const classes = [styles.button, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
+const classes: ComputedRef<string[]> = computed(() => [
+  styles.button,
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
+]);
 
 const button: ComputedRef<any> = computed((): any => {
   return props.url !== undefined ? BaseButtonLink : BaseButtonDefault;

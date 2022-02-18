@@ -19,11 +19,6 @@
 
 .backdrop-circle {
     border-radius: 50%;
-    padding: $spacerXs;
-}
-
-.backdrop-square {
-    padding: $spacerXs;
 }
 
 .theme-default {
@@ -59,6 +54,10 @@ $packageBreakpointStyles: (
         width: toRems(20),
     ),
     size-default: (
+        height: toRems(24),
+        width: toRems(24),
+    ),
+    size-base: ( // Alias default
         height: toRems(24),
         width: toRems(24),
     ),

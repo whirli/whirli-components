@@ -17,7 +17,18 @@ const localValues = getLocalPropValues(PropKeys, config);
 export const PropValues: Record<string, string[]> = {
   [PropKeys.BACKDROP]: ['default', 'circle', 'square', ...localValues[PropKeys.BACKDROP]],
   [PropKeys.ICON]: ['default'],
-  [PropKeys.SIZE]: ['3xs', '2xs', 'xs', 'sm', 'default', 'md', 'lg', 'xl', ...localValues[PropKeys.SIZE]],
+  [PropKeys.SIZE]: [
+    '3xs',
+    '2xs',
+    'xs',
+    'sm',
+    'default',
+    'base',
+    'md',
+    'lg',
+    'xl',
+    ...localValues[PropKeys.SIZE],
+  ],
   [PropKeys.THEME]: ['default', ...localValues[PropKeys.THEME]],
   [PropKeys.ROTATE]: [
     'default',
