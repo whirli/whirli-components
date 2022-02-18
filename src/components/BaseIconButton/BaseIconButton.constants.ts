@@ -4,5 +4,5 @@ export const PropKeys: Record<string, string> = {
 };
 
 export const PropValues: Record<string, string[]> = {
-  [PropKeys.TAG]: ['button', 'a'],
+  [PropKeys.TAG]: ['button', 'a', 'nuxt-link', 'div'],
 };
