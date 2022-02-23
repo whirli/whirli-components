@@ -3,6 +3,8 @@
 </template>
 
 <script setup lang="ts">
+// Vue
+import { computed, ComputedRef } from '@composition';
 // Styles
 // @ts-ignore
 import styles from '@whirli-local/components/BaseText/BaseText.module.scss?module';
@@ -20,5 +22,8 @@ const props = defineProps(ConfigProps);
 
 // Classes
 const { makeClasses } = useClasses();
-const classes = [styles.text, ...makeClasses(ComponentStyles, ConfigProps, props, styles)];
+const classes: ComputedRef<string[]> = computed(() => [
+  styles.text,
+  ...makeClasses(ComponentStyles, ConfigProps, props, styles),
+]);
 </script>
