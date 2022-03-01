@@ -38,7 +38,7 @@ const paddingClasses: ComputedRef<string[]> = computed(() => {
       padding(props.padding, 'left'),
     ];
   }
-  if (padding.length === 2) {
+  if (props.padding.length === 2) {
     return [
       padding(props.padding[0], 'top'),
       padding(props.padding[1], 'right'),
@@ -46,7 +46,7 @@ const paddingClasses: ComputedRef<string[]> = computed(() => {
       padding(props.padding[1], 'left'),
     ];
   }
-  if (padding.length === 3) {
+  if (props.padding.length === 3) {
     return [
       padding(props.padding[0], 'top'),
       padding(props.padding[1], 'right'),
@@ -54,7 +54,7 @@ const paddingClasses: ComputedRef<string[]> = computed(() => {
       padding(props.padding[1], 'left'),
     ];
   }
-  if (padding.length === 4) {
+  if (props.padding.length === 4) {
     return [
       padding(props.padding[0], 'top'),
       padding(props.padding[1], 'right'),
