@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import BaseRow from '@/components/BaseRow/BaseRow.vue';
 import BaseColumn from '@/components/BaseColumn/BaseColumn.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

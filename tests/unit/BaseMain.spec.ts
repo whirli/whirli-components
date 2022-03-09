@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import BaseMain from '@/components/BaseMain/BaseMain.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

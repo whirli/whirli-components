@@ -8,6 +8,7 @@ import BaseIconButton from '@/components/BaseIconButton/BaseIconButton.vue';
 import { PropKeys } from '@/components/BaseModal/BaseModal.constants';
 import { ConfigStyles } from '@/components/BaseModal/BaseModal.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const title = 'Modal title';
 const content = 'Hello World';

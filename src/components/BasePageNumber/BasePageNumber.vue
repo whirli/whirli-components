@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, ComputedRef } from '@composition';
+import { computed, ComputedRef, defineEmits } from '@composition';
 
 // Styles
 // @ts-ignore

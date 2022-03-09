@@ -7,6 +7,7 @@ import { propReturnsClass } from '../helpers';
 import { PropKeys } from '@/components/BaseFlex/BaseFlex.constants';
 import { ConfigStyles } from '@/components/BaseFlex/BaseFlex.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello world';
 

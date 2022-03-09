@@ -6,6 +6,7 @@ import BaseTag from '@/components/BaseTag/BaseTag.vue';
 import { PropKeys } from '@/components/BaseTag/BaseTag.constants';
 import { ConfigStyles } from '@/components/BaseTag/BaseTag.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

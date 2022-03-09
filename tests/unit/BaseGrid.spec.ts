@@ -5,6 +5,7 @@ import BaseGrid from '@/components/BaseGrid/BaseGrid.vue';
 import { PropKeys } from '@/components/BaseGrid/BaseGrid.constants';
 import { ConfigStyles } from '@/components/BaseGrid/BaseGrid.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

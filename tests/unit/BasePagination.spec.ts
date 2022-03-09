@@ -3,6 +3,7 @@ import BasePagination from '@/components/BasePagination/BasePagination.vue';
 import BasePageNumber from '@/components/BasePageNumber/BasePageNumber.vue';
 import BaseFormSelect from '@/components/BaseFormSelect/BaseFormSelect.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const firstPage = 1;
 const lastPage = 30;

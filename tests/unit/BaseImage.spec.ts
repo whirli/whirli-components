@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import BaseImage from '@/components/BaseImage/BaseImage.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseImage.vue - Single classes', () => {

@@ -5,6 +5,7 @@ import BaseSpacer from '@/components/BaseSpacer/BaseSpacer.vue';
 import { PropKeys } from '@/components/BaseSpacer/BaseSpacer.constants';
 import { ConfigStyles } from '@/components/BaseSpacer/BaseSpacer.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseSpacer.vue - Single classes', () => {

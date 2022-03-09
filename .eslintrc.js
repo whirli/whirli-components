@@ -29,6 +29,7 @@ module.exports = {
     ],
     '@typescript-eslint/ban-ts-comment': ['off'],
     '@typescript-eslint/no-empty-function': ['off'],
+    'vue/no-deprecated-v-on-native-modifier': ['off']
   },
   overrides: [
     {

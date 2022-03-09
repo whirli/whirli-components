@@ -8,6 +8,7 @@ import IconCross from '@/components/BaseIcon/icons/svg/IconCross.vue';
 import { PropKeys } from '@/components/BaseIcon/BaseIcon.constants';
 import { ConfigStyles } from '@/components/BaseIcon/BaseIcon.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseIcon.vue - Single classes', () => {

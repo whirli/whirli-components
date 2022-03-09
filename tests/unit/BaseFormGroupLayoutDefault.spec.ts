@@ -4,6 +4,7 @@ import BaseFormGroup from '@/components/BaseFormGroup/BaseFormGroup.vue';
 import BaseFormLabel from '@/components/BaseFormLabel/BaseFormLabel.vue';
 import BaseFormError from '@/components/BaseFormError/BaseFormError.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const label = 'Hello World';
 const content = 'Hello Content';

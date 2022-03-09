@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils';
 import BaseFormSelectOption from '@/components/BaseFormSelectOption/BaseFormSelectOption.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const value = 'hello-world';
 const selected = 'hello-world';

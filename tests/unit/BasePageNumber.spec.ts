@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils';
 import BasePageNumber from '@/components/BasePageNumber/BasePageNumber.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const pageNumber = '2';
 
