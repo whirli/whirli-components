@@ -2,6 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 
 import BaseBox from '@/components/BaseBox/BaseBox.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello world';
 

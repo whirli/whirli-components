@@ -7,6 +7,7 @@ import BaseList from '@/components/BaseList/BaseList.vue';
 import { PropKeys } from '@/components/BaseList/BaseList.constants';
 import { ConfigStyles } from '@/components/BaseList/BaseList.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello world';
 

@@ -5,6 +5,7 @@ import BaseText from '@/components/BaseText/BaseText.vue';
 import { PropKeys } from '@/components/BaseText/BaseText.constants';
 import { ConfigStyles } from '@/components/BaseText/BaseText.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

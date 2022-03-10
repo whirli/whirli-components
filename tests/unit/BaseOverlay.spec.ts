@@ -6,6 +6,7 @@ import BaseOverlay from '@/components/BaseOverlay/BaseOverlay.vue';
 import { PropKeys } from '@/components/BaseOverlay/BaseOverlay.constants';
 import { ConfigStyles } from '@/components/BaseOverlay/BaseOverlay.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

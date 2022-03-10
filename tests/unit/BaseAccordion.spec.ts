@@ -6,6 +6,7 @@ import BaseAccordion from '@/components/BaseAccordion/BaseAccordion.vue';
 import { PropKeys } from '@/components/BaseAccordion/BaseAccordion.constants';
 import { ConfigStyles } from '@/components/BaseAccordion/BaseAccordion.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const title = 'Title';
 const content = 'Hello World';

@@ -11,14 +11,19 @@ const toCamelCase = (string: string) => {
   });
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
 export const propReturnsClass = (wrapper: any, configStyles: any, prop: any, className: any): boolean => {
   return configStyles[prop].classes[wrapper.vm[toCamelCase(prop)]] === className;
 };
 
 export const propReturnsBreakpointClasses = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   wrapper: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   configStyles: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   prop: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   classNames: any
 ): boolean => {
   let returnsCorrectClasses = true;

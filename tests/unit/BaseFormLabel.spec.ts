@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import BaseFormLabel from '@/components/BaseFormLabel/BaseFormLabel.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 const name = 'hello-world';

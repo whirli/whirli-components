@@ -5,6 +5,7 @@ import BaseColumn from '@/components/BaseColumn/BaseColumn.vue';
 import { PropKeys } from '@/components/BaseColumn/BaseColumn.constants';
 import { ConfigStyles } from '@/components/BaseColumn/BaseColumn.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseColumn.vue - Single classes', () => {

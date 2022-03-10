@@ -6,6 +6,7 @@ import BaseButton from '@/components/BaseButton/BaseButton.vue';
 import { PropKeys, LoadingStates } from '@/components/BaseButton/BaseButton.constants';
 import { ConfigStyles } from '@/components/BaseButton/BaseButton.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const slots = {
   [LoadingStates.DEFAULT]: 'default',

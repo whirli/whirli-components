@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import BaseIconButton from '@/components/BaseIconButton/BaseIconButton.vue';
 import IconCross from '@/components/BaseIcon/icons/svg/IconCross.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseIconButton.vue - Single classes', () => {

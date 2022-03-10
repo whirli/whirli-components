@@ -52,6 +52,7 @@ const classes: ComputedRef<string[]> = computed(() => [
   ...makeClasses(ComponentStyles, ConfigProps, props, styles),
 ]);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const button: ComputedRef<any> = computed((): any => {
   return props.url !== undefined ? BaseButtonLink : BaseButtonDefault;
 });

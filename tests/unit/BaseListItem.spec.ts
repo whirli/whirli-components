@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 
 import BaseListItem from '@/components/BaseListItem/BaseListItem.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello world';
 

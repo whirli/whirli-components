@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 import BaseFormError from '@/components/BaseFormError/BaseFormError.vue';
 import BaseText from '@/components/BaseText/BaseText.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 const text = 'Hello World';
 

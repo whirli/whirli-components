@@ -66,7 +66,7 @@
 
 <script setup lang="ts">
 // Vue
-import { computed, ComputedRef } from '@composition';
+import { computed, ComputedRef, defineEmits } from '@composition';
 
 // Styles
 // @ts-ignore
@@ -103,8 +103,10 @@ import BaseFormSelectOption from '@whirli-components/components/BaseFormSelectOp
 import useClasses from '@whirli-components/@use/class';
 import { ConfigStyles, ConfigProps } from './BasePagination.config';
 
+/* eslint-disable  no-undef */
 // @ts-ignore
 const Route = useRoute();
+/* eslint-enable  no-undef */
 // @ts-ignore
 const emit = defineEmits(['pagination:go-to', 'pagination:next', 'pagination:previous']);
 

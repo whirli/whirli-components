@@ -5,6 +5,7 @@ import BaseDivider from '@/components/BaseDivider/BaseDivider.vue';
 import { PropKeys } from '@/components/BaseDivider/BaseDivider.constants';
 import { ConfigStyles } from '@/components/BaseDivider/BaseDivider.config';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrapper: any;
 
 describe('BaseDivider.vue - Single classes', () => {
