@@ -2,25 +2,26 @@
 
 // default styles
 .list {
-    margin: 0;
-    padding: 0;
-    display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .direction-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .direction-row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .listStyle-disc {
-    list-style: disc;
+  list-style: disc;
 }
 
 .listStyle-none {
-    list-style: none;
+  list-style: none;
 }
+
 // breakpoint styles
 $packageBreakpointStyles: ();

@@ -4,25 +4,25 @@
 
 // default styles
 .icon {
-    transition: transform ease-in-out 0.3s;
+  transition: transform ease-in-out 0.3s;
 }
 
 .color-inherit {
-    color: inherit;
+  color: inherit;
 }
 
 .backdrop-default {
-    background-color: none !important;
-    background: none !important;
+  background-color: none !important;
+  background: none !important;
 }
 
 .backdrop-circle {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .theme-default {
-    background-color: grey;
-    color: inherit;
+  background-color: grey;
+  color: inherit;
 }
 
 .rotate-default { transform: rotate(0); }
@@ -36,40 +36,37 @@
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    size-3xs: (
-        height: toRems(8),
-        width: toRems(8),
+  size-3xs: (
+    height: toRems(8),
+    width: toRems(8),
+  ),
+  size-2xs: (
+    height: toRems(12),
+    width: toRems(12),
+  ),
+  size-xs: (
+    height: toRems(16),
+    width: toRems(16),
+  ),
+  size-sm: (
+    height: toRems(20),
+    width: toRems(20),
+  ),
+  size-default: (
+    height: toRems(24),
+    width: toRems(24),
+  ),
+  size-base: ( 
+        height: to  ,
+        width: toR  
     ),
-    size-2xs: (
-        height: toRems(12),
-        width: toRems(12),
+    size-md    height: to  ,
+        width: toR  
     ),
-    size-xs: (
-        height: toRems(16),
-        width: toRems(16),
+    size-lg    height: to  ,
+        width: toR  
     ),
-    size-sm: (
-        height: toRems(20),
-        width: toRems(20),
-    ),
-    size-default: (
-        height: toRems(24),
-        width: toRems(24),
-    ),
-    size-base: ( // Alias default
-        height: toRems(24),
-        width: toRems(24),
-    ),
-    size-md: (
-        height: toRems(32),
-        width: toRems(32),
-    ),
-    size-lg: (
-        height: toRems(40),
-        width: toRems(40),
-    ),
-    size-xl: (
-        height: toRems(48),
-        width: toRems(48),
+    size-xl    height: to  ,
+        width: toR  
     ),
 );

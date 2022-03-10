@@ -2,147 +2,147 @@
 @import '@whirli-components/styles/Helpers.scss';
 
 @font-face {
-    font-family: "Maax";
-    src: url('~@whirli-components/assets/fonts/Maax.woff2') format("woff2");
+  font-family: Maax;
+  src: url('~@whirli-components/assets/fonts/Maax.woff2') format("woff2");
 }
 
 @font-face {
-    font-family: "MaaxBold";
-    src: url('~@whirli-components/assets/fonts/MaaxBold.woff2') format("woff2");
+  font-family: MaaxBold;
+  src: url('~@whirli-components/assets/fonts/MaaxBold.woff2') format("woff2");
 }
 
 @font-face {
-    font-family: "MaaxMono";
-    src: url('~@whirli-components/assets/fonts/MaaxMonoRegular.woff2') format("woff2");
+  font-family: MaaxMono;
+  src: url('~@whirli-components/assets/fonts/MaaxMonoRegular.woff2') format("woff2");
 }
 
 // default styles
 .text {}
 
 .transform-default {
-    text-transform: none;
+  text-transform: none;
 }
 
 .transform-uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .font-sans {
-    font-family: 'Maax', Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Maax, Tahoma, Geneva, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .font-bold {
-    font-family: 'MaaxBold', Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+  font-family: MaaxBold, Tahoma, Geneva, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .font-mono {
-    font-family: 'MaaxMono', "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: MaaxMono, Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    color-inherit: (
-        color: inherit,
-    ),
-    size-3xs: (
-        font-size: toRems(10),
-    ),
-    size-2xs: (
-        font-size: toRems(12),
-    ),
-    size-xs: (
-        font-size: toRems(13),
-    ),
-    size-sm: (
-        font-size: toRems(14),
-    ),
-    size-default: (
-        font-size: toRems(16),
-    ),
-    size-base: (
-        font-size: toRems(16),
-    ),
-    size-md: (
-        font-size: toRems(18),
-    ),
-    size-lg: (
-        font-size: toRems(20),
-    ),
-    size-xl: (
-        font-size: toRems(24),
-    ),
-    size-2xl: (
-        font-size: toRems(28),
-    ),
-    size-3xl: (
-        font-size: toRems(32),
-    ),
-    size-4xl: (
-        font-size: toRems(40),
-    ),
-    size-5xl: (
-        font-size: toRems(48),
-    ),
-    lineHeight-3xs: (
-        line-height: toRems(16),
-    ),
-    lineHeight-2xs: (
-        line-height: toRems(18),
-    ),
-    lineHeight-xs: (
-        line-height: toRems(20),
-    ),
-    lineHeight-sm: (
-        line-height: toRems(22),
-    ),
-    lineHeight-default: (
-        line-height: toRems(24),
-    ),
-    lineHeight-base: (
-        line-height: toRems(24),
-    ),
-    lineHeight-md: (
-        line-height: toRems(28),
-    ),
-    lineHeight-lg: (
-        line-height: toRems(32),
-    ),
-    lineHeight-xl: (
-        line-height: toRems(36),
-    ),
-    lineHeight-2xl: (
-        line-height: toRems(40),
-    ),
-    lineHeight-3xl: (
-        line-height: toRems(42),
-    ),
-    lineHeight-4xl: (
-        line-height: toRems(48),
-    ),
-    lineHeight-5xl: (
-        line-height: toRems(56),
-    ),
-    letterSpacing-default: (
-        letter-spacing: toRems(0),
-    ),
-    letterSpacing-md: (
-        letter-spacing: toRems(1),
-    ),
-    letterSpacing-lg: (
-        letter-spacing: toRems(1.2),
-    ),
-    letterSpacing-xl: (
-        letter-spacing: toRems(1.5),
-    ),
-    align-default: (
-        text-align: left,
-    ),
-    align-center: (
-        text-align: center,
-    ),
-    align-right: (
-        text-align: right,
-    )
+  color-inherit: (
+    color: inherit,
+  ),
+  size-3xs: (
+    font-size: torems(10),
+  ),
+  size-2xs: (
+    font-size: torems(12),
+  ),
+  size-xs: (
+    font-size: torems(13),
+  ),
+  size-sm: (
+    font-size: torems(14),
+  ),
+  size-default: (
+    font-size: torems(16),
+  ),
+  size-base: (
+    font-size: torems(16),
+  ),
+  size-md: (
+    font-size: torems(18),
+  ),
+  size-lg: (
+    font-size: torems(20),
+  ),
+  size-xl: (
+    font-size: torems(24),
+  ),
+  size-2xl: (
+    font-size: torems(28),
+  ),
+  size-3xl: (
+    font-size: torems(32),
+  ),
+  size-4xl: (
+    font-size: torems(40),
+  ),
+  size-5xl: (
+    font-size: torems(48),
+  ),
+  lineheight-3xs: (
+    line-height: torems(16),
+  ),
+  lineheight-2xs: (
+    line-height: torems(18),
+  ),
+  lineheight-xs: (
+    line-height: torems(20),
+  ),
+  lineheight-sm: (
+    line-height: torems(22),
+  ),
+  lineheight-default: (
+    line-height: torems(24),
+  ),
+  lineheight-base: (
+    line-height: torems(24),
+  ),
+  lineheight-md: (
+    line-height: torems(28),
+  ),
+  lineheight-lg: (
+    line-height: torems(32),
+  ),
+  lineheight-xl: (
+    line-height: torems(36),
+  ),
+  lineheight-2xl: (
+    line-height: torems(40),
+  ),
+  lineheight-3xl: (
+    line-height: torems(42),
+  ),
+  lineheight-4xl: (
+    line-height: torems(48),
+  ),
+  lineheight-5xl: (
+    line-height: torems(56),
+  ),
+  letterspacing-default: (
+    letter-spacing: torems(0),
+  ),
+  letterspacing-md: (
+    letter-spacing: torems(1),
+  ),
+  letterspacing-lg: (
+    letter-spacing: torems(1.2),
+  ),
+  letterspacing-xl: (
+    letter-spacing: torems(1.5),
+  ),
+  align-default: (
+    text-align: left,
+  ),
+  align-center: (
+    text-align: center,
+  ),
+  align-right: (
+    text-align: right,
+  )
 );

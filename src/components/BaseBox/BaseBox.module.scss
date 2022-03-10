@@ -3,44 +3,42 @@
 
 // default styles
 .base-box {
-    width: 100%;
+  width: 100%;
 }
 
 $sides: top, right, bottom, left;
 
 @each $side in $sides {
-    .padding-#{$side}-none {
-        padding-#{$side}: $spacerNone;
-    }
-    .padding-#{$side}-2xs {
-        padding-#{$side}: $spacer2Xs;
-    }
-    .padding-#{$side}-xs {
-        padding-#{$side}: $spacerXs;
-    }
-    .padding-#{$side}-sm {
-        padding-#{$side}: $spacerSm;
-    }
-    .padding-#{$side}-base {
-        padding-#{$side}: $spacerDefault;
-    }
-    .padding-#{$side}-md {
-        padding-#{$side}: $spacerMd;
-    }
-    .padding-#{$side}-lg {
-        padding-#{$side}: $spacerLg;
-    }
-    .padding-#{$side}-xl {
-        padding-#{$side}: $spacerXl;
-    }
-    .padding-#{$side}-2xl {
-        padding-#{$side}: $spacer2Xl;
-    }
+  .padding-#{$side}-none {
+    padding-#{$side}: $spacerNone;
+  }
+  .padding-#{$side}-2xs {
+    padding-#{$side}: $spacer2Xs;
+  }
+  .padding-#{$side}-xs {
+    padding-#{$side}: $spacerXs;
+  }
+  .padding-#{$side}-sm {
+    padding-#{$side}: $spacerSm;
+  }
+  .padding-#{$side}-base {
+    padding-#{$side}: $spacerDefault;
+  }
+  .padding-#{$side}-md {
+    padding-#{$side}: $spacerMd;
+  }
+  .padding-#{$side}-lg {
+    padding-#{$side}: $spacerLg;
+  }
+  .padding-#{$side}-xl {
+    padding-#{$side}: $spacerXl;
+  }
+  .padding-#{$side}-2xl {
+    padding-#{$side}: $spacer2Xl;
+  }
 }
 
 // breakpoint styles
 $packageBreakpointStyles: (
-    /*color-black: (
-        color: black,
-    ),*/
+
 );

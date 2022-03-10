@@ -2,37 +2,37 @@
 @import './Helpers.scss';
 
 @mixin createBreakpointClasses($styles) {
-    
-    @each $className, $classStyles in $styles {
-        .#{$className} {
-            @each $classProperty, $classStyle in $classStyles {
-                #{$classProperty}: $classStyle;
-            }
-        }
+
+  @each $className, $classStyles in $styles {
+    .#{$className} {
+      @each $classProperty, $classStyle in $classStyles {
+        #{$classProperty}: $classStyle;
+      }
     }
-    
-    @each $name, $value in $breakpoints {
-        $prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
-        $breakpoint: map-deep-get($breakpoints, #{$name}, 'min-width');
-  
-        @media screen and (min-width: $breakpoint) {
-            
-            
-            @each $className, $classStyles in $styles {
-                .#{$prefix}\:#{$className} {
-                    @each $classProperty, $classStyle in $classStyles {
-                        #{$classProperty}: $classStyle;
-                    }
-                }
-            }
-        }
-    }
-    
   }
 
-:export {
-    @each $name, $value in $breakpoints {
-        defaultPrefix: null;
-        #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
+  @each $name, $value in $breakpoints {
+    $prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
+    $breakpoint: map-deep-get($breakpoints, #{$name}, 'min-width');
+
+    @media screen and (min-width: $breakpoint) {
+
+
+      @each $className, $classStyles in $styles {
+        .#{$prefix}\:#{$className} {
+          @each $classProperty, $classStyle in $classStyles {
+            #{$classProperty}: $classStyle;
+          }
+        }
+      }
     }
+  }
+
+}
+
+:export {
+  @each $name, $value in $breakpoints {
+    defaultprefix: null;
+    #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
+  }
 }

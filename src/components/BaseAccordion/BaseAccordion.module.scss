@@ -4,11 +4,11 @@
 .accordion {}
 
 .accordion__trigger {
-    background: none;
-    border: none;
-    box-shadow: none;
-    color: inherit;
-    cursor: pointer;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .accordion__content {
@@ -17,12 +17,12 @@
 }
 
 [data-state="open"] .accordion__content {
-    max-height: auto;
-    max-height: var(--accordion-height);
+  max-height: auto;
+  max-height: var(--accordion-height);
 }
 
 [data-state="closed"] .accordion__content {
-    max-height: 0;
+  max-height: 0;
 }
 
 // breakpoint styles
