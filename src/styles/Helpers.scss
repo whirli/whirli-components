@@ -1,12 +1,13 @@
 @use "sass:math";
+@use "sass:map";
 @import './Defaults.scss';
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }
 
 @function to-rems($px) {
-  @return math.div($px, $defaultFontSize) + rem; }
+  @return math.div($px, $default-font-size) + rem; }

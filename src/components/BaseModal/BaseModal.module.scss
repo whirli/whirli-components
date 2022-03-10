@@ -4,7 +4,7 @@
 // default styles
 .modal {
   box-sizing: border-box;
-  padding: $spacerXl;
+  padding: $spacer-xl;
   max-width: 90%;
   overflow: scroll;
   max-height: 100%;
@@ -13,8 +13,8 @@
 
 .modal__close-icon {
   position: absolute;
-  top: $spacerXl;
-  right: $spacerXl;
+  top: $spacer-xl;
+  right: $spacer-xl;
 }
 
 .modal__title,
@@ -36,4 +36,4 @@
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

@@ -4,12 +4,12 @@
 // default styles
 .page-number {
   display: flex;
-  height: $spacerMd;
-  width: $spacerMd;
+  height: $spacer-md;
+  width: $spacer-md;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin: 0 $spacer3Xs;
+  margin: 0 $spacer-3xs;
 }
 
 .is-disabled {
@@ -17,10 +17,9 @@
   opacity: 0.5;
 }
 
-.is-active { background-color: grey;}
-.is-not-active {}
+.is-active { background-color: #808080;}
 
 // breakpoint styles
-$packageBreakpointStyles: (
+$package-breakpoint-styles: (
 
 );

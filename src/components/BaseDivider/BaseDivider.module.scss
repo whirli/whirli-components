@@ -7,12 +7,12 @@
 }
 
 .size-default {
-  height: $spacerHairline;
+  height: $spacer-hairline;
 }
 
 .color-default {
-  background-color: black;
+  background-color: #000;
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

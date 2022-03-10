@@ -5,4 +5,4 @@
 // Breakpoint styles
 $localBreakpointStyles: ();
 
-@include createBreakpointClasses(map-merge($packageBreakpointStyles, $localBreakpointStyles));
+@include create-breakpoint-classes(map-merge($package-breakpoint-styles, $localBreakpointStyles));

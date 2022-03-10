@@ -13,7 +13,6 @@
 
 .backdrop-default {
   background-color: none !important;
-  background: none !important;
 }
 
 .backdrop-circle {
@@ -21,7 +20,7 @@
 }
 
 .theme-default {
-  background-color: grey;
+  background-color: #808080;
   color: inherit;
 }
 
@@ -35,7 +34,7 @@
 .rotate-315 { transform: rotate(315deg); }
 
 // breakpoint styles
-$packageBreakpointStyles: (
+$package-breakpoint-styles: (
   size-3xs: (
     height: to-rems(8),
     width: to-rems(8),
@@ -56,7 +55,7 @@ $packageBreakpointStyles: (
     height: to-rems(24),
     width: to-rems(24),
   ),
-  size-base: ( // Alias default
+  size-base: (
     height: to-rems(24),
     width: to-rems(24),
   ),

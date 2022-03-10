@@ -9,7 +9,7 @@
 }
 
 .gap-default {
-  gap: $spacerDefault;
+  gap: $spacer-default;
 }
 
 .gap-0 {
@@ -17,4 +17,4 @@
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

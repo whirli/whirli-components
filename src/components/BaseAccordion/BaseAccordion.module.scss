@@ -1,8 +1,6 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
-.accordion {}
-
 .accordion__trigger {
   background: none;
   border: none;
@@ -26,4 +24,4 @@
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

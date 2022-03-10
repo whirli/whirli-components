@@ -11,13 +11,13 @@
 }
 
 .size-default {
-  padding: $spacer2Xs $spacerSm;
+  padding: $spacer-2xs $spacer-sm;
 }
 
 .theme-default {
-  background: grey;
-  color: black;
+  background: #808080;
+  color: #000;
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

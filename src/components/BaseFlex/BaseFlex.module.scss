@@ -18,111 +18,111 @@
 
 // @todo spacer maps could be much better and would save repetition (Base Spacer)
 .spacing-2xs {
-  margin: calc($spacer2Xs / 2 * -1);
+  margin: calc($spacer-2xs / 2 * -1);
 
   > * {
-    margin: calc($spacer2Xs / 2);
+    margin: calc($spacer-2xs / 2);
   }
 }
 
 .spacing-xs {
-  margin: calc($spacerXs / 2 * -1);
+  margin: calc($spacer-xs / 2 * -1);
 
   > * {
-    margin: calc($spacerXs / 2);
+    margin: calc($spacer-xs / 2);
   }
 }
 
 .spacing-sm {
-  margin: calc($spacerSm / 2 * -1);
+  margin: calc($spacer-sm / 2 * -1);
 
   > * {
-    margin: calc($spacerSm / 2);
+    margin: calc($spacer-sm / 2);
   }
 }
 
 .spacing-base{
-  margin: calc($spacerDefault / 2 * -1);
+  margin: calc($spacer-default / 2 * -1);
 
   > * {
-    margin: calc($spacerDefault / 2);
+    margin: calc($spacer-default / 2);
   }
 }
 
 .spacing-md {
-  margin: calc($spacerMd / 2 * -1);
+  margin: calc($spacer-md / 2 * -1);
 
   > * {
-    margin: calc($spacerMd / 2);
+    margin: calc($spacer-md / 2);
   }
 }
 
 .spacing-lg {
-  margin: calc($spacerLg / 2 * -1);
+  margin: calc($spacer-lg / 2 * -1);
 
   > * {
-    margin: calc($spacerLg / 2);
+    margin: calc($spacer-lg / 2);
   }
 }
 
 .spacing-xl {
-  margin: calc($spacerXl / 2 * -1);
+  margin: calc($spacer-xl / 2 * -1);
 
   > * {
-    margin: calc($spacerXl / 2);
+    margin: calc($spacer-xl / 2);
   }
 }
 
 .spacing-2xl {
-  margin: calc($spacer2Xl / 2 * -1);
+  margin: calc($spacer-2xl / 2 * -1);
 
   > * {
-    margin: calc($spacer2Xl / 2);
+    margin: calc($spacer-2xl / 2);
   }
 }
 
 .spacing-3xl {
-  margin: calc($spacer3Xl / 2 * -1);
+  margin: calc($spacer-3xl / 2 * -1);
 
   > * {
-    margin: calc($spacer3Xl / 2);
+    margin: calc($spacer-3xl / 2);
   }
 }
 
 .spacing-4xl {
-  margin: calc($spacer4Xl / 2 * -1);
+  margin: calc($spacer-4xl / 2 * -1);
 
   > * {
-    margin: calc($spacer4Xl / 2);
+    margin: calc($spacer-4xl / 2);
   }
 }
 
 .spacing-5xl {
-  margin: calc($spacer5Xl / 2 * -1);
+  margin: calc($spacer-5xl / 2 * -1);
 
   > * {
-    margin: calc($spacer5Xl / 2);
+    margin: calc($spacer-5xl / 2);
   }
 }
 
 .spacing-6xl {
-  margin: calc($spacer6Xl / 2 * -1);
+  margin: calc($spacer-6xl / 2 * -1);
 
   > * {
-    margin: calc($spacer6Xl / 2);
+    margin: calc($spacer-6xl / 2);
   }
 }
 
 .spacing-7xl {
-  margin: calc($spacer7Xl / 2 * -1);
+  margin: calc($spacer-7xl / 2 * -1);
 
   > * {
-    margin: calc($spacer7Xl / 2);
+    margin: calc($spacer-7xl / 2);
   }
 }
 
 // breakpoint styles
-$packageBreakpointStyles: (
+$package-breakpoint-styles: (
   align-start: (
     align-items: flex-start,
   ),

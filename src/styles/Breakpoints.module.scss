@@ -1,7 +1,7 @@
 @import '@whirli-local/components/config.scss';
 @import './Helpers.scss';
 
-@mixin createBreakpointClasses($styles) {
+@mixin create-breakpoint-classes($styles) {
 
   @each $className, $classStyles in $styles {
     .#{$className} {
@@ -30,9 +30,11 @@
 
 }
 
+/* stylelint-disable */
 :export {
+  defaultPrefix: null;
   @each $name, $value in $breakpoints {
-    defaultprefix: null;
     #{$name}Prefix: map-deep-get($breakpoints, #{$name}, 'prefix');
   }
 }
+/* stylelint-enable */

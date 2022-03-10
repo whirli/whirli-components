@@ -10,35 +10,35 @@ $sides: top, right, bottom, left;
 
 @each $side in $sides {
   .padding-#{$side}-none {
-    padding-#{$side}: $spacerNone;
+    padding-#{$side}: $spacer-none;
   }
   .padding-#{$side}-2xs {
-    padding-#{$side}: $spacer2Xs;
+    padding-#{$side}: $spacer-2xs;
   }
   .padding-#{$side}-xs {
-    padding-#{$side}: $spacerXs;
+    padding-#{$side}: $spacer-xs;
   }
   .padding-#{$side}-sm {
-    padding-#{$side}: $spacerSm;
+    padding-#{$side}: $spacer-sm;
   }
   .padding-#{$side}-base {
-    padding-#{$side}: $spacerDefault;
+    padding-#{$side}: $spacer-default;
   }
   .padding-#{$side}-md {
-    padding-#{$side}: $spacerMd;
+    padding-#{$side}: $spacer-md;
   }
   .padding-#{$side}-lg {
-    padding-#{$side}: $spacerLg;
+    padding-#{$side}: $spacer-lg;
   }
   .padding-#{$side}-xl {
-    padding-#{$side}: $spacerXl;
+    padding-#{$side}: $spacer-xl;
   }
   .padding-#{$side}-2xl {
-    padding-#{$side}: $spacer2Xl;
+    padding-#{$side}: $spacer-2xl;
   }
 }
 
 // breakpoint styles
-$packageBreakpointStyles: (
+$package-breakpoint-styles: (
 
 );

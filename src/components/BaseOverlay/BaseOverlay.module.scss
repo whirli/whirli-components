@@ -3,7 +3,7 @@
 
 // default styles
 .overlay {
-  padding: $spacer2Xl 0;
+  padding: $spacer-2xl 0;
   box-sizing: border-box;
   z-index: 1000;
   height: 100%;
@@ -50,4 +50,4 @@
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

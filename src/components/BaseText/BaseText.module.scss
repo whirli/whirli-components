@@ -17,7 +17,6 @@
 }
 
 // default styles
-.text {}
 
 .transform-default {
   text-transform: none;
@@ -42,7 +41,7 @@
 
 
 // breakpoint styles
-$packageBreakpointStyles: (
+$package-breakpoint-styles: (
   color-inherit: (
     color: inherit,
   ),
