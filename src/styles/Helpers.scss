@@ -8,5 +8,5 @@
   @return $map;
 }
 
-@function toRems($px) {
+@function to-rems($px) {
   @return math.div($px, $defaultFontSize) + rem; }

@@ -37,39 +37,39 @@
 // breakpoint styles
 $packageBreakpointStyles: (
   size-3xs: (
-    height: toRems(8),
-    width: toRems(8),
+    height: to-rems(8),
+    width: to-rems(8),
   ),
   size-2xs: (
-    height: toRems(12),
-    width: toRems(12),
+    height: to-rems(12),
+    width: to-rems(12),
   ),
   size-xs: (
-    height: toRems(16),
-    width: toRems(16),
+    height: to-rems(16),
+    width: to-rems(16),
   ),
   size-sm: (
-    height: toRems(20),
-    width: toRems(20),
+    height: to-rems(20),
+    width: to-rems(20),
   ),
   size-default: (
-    height: toRems(24),
-    width: toRems(24),
+    height: to-rems(24),
+    width: to-rems(24),
   ),
   size-base: ( // Alias default
-    height: toRems(24),
-    width: toRems(24),
+    height: to-rems(24),
+    width: to-rems(24),
   ),
   size-md: (
-    height: toRems(32),
-    width: toRems(32),
+    height: to-rems(32),
+    width: to-rems(32),
   ),
   size-lg: (
-    height: toRems(40),
-    width: toRems(40),
+    height: to-rems(40),
+    width: to-rems(40),
   ),
   size-xl: (
-    height: toRems(48),
-    width: toRems(48),
+    height: to-rems(48),
+    width: to-rems(48),
   ),
 );
