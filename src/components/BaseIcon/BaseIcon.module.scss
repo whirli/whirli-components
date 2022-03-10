@@ -56,17 +56,20 @@ $packageBreakpointStyles: (
     height: toRems(24),
     width: toRems(24),
   ),
-  size-base: ( 
-        height: to  ,
-        width: toR  
-    ),
-    size-md    height: to  ,
-        width: toR  
-    ),
-    size-lg    height: to  ,
-        width: toR  
-    ),
-    size-xl    height: to  ,
-        width: toR  
-    ),
+  size-base: ( // Alias default
+    height: toRems(24),
+    width: toRems(24),
+  ),
+  size-md: (
+    height: toRems(32),
+    width: toRems(32),
+  ),
+  size-lg: (
+    height: toRems(40),
+    width: toRems(40),
+  ),
+  size-xl: (
+    height: toRems(48),
+    width: toRems(48),
+  ),
 );

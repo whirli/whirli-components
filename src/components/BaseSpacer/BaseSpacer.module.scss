@@ -27,22 +27,34 @@ $packageBreakpointStyles: (
   size-base: (
     height: $spacerDefault,
   ),
-  size-default: ( 
-        height: $sp  ult,
-    ),
-    size-md:   height: $sp      ),
-    size-lg:   height: $sp      ),
-    size-xl:   height: $sp      ),
-    size-2xl    height: $sp  
-    ),
-    size-3xl    height: $sp  
-    ),
-    size-4xl    height: $sp  
-    ),
-    size-5xl    height: $sp  
-    ),
-    size-6xl    height: $sp  
-    ),
-    size-7xl    height: $sp  
-    ),
+  size-default: (
+    height: $spacerDefault,
+  ),
+  size-md: (
+    height: $spacerMd,
+  ),
+  size-lg: (
+    height: $spacerLg,
+  ),
+  size-xl: (
+    height: $spacerXl,
+  ),
+  size-2xl: (
+    height: $spacer2Xl,
+  ),
+  size-3xl: (
+    height: $spacer3Xl,
+  ),
+  size-4xl: (
+    height: $spacer4Xl,
+  ),
+  size-5xl: (
+    height: $spacer5Xl,
+  ),
+  size-6xl: (
+    height: $spacer6Xl,
+  ),
+  size-7xl: (
+    height: $spacer7Xl,
+  ),
 );
