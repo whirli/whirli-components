@@ -3,37 +3,37 @@
 
 // default styles
 .modal {
-    box-sizing: border-box;
-    padding: $spacerXl;
-    max-width: 90%;
-    overflow: scroll;
-    max-height: 100%;
-    position: relative;
+  box-sizing: border-box;
+  padding: $spacer-xl;
+  max-width: 90%;
+  overflow: scroll;
+  max-height: 100%;
+  position: relative;
 }
 
 .modal__close-icon {
-    position: absolute;
-    top: $spacerXl;
-    right: $spacerXl;
+  position: absolute;
+  top: $spacer-xl;
+  right: $spacer-xl;
 }
 
 .modal__title,
 .modal__content  {
-    width: toRems(800);
-    max-width: 100%;
+  width: to-rems(800);
+  max-width: 100%;
 }
 
 .color-default {
-    background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255 255 255 / 100%);
 }
 
 .size-default {
-    width: toRems(1200);
+  width: to-rems(1200);
 }
 
 .size-small {
-    width: toRems(800);
+  width: to-rems(800);
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

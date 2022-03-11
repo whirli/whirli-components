@@ -4,224 +4,236 @@
 
 // default styles
 .base-flex {
-    display: flex;
+  display: flex;
 }
 
 .spacing-none,
 .spacing-0 {
-    margin: 0;
+  margin: 0;
 
-    > * {
-      margin: 0;
-    }
+  > * {
+    margin: 0;
+  }
 }
 
 // @todo spacer maps could be much better and would save repetition (Base Spacer)
 .spacing-2xs {
-    margin: calc($spacer2Xs / 2 * -1);
+  margin: calc($spacer-2xs / 2 * -1);
 
-    > * {
-        margin: calc($spacer2Xs / 2);
-    }
+  > * {
+    margin: calc($spacer-2xs / 2);
+  }
 }
+
 .spacing-xs {
-    margin: calc($spacerXs / 2 * -1);
+  margin: calc($spacer-xs / 2 * -1);
 
-    > * {
-        margin: calc($spacerXs / 2);
-    }
+  > * {
+    margin: calc($spacer-xs / 2);
+  }
 }
+
 .spacing-sm {
-    margin: calc($spacerSm / 2 * -1);
+  margin: calc($spacer-sm / 2 * -1);
 
-    > * {
-        margin: calc($spacerSm / 2);
-    }
+  > * {
+    margin: calc($spacer-sm / 2);
+  }
 }
+
 .spacing-base{
-    margin: calc($spacerDefault/ 2 * -1);
+  margin: calc($spacer-default / 2 * -1);
 
-    > * {
-        margin: calc($spacerDefault / 2);
-    }
+  > * {
+    margin: calc($spacer-default / 2);
+  }
 }
+
 .spacing-md {
-    margin: calc($spacerMd / 2 * -1);
+  margin: calc($spacer-md / 2 * -1);
 
-    > * {
-        margin: calc($spacerMd / 2);
-    }
+  > * {
+    margin: calc($spacer-md / 2);
+  }
 }
+
 .spacing-lg {
-    margin: calc($spacerLg / 2 * -1);
+  margin: calc($spacer-lg / 2 * -1);
 
-    > * {
-        margin: calc($spacerLg / 2);
-    }
+  > * {
+    margin: calc($spacer-lg / 2);
+  }
 }
+
 .spacing-xl {
-    margin: calc($spacerXl / 2 * -1);
+  margin: calc($spacer-xl / 2 * -1);
 
-    > * {
-        margin: calc($spacerXl / 2);
-    }
+  > * {
+    margin: calc($spacer-xl / 2);
+  }
 }
+
 .spacing-2xl {
-    margin: calc($spacer2Xl / 2 * -1);
+  margin: calc($spacer-2xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer2Xl / 2);
-    }
+  > * {
+    margin: calc($spacer-2xl / 2);
+  }
 }
+
 .spacing-3xl {
-    margin: calc($spacer3Xl / 2 * -1);
+  margin: calc($spacer-3xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer3Xl / 2);
-    }
+  > * {
+    margin: calc($spacer-3xl / 2);
+  }
 }
+
 .spacing-4xl {
-    margin: calc($spacer4Xl / 2 * -1);
+  margin: calc($spacer-4xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer4Xl / 2);
-    }
+  > * {
+    margin: calc($spacer-4xl / 2);
+  }
 }
+
 .spacing-5xl {
-    margin: calc($spacer5Xl / 2 * -1);
+  margin: calc($spacer-5xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer5Xl / 2);
-    }
+  > * {
+    margin: calc($spacer-5xl / 2);
+  }
 }
+
 .spacing-6xl {
-    margin: calc($spacer6Xl / 2 * -1);
+  margin: calc($spacer-6xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer6Xl / 2);
-    }
+  > * {
+    margin: calc($spacer-6xl / 2);
+  }
 }
-.spacing-7xl {
-    margin: calc($spacer7Xl / 2 * -1);
 
-    > * {
-        margin: calc($spacer7Xl / 2);
-    }
+.spacing-7xl {
+  margin: calc($spacer-7xl / 2 * -1);
+
+  > * {
+    margin: calc($spacer-7xl / 2);
+  }
 }
 
 // breakpoint styles
-$packageBreakpointStyles: (
-    align-start: (
-        align-items: flex-start,
-    ),
-    align-center: (
-        align-items: center,
-    ),
-    align-end: (
-        align-items: flex-end,
-    ),
-    align-baseline: (
-        align-items: baseline,
-    ),
-    align-stretch: (
-        align-items: stretch,
-    ),
-    align-normal: (
-        align-items: normal,
-    ),
+$package-breakpoint-styles: (
+  align-start: (
+    align-items: flex-start,
+  ),
+  align-center: (
+    align-items: center,
+  ),
+  align-end: (
+    align-items: flex-end,
+  ),
+  align-baseline: (
+    align-items: baseline,
+  ),
+  align-stretch: (
+    align-items: stretch,
+  ),
+  align-normal: (
+    align-items: normal,
+  ),
 
-    justify-center: (
-        justify-content: center,
-    ),
-    justify-left: (
-        justify-content: left,
-    ),
-    justify-right: (
-        justify-content: right,
-    ),
-    justify-between: (
-        justify-content: space-between,
-    ),
-    justify-around: (
-        justify-content: space-around,
-    ),
-    justify-evenly: (
-        justify-content: space-evenly,
-    ),
-    justify-normal: (
-        justify-content: normal,
-    ),
+  justify-center: (
+    justify-content: center,
+  ),
+  justify-left: (
+    justify-content: left,
+  ),
+  justify-right: (
+    justify-content: right,
+  ),
+  justify-between: (
+    justify-content: space-between,
+  ),
+  justify-around: (
+    justify-content: space-around,
+  ),
+  justify-evenly: (
+    justify-content: space-evenly,
+  ),
+  justify-normal: (
+    justify-content: normal,
+  ),
 
-    direction-row: (
-        flex-direction: row
-    ),
-    direction-row-reverse: (
-        flex-direction: row-reverse
-    ),
-    direction-column: (
-        flex-direction: column
-    ),
-    direction-column-reverse: (
-        flex-direction: column-reverse
-    ),
+  direction-row: (
+    flex-direction: row
+  ),
+  direction-row-reverse: (
+    flex-direction: row-reverse
+  ),
+  direction-column: (
+    flex-direction: column
+  ),
+  direction-column-reverse: (
+    flex-direction: column-reverse
+  ),
 
-    wrap-no-wrap: (
-        flex-wrap: nowrap
-    ),
-    wrap-wrap: (
-        flex-wrap: wrap
-    ),
-    wrap-wrap-reverse: (
-        flex-wrap: wrap-reverse
-    ),
-    wrap-inherit: (
-        flex-wrap: inherit
-    ),
-    wrap-initial: (
-        flex-wrap: initial
-    ),
-    wrap-unset: (
-        flex-wrap: unset
-    ),
+  wrap-no-wrap: (
+    flex-wrap: nowrap
+  ),
+  wrap-wrap: (
+    flex-wrap: wrap
+  ),
+  wrap-wrap-reverse: (
+    flex-wrap: wrap-reverse
+  ),
+  wrap-inherit: (
+    flex-wrap: inherit
+  ),
+  wrap-initial: (
+    flex-wrap: initial
+  ),
+  wrap-unset: (
+    flex-wrap: unset
+  ),
 
-    spans-auto: (
-        width: auto
-    ),
+  spans-auto: (
+    width: auto
+  ),
 
-    spans-1: (
-        width: #{math.div(1, 12) * 100}#{'%'}
-    ),
-    spans-2: (
-        width: #{math.div(2, 12) * 100}#{'%'}
-    ),
-    spans-3: (
-        width: #{math.div(3, 12) * 100}#{'%'}
-    ),
-    spans-4: (
-        width: #{math.div(4, 12) * 100}#{'%'}
-    ),
-    spans-5: (
-        width: #{math.div(5, 12) * 100}#{'%'}
-    ),
-    spans-6: (
-        width: #{math.div(6, 12) * 100}#{'%'}
-    ),
-    spans-7: (
-        width: #{math.div(7, 12) * 100}#{'%'}
-    ),
-    spans-8: (
-        width: #{math.div(8, 12) * 100}#{'%'}
-    ),
-    spans-9: (
-        width: #{math.div(9, 12) * 100}#{'%'}
-    ),
-    spans-10: (
-        width: #{math.div(10, 12) * 100}#{'%'}
-    ),
-    spans-11: (
-        width: #{math.div(11, 12) * 100}#{'%'}
-    ),
-    spans-12: (
-        width: 100%
-    )
+  spans-1: (
+    width: #{math.div(1, 12) * 100}#{'%'}
+  ),
+  spans-2: (
+    width: #{math.div(2, 12) * 100}#{'%'}
+  ),
+  spans-3: (
+    width: #{math.div(3, 12) * 100}#{'%'}
+  ),
+  spans-4: (
+    width: #{math.div(4, 12) * 100}#{'%'}
+  ),
+  spans-5: (
+    width: #{math.div(5, 12) * 100}#{'%'}
+  ),
+  spans-6: (
+    width: #{math.div(6, 12) * 100}#{'%'}
+  ),
+  spans-7: (
+    width: #{math.div(7, 12) * 100}#{'%'}
+  ),
+  spans-8: (
+    width: #{math.div(8, 12) * 100}#{'%'}
+  ),
+  spans-9: (
+    width: #{math.div(9, 12) * 100}#{'%'}
+  ),
+  spans-10: (
+    width: #{math.div(10, 12) * 100}#{'%'}
+  ),
+  spans-11: (
+    width: #{math.div(11, 12) * 100}#{'%'}
+  ),
+  spans-12: (
+    width: 100%
+  )
 );

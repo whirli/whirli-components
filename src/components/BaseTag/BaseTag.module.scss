@@ -3,20 +3,21 @@
 
 // default styles
 .tag {
-    display: inline-block;
-    position: relative;
-    background: none;
-    border: none;
-    box-shadow: none;
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 .size-default {
-    padding: $spacer2Xs $spacerSm;
+  padding: $spacer-2xs $spacer-sm;
 }
 
 .theme-default {
-    background: grey;
-    color: black
+  background: #808080;
+  color: #000;
 }
+
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

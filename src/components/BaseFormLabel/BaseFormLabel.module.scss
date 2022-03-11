@@ -1,12 +1,11 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
-.label {}
 
 .required:after {
-    content: ' *';
-    display: inline;
+  content: ' *';
+  display: inline;
 }
 
 // breakpoint styles
-$packageBreakpointStyles: ();
+$package-breakpoint-styles: ();

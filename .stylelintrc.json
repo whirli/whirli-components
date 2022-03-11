@@ -1,19 +1,19 @@
 {
   "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "syntax": "scss",
   "rules": {
     "scss/at-extend-no-missing-placeholder": true,
     "scss/dollar-variable-colon-space-before": "never",
-    "scss/partial-no-import": true,
     "scss/selector-no-redundant-nesting-selector": true,
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",
+    "scss/at-import-partial-extension": "always",
 
-    "block-no-empty": true,
+    "selector-class-pattern": "(.*?)",
 
     "color-named": ["never", { "ignoreProperties": "/^-apple-pay-button-style/" }],
-    "color-no-invalid-hex": true,
 
     "comment-empty-line-before": "always",
     "comment-no-empty": true,
@@ -73,8 +73,6 @@
     "number-max-precision": 7,
     "number-no-trailing-zeros": true,
 
-    "order/properties-alphabetical-order": true,
-
     "property-case": "lower",
     "property-no-unknown": true,
 
@@ -94,7 +92,6 @@
     "selector-max-compound-selectors": 5,
 
     "selector-pseudo-class-case": "lower",
-    "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-class-parentheses-space-inside": "never",
 
     "selector-pseudo-element-case": "lower",

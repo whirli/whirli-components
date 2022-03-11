@@ -3,58 +3,58 @@
 
 // default styles
 .spacer {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 // breakpoint styles
-$packageBreakpointStyles: (
-    size-0: (
-        height: 0
-    ),
-    size-none: (
-        height: 0
-    ),
-    size-2xs: (
-        height: $spacer2Xs,
-    ),
-    size-xs: (
-        height: $spacerXs,
-    ),
-    size-sm: (
-        height: $spacerSm,
-    ),
-    size-base: (
-        height: $spacerDefault,
-    ),
-    size-default: ( // Alias for base
-        height: $spacerDefault,
-    ),
-    size-md: (
-        height: $spacerMd,
-    ),
-    size-lg: (
-        height: $spacerLg,
-    ),
-    size-xl: (
-        height: $spacerXl,
-    ),
-    size-2xl: (
-        height: $spacer2Xl,
-    ),
-    size-3xl: (
-        height: $spacer3Xl,
-    ),
-    size-4xl: (
-        height: $spacer4Xl,
-    ),
-    size-5xl: (
-        height: $spacer5Xl,
-    ),
-    size-6xl: (
-        height: $spacer6Xl,
-    ),
-    size-7xl: (
-        height: $spacer7Xl,
-    ),
+$package-breakpoint-styles: (
+  size-0: (
+    height: 0
+  ),
+  size-none: (
+    height: 0
+  ),
+  size-2xs: (
+    height: $spacer-2xs,
+  ),
+  size-xs: (
+    height: $spacer-xs,
+  ),
+  size-sm: (
+    height: $spacer-sm,
+  ),
+  size-base: (
+    height: $spacer-default,
+  ),
+  size-default: (
+    height: $spacer-default,
+  ),
+  size-md: (
+    height: $spacer-md,
+  ),
+  size-lg: (
+    height: $spacer-lg,
+  ),
+  size-xl: (
+    height: $spacer-xl,
+  ),
+  size-2xl: (
+    height: $spacer-2xl,
+  ),
+  size-3xl: (
+    height: $spacer-3xl,
+  ),
+  size-4xl: (
+    height: $spacer-4xl,
+  ),
+  size-5xl: (
+    height: $spacer-5xl,
+  ),
+  size-6xl: (
+    height: $spacer-6xl,
+  ),
+  size-7xl: (
+    height: $spacer-7xl,
+  ),
 );

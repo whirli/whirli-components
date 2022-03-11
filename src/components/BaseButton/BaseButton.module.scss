@@ -1,9 +1,9 @@
 @import '@whirli-components/styles/Breakpoints.module.scss';
 
 // default styles
-.button {}
+
 // breakpoint styles
-$packageBreakpointStyles: (
-    size-default: (),
-    color-default: ()
+$package-breakpoint-styles: (
+  size-default: (),
+  color-default: ()
 );

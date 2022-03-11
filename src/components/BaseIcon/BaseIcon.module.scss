@@ -4,25 +4,24 @@
 
 // default styles
 .icon {
-    transition: transform ease-in-out 0.3s;
+  transition: transform ease-in-out 0.3s;
 }
 
 .color-inherit {
-    color: inherit;
+  color: inherit;
 }
 
 .backdrop-default {
-    background-color: none !important;
-    background: none !important;
+  background-color: none !important;
 }
 
 .backdrop-circle {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .theme-default {
-    background-color: grey;
-    color: inherit;
+  background-color: #808080;
+  color: inherit;
 }
 
 .rotate-default { transform: rotate(0); }
@@ -35,41 +34,41 @@
 .rotate-315 { transform: rotate(315deg); }
 
 // breakpoint styles
-$packageBreakpointStyles: (
-    size-3xs: (
-        height: toRems(8),
-        width: toRems(8),
-    ),
-    size-2xs: (
-        height: toRems(12),
-        width: toRems(12),
-    ),
-    size-xs: (
-        height: toRems(16),
-        width: toRems(16),
-    ),
-    size-sm: (
-        height: toRems(20),
-        width: toRems(20),
-    ),
-    size-default: (
-        height: toRems(24),
-        width: toRems(24),
-    ),
-    size-base: ( // Alias default
-        height: toRems(24),
-        width: toRems(24),
-    ),
-    size-md: (
-        height: toRems(32),
-        width: toRems(32),
-    ),
-    size-lg: (
-        height: toRems(40),
-        width: toRems(40),
-    ),
-    size-xl: (
-        height: toRems(48),
-        width: toRems(48),
-    ),
+$package-breakpoint-styles: (
+  size-3xs: (
+    height: to-rems(8),
+    width: to-rems(8),
+  ),
+  size-2xs: (
+    height: to-rems(12),
+    width: to-rems(12),
+  ),
+  size-xs: (
+    height: to-rems(16),
+    width: to-rems(16),
+  ),
+  size-sm: (
+    height: to-rems(20),
+    width: to-rems(20),
+  ),
+  size-default: (
+    height: to-rems(24),
+    width: to-rems(24),
+  ),
+  size-base: (
+    height: to-rems(24),
+    width: to-rems(24),
+  ),
+  size-md: (
+    height: to-rems(32),
+    width: to-rems(32),
+  ),
+  size-lg: (
+    height: to-rems(40),
+    width: to-rems(40),
+  ),
+  size-xl: (
+    height: to-rems(48),
+    width: to-rems(48),
+  ),
 );
