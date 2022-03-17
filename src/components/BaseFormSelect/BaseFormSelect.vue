@@ -1,5 +1,5 @@
 <template>
-  <BaseFormGroupLayoutDefault v-bind="$props">
+  <BaseFormGroupLayoutDefault v-bind="$attrs" :name="props.name">
     <select
       :id="props.name"
       :name="props.name"

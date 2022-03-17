@@ -124,20 +124,23 @@ onBeforeMount(() => {
   initInitialState();
 });
 
-const observer = new MutationObserver(updateAccordionHeight);
+// @ts-ignore
+if (process.browser) {
+  const observer = new MutationObserver(updateAccordionHeight);
 
-onMounted(() => {
-  updateAccordionHeight();
+  onMounted(() => {
+    updateAccordionHeight();
 
-  observer.observe(accordionContent.value, {
-    attributes: true,
-    childList: true,
-    characterData: true,
-    subtree: true,
+    observer.observe(accordionContent.value, {
+      attributes: true,
+      childList: true,
+      characterData: true,
+      subtree: true,
+    });
   });
-});
 
-onBeforeUnmount(() => {
-  observer.disconnect();
-});
+  onBeforeUnmount(() => {
+    observer.disconnect();
+  });
+}
 </script>
