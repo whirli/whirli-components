@@ -3,7 +3,8 @@ const fs = require('fs');
 /* eslint-disable-next-line */
 const path = require('path');
 
-const DESTINATION_DIRECTORY = './components/@whirli-components';
+const COMPONENTS_DIRECTORY = './components';
+const DESTINATION_DIRECTORY = `${COMPONENTS_DIRECTORY}/@whirli-components`;
 const SOURCE_DIRECTORY = './node_modules/@whirli/components/src';
 const DIRECTORIES_TO_COPY = ['@types', '@use', 'assets', 'components', 'constants', 'helpers', 'styles'];
 const DESTINATION_CONFIG_DIRECTORY = './whirli/components';
@@ -24,6 +25,9 @@ var copyRecursiveSync = function (src, dest) {
 };
 
 // Create the local components directory
+if (!fs.existsSync(COMPONENTS_DIRECTORY)) {
+  fs.mkdirSync(COMPONENTS_DIRECTORY);
+}
 if (fs.existsSync(DESTINATION_DIRECTORY)) {
   fs.rmSync(DESTINATION_DIRECTORY, { recursive: true });
 }
