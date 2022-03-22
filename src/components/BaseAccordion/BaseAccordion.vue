@@ -1,12 +1,12 @@
 <template>
   <div :class="wrapperClasses" :data-state="activeBreakpointState">
     <button
+      :id="headerId"
       :class="triggerClasses"
-      @click="updateAccordionState()"
       :aria-controls="bodyId"
       :aria-expanded="isActiveBreakpointStateOpen"
-      :id="headerId"
       :disabled="props.disableToggle"
+      @click="updateAccordionState()"
     >
       <slot name="title" />
     </button>
@@ -25,16 +25,7 @@
 
 <script setup lang="ts">
 // Vue
-import {
-  computed,
-  ref,
-  onMounted,
-  reactive,
-  ComputedRef,
-  Ref,
-  onBeforeMount,
-  onBeforeUnmount,
-} from '@composition';
+import { computed, ref, onMounted, reactive, ComputedRef, Ref, onBeforeUnmount } from '@composition';
 
 // Types
 import { ComponentStyles as ComponentStylesInterface } from '@whirli-components/@types/components';
@@ -75,10 +66,10 @@ const wrapperClasses: ComputedRef<string[]> = computed(() => [
   ...staticWrapperClasses,
   ...dynamicWrapperClasses.value,
 ]);
-const triggerClasses: string[] = [styles['accordion__trigger']];
-const contentClasses: string[] = [styles['accordion__content']];
+const triggerClasses: string[] = [styles.accordion__trigger];
+const contentClasses: string[] = [styles.accordion__content];
 
-const activeBreakpointState: Ref<string> = ref('closed');
+const activeBreakpointState: Ref<string | undefined> = ref(undefined);
 
 const updateActiveBreakpointState = (): void => {
   activeBreakpointState.value = accordionState[activeBreakpoint.value];
@@ -97,6 +88,7 @@ const updateAccordionState = (): void => {
 
 function updateAccordionHeight(): void {
   accordionMaxHeight.value = `${accordionContent.value.offsetHeight}px`;
+  updateActiveBreakpointState();
 }
 
 const setAccordionState = (): void => {
@@ -120,27 +112,28 @@ const initInitialState = (): void => {
   setAccordionState();
 };
 
-onBeforeMount(() => {
-  initInitialState();
-});
-
 // @ts-ignore
-if (process.browser) {
-  const observer = new MutationObserver(updateAccordionHeight);
+const observer: MutationObserver | null = process.browser
+  ? new MutationObserver(updateAccordionHeight)
+  : null;
 
-  onMounted(() => {
-    updateAccordionHeight();
+onMounted(() => {
+  initInitialState();
+  updateAccordionHeight();
 
+  if (observer) {
     observer.observe(accordionContent.value, {
       attributes: true,
       childList: true,
       characterData: true,
       subtree: true,
     });
-  });
+  }
+});
 
-  onBeforeUnmount(() => {
+onBeforeUnmount(() => {
+  if (observer) {
     observer.disconnect();
-  });
-}
+  }
+});
 </script>
